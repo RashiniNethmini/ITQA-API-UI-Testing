@@ -1,0 +1,79 @@
+[
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "get-all-books;verify-the-response-of-the-get-/api/books-api",
+        "keyword": "Scenario",
+        "line": 3,
+        "name": "Verify the response of the GET /api/books API",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 1704399
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "I send a GET request to \"/api/books\"",
+            "match": {
+              "location": "src\\steps\\getBooks.steps.ts:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 126308500
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 5,
+            "name": "the response status should be 200",
+            "match": {
+              "location": "src\\steps\\getBooks.steps.ts:17"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 691500
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 6,
+            "name": "the response should contain a list of books",
+            "match": {
+              "location": "src\\steps\\getBooks.steps.ts:21"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3719100
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 3447400
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "get-all-books",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Get all books",
+    "tags": [],
+    "uri": "features\\getBooks.feature"
+  }
+]
