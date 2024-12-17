@@ -10,14 +10,6 @@
         "name": "Verify the response of the GET /api/books API",
         "steps": [
           {
-            "keyword": "Before",
-            "hidden": true,
-            "result": {
-              "status": "passed",
-              "duration": 1704399
-            }
-          },
-          {
             "arguments": [],
             "keyword": "Given ",
             "line": 4,
@@ -27,7 +19,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 126308500
+              "duration": 96416400
             }
           },
           {
@@ -40,7 +32,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 691500
+              "duration": 1051699
             }
           },
           {
@@ -53,15 +45,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 3719100
-            }
-          },
-          {
-            "keyword": "After",
-            "hidden": true,
-            "result": {
-              "status": "passed",
-              "duration": 3447400
+              "duration": 5233999
             }
           }
         ],
@@ -75,5 +59,104 @@
     "name": "Get all books",
     "tags": [],
     "uri": "features\\getBooks.feature"
+  },
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "create-a-new-book;verify-that-a-new-book-can-be-created-successfully",
+        "keyword": "Scenario",
+        "line": 3,
+        "name": "Verify that a new book can be created successfully",
+        "steps": [
+          {
+            "arguments": [
+              {
+                "rows": [
+                  {
+                    "cells": [
+                      "id",
+                      "title",
+                      "author"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "2",
+                      "Test Book 2",
+                      "Kent Beck"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "I send a POST request to \"/api/books\" with the following details:",
+            "match": {
+              "location": "src\\steps\\postBook.steps.ts:13"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 16975200
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 7,
+            "name": "the POST response status should be 201",
+            "match": {
+              "location": "src\\steps\\postBook.steps.ts:33"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 322299
+            }
+          },
+          {
+            "arguments": [
+              {
+                "rows": [
+                  {
+                    "cells": [
+                      "id",
+                      "title",
+                      "author"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "2",
+                      "Test Book 2",
+                      "Kent Beck"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "keyword": "And ",
+            "line": 8,
+            "name": "the response should contain the created book details:",
+            "match": {
+              "location": "src\\steps\\postBook.steps.ts:38"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5616600
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "create-a-new-book",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Create a new book",
+    "tags": [],
+    "uri": "features\\postBook.feature"
   }
 ]

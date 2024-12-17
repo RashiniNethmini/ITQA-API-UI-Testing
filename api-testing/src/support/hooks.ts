@@ -1,10 +1,20 @@
-import { Before, After } from '@cucumber/cucumber';
-import { request } from './playwright';
+import { request as playwrightRequest, APIRequestContext } from '@playwright/test';
+import { afterEach, beforeEach } from 'node:test';
 
-Before(async () => {
-    // Any setup before the tests run
+
+let request: APIRequestContext;
+
+
+beforeEach(async () => {
+  request = await playwrightRequest.newContext({
+    baseURL: 'http://localhost:7081/api',
+  });
 });
 
-After(async () => {
-    await request.dispose();
+
+afterEach(async () => {
+  await request.dispose();
 });
+
+
+export { request };
