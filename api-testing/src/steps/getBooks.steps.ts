@@ -20,7 +20,7 @@ Then('the response status should be {int}', (status: number) => {
 
 Then('the response should contain a list of books', async () => {
     const responseBody = await response.json();
-    console.log(response.data);
+    console.log('Response Body:', responseBody);
     expect(responseBody).to.be.an('array');
     expect(responseBody.length).to.be.greaterThan(0);
 });
