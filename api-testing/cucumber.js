@@ -1,8 +1,8 @@
 module.exports = {
     default: {
-        require: ['src/**/*.ts'],
+        require: ['src/tests/steps/**/*.ts', 'src/tests/support/**/*.ts'],
         format: ['progress', 'json:reports/cucumber-report.json'],
-        paths: ['features/*.feature'],
+        paths: ['src/tests/features/*.feature'],
         publishQuiet: true
     }
 };
