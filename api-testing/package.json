@@ -4,14 +4,16 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "cucumber-js --require-module ts-node/register --require src/**/*.ts"
-},
-
+    "test": "cucumber-js --require-module ts-node/register --require src/**/*.ts",
+    "allure-report": "allure generate allure-results --clean && allure open"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "@cucumber/cucumber": "^11.1.1",
+    "allure-commandline": "^2.32.0",
+    "allure-cucumberjs": "^3.0.7",
     "@playwright/test": "^1.49.1",
     "@types/chai": "^5.0.1",
     "@types/node": "^22.10.2",
