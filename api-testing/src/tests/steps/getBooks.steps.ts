@@ -9,8 +9,13 @@ const expect = chai.expect;
 let booksPage: BooksPage;
 let response: any;
 
-Given('I am an authenticated API client', async () => {
+Given('I am an authenticated admin API client', async () => {
     const request = await RequestFactory.createRequest('Basic', credentials.admin,credentials.password);
+    booksPage = new BooksPage(request);
+});
+
+Given('I am an authenticated user API client', async () => {
+    const request = await RequestFactory.createRequest('Basic', credentials.user,credentials.password);
     booksPage = new BooksPage(request);
 });
 
