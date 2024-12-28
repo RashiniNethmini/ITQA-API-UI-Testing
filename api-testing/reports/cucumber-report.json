@@ -12,54 +12,66 @@
           {
             "arguments": [],
             "keyword": "Given ",
-            "line": 4,
-            "name": "I am an authenticated admin API client",
+            "line": 5,
+            "name": "there is a book entry in the system",
             "match": {
               "location": "src\\tests\\steps\\getBooks.steps.ts:11"
             },
             "result": {
               "status": "passed",
-              "duration": 14288800
+              "duration": 109478899
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 6,
+            "name": "I am an authenticated admin API client",
+            "match": {
+              "location": "src\\tests\\steps\\getBooks.steps.ts:20"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2494900
             }
           },
           {
             "arguments": [],
             "keyword": "When ",
-            "line": 5,
+            "line": 7,
             "name": "I send a GET request to the \"books\" endpoint",
             "match": {
-              "location": "src\\tests\\steps\\getBooks.steps.ts:21"
+              "location": "src\\tests\\steps\\getBooks.steps.ts:30"
             },
             "result": {
               "status": "passed",
-              "duration": 110759300
+              "duration": 72337700
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
-            "line": 6,
+            "line": 8,
             "name": "the response status should be 200",
             "match": {
-              "location": "src\\tests\\steps\\getBooks.steps.ts:29"
+              "location": "src\\tests\\steps\\getBooks.steps.ts:38"
             },
             "result": {
               "status": "passed",
-              "duration": 1288300
+              "duration": 476700
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
-            "line": 7,
+            "line": 9,
             "name": "the response should contain a list of books",
             "match": {
-              "location": "src\\tests\\steps\\getBooks.steps.ts:33"
+              "location": "src\\tests\\steps\\getBooks.steps.ts:42"
             },
             "result": {
-              "status": "failed",
-              "duration": 5557099,
-              "error_message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: > \u001b[32m0\u001b[39m\nReceived:   \u001b[31m0\u001b[39m\n    at Proxy.<anonymous> (C:\\Users\\OMEN\\Documents\\GitHub\\ITQA-API-UI-Testing\\api-testing\\node_modules\\playwright\\lib\\matchers\\expect.js:227:37)\n    at World.<anonymous> (C:\\Users\\OMEN\\Documents\\GitHub\\ITQA-API-UI-Testing\\api-testing\\src\\tests\\steps\\getBooks.steps.ts:36:33)"
+              "status": "passed",
+              "duration": 2926399
             }
           }
         ],
@@ -70,60 +82,72 @@
         "description": "",
         "id": "get-all-books;verify-the-response-of-the-get-/api/books-api-as-user",
         "keyword": "Scenario",
-        "line": 10,
+        "line": 12,
         "name": "Verify the response of the GET /api/books API as user",
         "steps": [
           {
             "arguments": [],
             "keyword": "Given ",
-            "line": 11,
-            "name": "I am an authenticated user API client",
+            "line": 14,
+            "name": "there is a book entry in the system",
             "match": {
-              "location": "src\\tests\\steps\\getBooks.steps.ts:16"
+              "location": "src\\tests\\steps\\getBooks.steps.ts:11"
             },
             "result": {
               "status": "passed",
-              "duration": 1350000
+              "duration": 75882100
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 15,
+            "name": "I am an authenticated user API client",
+            "match": {
+              "location": "src\\tests\\steps\\getBooks.steps.ts:25"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1330500
             }
           },
           {
             "arguments": [],
             "keyword": "When ",
-            "line": 12,
+            "line": 16,
             "name": "I send a GET request to the \"books\" endpoint",
             "match": {
-              "location": "src\\tests\\steps\\getBooks.steps.ts:21"
+              "location": "src\\tests\\steps\\getBooks.steps.ts:30"
             },
             "result": {
               "status": "passed",
-              "duration": 67844100
+              "duration": 67472099
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
-            "line": 13,
+            "line": 17,
             "name": "the response status should be 200",
             "match": {
-              "location": "src\\tests\\steps\\getBooks.steps.ts:29"
+              "location": "src\\tests\\steps\\getBooks.steps.ts:38"
             },
             "result": {
               "status": "passed",
-              "duration": 406400
+              "duration": 467899
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
-            "line": 14,
+            "line": 18,
             "name": "the response should contain a list of books",
             "match": {
-              "location": "src\\tests\\steps\\getBooks.steps.ts:33"
+              "location": "src\\tests\\steps\\getBooks.steps.ts:42"
             },
             "result": {
-              "status": "failed",
-              "duration": 1686200,
-              "error_message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: > \u001b[32m0\u001b[39m\nReceived:   \u001b[31m0\u001b[39m\n    at Proxy.<anonymous> (C:\\Users\\OMEN\\Documents\\GitHub\\ITQA-API-UI-Testing\\api-testing\\node_modules\\playwright\\lib\\matchers\\expect.js:227:37)\n    at World.<anonymous> (C:\\Users\\OMEN\\Documents\\GitHub\\ITQA-API-UI-Testing\\api-testing\\src\\tests\\steps\\getBooks.steps.ts:36:33)"
+              "status": "passed",
+              "duration": 2498700
             }
           }
         ],

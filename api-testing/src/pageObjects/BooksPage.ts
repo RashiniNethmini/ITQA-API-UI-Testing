@@ -1,5 +1,5 @@
 import { APIRequestContext } from 'playwright';
-import { API_BASE_URL } from '../config';  // Access the base URL from environment
+import { API_BASE_URL } from '../config';  
 
 export class BooksPage {
     private request: APIRequestContext;
@@ -7,12 +7,19 @@ export class BooksPage {
 
     constructor(request: APIRequestContext) {
         this.request = request;
-        this.baseURL = API_BASE_URL; // Use the base URL from environment
+        this.baseURL = API_BASE_URL;
         
     }
 
     async getBooks() {
         const response = await this.request.get(`${this.baseURL}/books`);
+        return response;
+    }
+    async createBook(bookDetails: { title: string, author: string }) {
+        const response = await this.request.post(`${this.baseURL}/books`, {
+            data: bookDetails
+            
+        });
         return response;
     }
 }
