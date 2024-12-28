@@ -5,9 +5,6 @@ import { credentials } from '../../config';
 import { expect } from 'playwright/test';
 import { BooksPage } from '../../pageObjects/BooksPage';
 
-
-
-
 let booksPage: BooksPage;
 let response: any;
 
