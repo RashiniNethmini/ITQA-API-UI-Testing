@@ -15,11 +15,11 @@
             "line": 5,
             "name": "there is a book entry in the system",
             "match": {
-              "location": "src\\tests\\steps\\getBooks.steps.ts:11"
+              "location": "src\\tests\\steps\\getBooks.steps.ts:15"
             },
             "result": {
               "status": "passed",
-              "duration": 109478899
+              "duration": 111145899
             }
           },
           {
@@ -28,11 +28,11 @@
             "line": 6,
             "name": "I am an authenticated admin API client",
             "match": {
-              "location": "src\\tests\\steps\\getBooks.steps.ts:20"
+              "location": "src\\tests\\steps\\getBooks.steps.ts:31"
             },
             "result": {
               "status": "passed",
-              "duration": 2494900
+              "duration": 1882700
             }
           },
           {
@@ -41,11 +41,11 @@
             "line": 7,
             "name": "I send a GET request to the \"books\" endpoint",
             "match": {
-              "location": "src\\tests\\steps\\getBooks.steps.ts:30"
+              "location": "src\\tests\\steps\\getBooks.steps.ts:43"
             },
             "result": {
               "status": "passed",
-              "duration": 72337700
+              "duration": 74043099
             }
           },
           {
@@ -54,11 +54,11 @@
             "line": 8,
             "name": "the response status should be 200",
             "match": {
-              "location": "src\\tests\\steps\\getBooks.steps.ts:38"
+              "location": "src\\tests\\steps\\getBooks.steps.ts:52"
             },
             "result": {
               "status": "passed",
-              "duration": 476700
+              "duration": 331699
             }
           },
           {
@@ -67,11 +67,11 @@
             "line": 9,
             "name": "the response should contain a list of books",
             "match": {
-              "location": "src\\tests\\steps\\getBooks.steps.ts:42"
+              "location": "src\\tests\\steps\\getBooks.steps.ts:57"
             },
             "result": {
               "status": "passed",
-              "duration": 2926399
+              "duration": 3262900
             }
           }
         ],
@@ -91,11 +91,11 @@
             "line": 14,
             "name": "there is a book entry in the system",
             "match": {
-              "location": "src\\tests\\steps\\getBooks.steps.ts:11"
+              "location": "src\\tests\\steps\\getBooks.steps.ts:15"
             },
             "result": {
               "status": "passed",
-              "duration": 75882100
+              "duration": 78039899
             }
           },
           {
@@ -104,11 +104,11 @@
             "line": 15,
             "name": "I am an authenticated user API client",
             "match": {
-              "location": "src\\tests\\steps\\getBooks.steps.ts:25"
+              "location": "src\\tests\\steps\\getBooks.steps.ts:37"
             },
             "result": {
               "status": "passed",
-              "duration": 1330500
+              "duration": 1195900
             }
           },
           {
@@ -117,11 +117,11 @@
             "line": 16,
             "name": "I send a GET request to the \"books\" endpoint",
             "match": {
-              "location": "src\\tests\\steps\\getBooks.steps.ts:30"
+              "location": "src\\tests\\steps\\getBooks.steps.ts:43"
             },
             "result": {
               "status": "passed",
-              "duration": 67472099
+              "duration": 78898499
             }
           },
           {
@@ -130,11 +130,11 @@
             "line": 17,
             "name": "the response status should be 200",
             "match": {
-              "location": "src\\tests\\steps\\getBooks.steps.ts:38"
+              "location": "src\\tests\\steps\\getBooks.steps.ts:52"
             },
             "result": {
               "status": "passed",
-              "duration": 467899
+              "duration": 355699
             }
           },
           {
@@ -143,11 +143,11 @@
             "line": 18,
             "name": "the response should contain a list of books",
             "match": {
-              "location": "src\\tests\\steps\\getBooks.steps.ts:42"
+              "location": "src\\tests\\steps\\getBooks.steps.ts:57"
             },
             "result": {
               "status": "passed",
-              "duration": 2498700
+              "duration": 1693600
             }
           }
         ],
