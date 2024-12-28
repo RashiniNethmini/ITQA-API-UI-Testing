@@ -1,1 +1,1 @@
-[{"uid":"dcff40bc402efdbd","name":"Verify the response of the GET /api/books API","time":{"start":1735308632279,"stop":1735308632455,"duration":176},"status":"passed","severity":"normal"}]
+[{"uid":"faf51058db2d2b21","name":"Verify the response of the GET /api/books API as admin","time":{"start":1735365441810,"stop":1735365441924,"duration":114},"status":"passed","severity":"normal"},{"uid":"84440e70c2a34291","name":"Verify the response of the GET /api/books API as user","time":{"start":1735365441926,"stop":1735365442001,"duration":75},"status":"passed","severity":"normal"}]
