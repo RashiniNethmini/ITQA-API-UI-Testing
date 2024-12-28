@@ -2,9 +2,8 @@ import { Given, When, Then } from '@cucumber/cucumber';
 import { RequestFactory } from '../support/requestFactory';
 import { BooksPage } from '../support/pageObjects/BooksPage';
 import { credentials } from '../support/config';
-import chai from 'chai';
+import { expect } from 'playwright/test';
 
-const expect = chai.expect;
 
 let booksPage: BooksPage;
 let response: any;
@@ -28,11 +27,12 @@ When('I send a GET request to the {string} endpoint', async (endpoint: string) =
 });
 
 Then('the response status should be {int}', (status: number) => {
-    expect(response.status()).to.equal(status);
+    expect(response.status()).toBe(status); // 'toBe' is Jest's equivalent of 'equal'
 });
 
 Then('the response should contain a list of books', async () => {
     const responseBody = await response.json();
-    expect(responseBody).to.be.an('array');
-    expect(responseBody.length).to.be.greaterThan(0);
+    expect(Array.isArray(responseBody)).toBe(true); // Check if responseBody is an array
+    expect(responseBody.length).toBeGreaterThan(0); // Assert the array has more than 0 elements
 });
+
