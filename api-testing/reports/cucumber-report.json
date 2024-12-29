@@ -19,7 +19,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 154208900
+              "duration": 159203800
             }
           },
           {
@@ -32,7 +32,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 3308900
+              "duration": 3178299
             }
           },
           {
@@ -45,7 +45,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 87040500
+              "duration": 110252800
             }
           },
           {
@@ -58,7 +58,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 824900
+              "duration": 1272300
             }
           },
           {
@@ -71,7 +71,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 3740800
+              "duration": 4737700
             }
           }
         ],
@@ -95,7 +95,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 75671799
+              "duration": 112522500
             }
           },
           {
@@ -108,7 +108,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 2607200
+              "duration": 4317700
             }
           },
           {
@@ -121,7 +121,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 77763599
+              "duration": 118821699
             }
           },
           {
@@ -134,7 +134,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 566200
+              "duration": 856600
             }
           },
           {
@@ -147,7 +147,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 3604100
+              "duration": 3680199
             }
           }
         ],
@@ -171,7 +171,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 88160000
+              "duration": 138988800
             }
           },
           {
@@ -184,7 +184,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 6654699
+              "duration": 4885299
             }
           },
           {
@@ -197,7 +197,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 82670900
+              "duration": 102229299
             }
           },
           {
@@ -210,7 +210,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 717999
+              "duration": 960000
             }
           }
         ],
@@ -234,7 +234,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 84091400
+              "duration": 112881800
             }
           },
           {
@@ -247,7 +247,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 2451999
+              "duration": 3339100
             }
           },
           {
@@ -260,7 +260,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 82100899
+              "duration": 172721300
             }
           },
           {
@@ -273,8 +273,8 @@
             },
             "result": {
               "status": "failed",
-              "duration": 4039000,
-              "error_message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m404\u001b[39m\nReceived: \u001b[31m403\u001b[39m\n    at Proxy.<anonymous> (C:\\Users\\Naduni\\Documents\\GitHub\\ITQA-API-UI-Testing\\api-testing\\node_modules\\playwright\\lib\\matchers\\expect.js:227:37)\n    at World.<anonymous> (C:\\Users\\Naduni\\Documents\\GitHub\\ITQA-API-UI-Testing\\api-testing\\src\\tests\\steps\\getBooks.steps.ts:58:31)"
+              "duration": 7298800,
+              "error_message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m404\u001b[39m\nReceived: \u001b[31m403\u001b[39m\n    at Proxy.<anonymous> (C:\\Users\\Pruthuvi\\Documents\\GitHub\\ITQA-API-UI-Testing\\api-testing\\node_modules\\playwright\\lib\\matchers\\expect.js:227:37)\n    at World.<anonymous> (C:\\Users\\Pruthuvi\\Documents\\GitHub\\ITQA-API-UI-Testing\\api-testing\\src\\tests\\steps\\getBooks.steps.ts:58:31)"
             }
           }
         ],
@@ -309,7 +309,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 5376699
+              "duration": 4318000
             }
           },
           {
@@ -322,7 +322,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 77039400
+              "duration": 208437199
             }
           },
           {
@@ -331,11 +331,11 @@
             "line": 6,
             "name": "the response status of POST should be either 201 or 208",
             "match": {
-              "location": "src\\tests\\steps\\postBook.steps.ts:46"
+              "location": "src\\tests\\steps\\postBook.steps.ts:59"
             },
             "result": {
               "status": "passed",
-              "duration": 881999
+              "duration": 1064000
             }
           },
           {
@@ -344,11 +344,11 @@
             "line": 7,
             "name": "the response should contain the created book details",
             "match": {
-              "location": "src\\tests\\steps\\postBook.steps.ts:50"
+              "location": "src\\tests\\steps\\postBook.steps.ts:63"
             },
             "result": {
               "status": "passed",
-              "duration": 15570699
+              "duration": 7689500
             }
           }
         ],
@@ -372,7 +372,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1875900
+              "duration": 4959200
             }
           },
           {
@@ -385,7 +385,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 75476500
+              "duration": 198123200
             }
           },
           {
@@ -394,11 +394,11 @@
             "line": 12,
             "name": "the response status of POST should be either 201 or 208",
             "match": {
-              "location": "src\\tests\\steps\\postBook.steps.ts:46"
+              "location": "src\\tests\\steps\\postBook.steps.ts:59"
             },
             "result": {
               "status": "passed",
-              "duration": 1712600
+              "duration": 1130800
             }
           },
           {
@@ -407,11 +407,11 @@
             "line": 13,
             "name": "the response should contain the created book details",
             "match": {
-              "location": "src\\tests\\steps\\postBook.steps.ts:50"
+              "location": "src\\tests\\steps\\postBook.steps.ts:63"
             },
             "result": {
               "status": "passed",
-              "duration": 8367399
+              "duration": 11976200
             }
           }
         ],
@@ -435,7 +435,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 3539499
+              "duration": 4165600
             }
           },
           {
@@ -448,7 +448,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 78231699
+              "duration": 206472399
             }
           },
           {
@@ -457,11 +457,11 @@
             "line": 19,
             "name": "the response status of POST should be either 201 or 208",
             "match": {
-              "location": "src\\tests\\steps\\postBook.steps.ts:46"
+              "location": "src\\tests\\steps\\postBook.steps.ts:59"
             },
             "result": {
               "status": "passed",
-              "duration": 1015499
+              "duration": 684199
             }
           },
           {
@@ -470,11 +470,11 @@
             "line": 20,
             "name": "the response should contain the created book details with empty title and author",
             "match": {
-              "location": "src\\tests\\steps\\postBook.steps.ts:54"
+              "location": "src\\tests\\steps\\postBook.steps.ts:67"
             },
             "result": {
               "status": "passed",
-              "duration": 9690699
+              "duration": 11198300
             }
           }
         ],
@@ -498,7 +498,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 2044900
+              "duration": 3981700
             }
           },
           {
@@ -511,7 +511,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 84713300
+              "duration": 168077800
             }
           },
           {
@@ -520,11 +520,11 @@
             "line": 25,
             "name": "the response status of POST should be either 201 or 208",
             "match": {
-              "location": "src\\tests\\steps\\postBook.steps.ts:46"
+              "location": "src\\tests\\steps\\postBook.steps.ts:59"
             },
             "result": {
               "status": "passed",
-              "duration": 721799
+              "duration": 903599
             }
           },
           {
@@ -533,11 +533,137 @@
             "line": 26,
             "name": "the response should contain the created book details with empty title and author",
             "match": {
-              "location": "src\\tests\\steps\\postBook.steps.ts:54"
+              "location": "src\\tests\\steps\\postBook.steps.ts:67"
             },
             "result": {
               "status": "passed",
-              "duration": 4071899
+              "duration": 10147300
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "create-a-new-book;attempt-to-create-two-different-books-with-the-same-author-but-different-titles-as-admin",
+        "keyword": "Scenario",
+        "line": 28,
+        "name": "Attempt to create two different books with the same author but different titles as admin",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 29,
+            "name": "I am an authenticated POST admin API client",
+            "match": {
+              "location": "src\\tests\\steps\\postBook.steps.ts:11"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3625399
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 30,
+            "name": "I send a POST request to the \"books\" endpoint with two different titles and the same author",
+            "match": {
+              "location": "src\\tests\\steps\\postBook.steps.ts:45"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 229176300
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 31,
+            "name": "the response status of POST should be either 201 or 208",
+            "match": {
+              "location": "src\\tests\\steps\\postBook.steps.ts:59"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 736399
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 32,
+            "name": "the response should contain the details of both books",
+            "match": {
+              "location": "src\\tests\\steps\\postBook.steps.ts:71"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 8256700
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "create-a-new-book;attempt-to-create-two-different-books-with-the-same-author-but-different-titles-as-user",
+        "keyword": "Scenario",
+        "line": 34,
+        "name": "Attempt to create two different books with the same author but different titles as user",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 35,
+            "name": "I am an authenticated POST user API client",
+            "match": {
+              "location": "src\\tests\\steps\\postBook.steps.ts:16"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2919299
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 36,
+            "name": "I send a POST request to the \"books\" endpoint with two different titles and the same author",
+            "match": {
+              "location": "src\\tests\\steps\\postBook.steps.ts:45"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 208577999
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 37,
+            "name": "the response status of POST should be either 201 or 208",
+            "match": {
+              "location": "src\\tests\\steps\\postBook.steps.ts:59"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 880100
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 38,
+            "name": "the response should contain the details of both books",
+            "match": {
+              "location": "src\\tests\\steps\\postBook.steps.ts:71"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 8849699
             }
           }
         ],
