@@ -2,7 +2,7 @@ import { Given, When, Then } from '@cucumber/cucumber';
 import { RequestFactory } from '../../requests/requestFactory';
 import { BooksPage } from '../../pageObjects/BooksPage';
 import { credentials } from '../../config';
-import {  validateBookCreationResponse } from '../../requests/BookCreation';
+import {  validateBookCreationResponse,validateBookCreationResponseEmpty } from '../../requests/BookCreation';
 import {  validateResponseTwoStatus } from '../../requests/ValidateResponseStatus'; 
 
 let booksPage: BooksPage;
@@ -30,10 +30,27 @@ When('I send a POST request to the {string} endpoint with valid book details', a
     }
 });
 
+When('I send a POST request to the {string} endpoint with empty title and author', async function (endpoint: string) {
+    if (endpoint === 'books') {
+        const bookDetails = {
+            title: '', // Empty title
+            author: '' // Empty author
+        };
+        response = await booksPage.createBook(bookDetails);
+    } else {
+        throw new Error(`Unknown endpoint: ${endpoint}`);
+    }
+});
+
+
 Then('the response status of POST should be either {int} or {int}', (status1: number, status2: number) => {
     validateResponseTwoStatus(response, status1, status2);
 });
 
 Then('the response should contain the created book details', async () => {
     await validateBookCreationResponse(response);
+});
+
+Then('the response should contain the created book details with empty title and author', async () => {
+    await validateBookCreationResponseEmpty(response);
 });

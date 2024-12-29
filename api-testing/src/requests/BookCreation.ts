@@ -27,3 +27,21 @@ export async function validateBookCreationResponse(response: any) {
         expect(responseBody).toBe('Book Already Exists');
     }
 }
+
+export async function validateBookCreationResponseEmpty(response: any) {
+    let responseBody;
+    try {
+        responseBody = await response.json();
+    } catch (error) {
+        responseBody = await response.text();
+    }
+
+
+    if (typeof responseBody === 'object') {
+        expect(responseBody).toHaveProperty('id');
+        expect(responseBody.title).toBe('');
+        expect(responseBody.author).toBe('');
+    } else {
+        expect(responseBody).toBe('Book Already Exists');
+    }
+}
