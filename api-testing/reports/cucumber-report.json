@@ -15,11 +15,11 @@
             "line": 5,
             "name": "there is a book entry in the system",
             "match": {
-              "location": "src\\tests\\steps\\getBooks.steps.ts:15"
+              "location": "src\\tests\\steps\\getBooks.steps.ts:12"
             },
             "result": {
               "status": "passed",
-              "duration": 111145899
+              "duration": 610852999
             }
           },
           {
@@ -28,11 +28,11 @@
             "line": 6,
             "name": "I am an authenticated admin API client",
             "match": {
-              "location": "src\\tests\\steps\\getBooks.steps.ts:31"
+              "location": "src\\tests\\steps\\getBooks.steps.ts:28"
             },
             "result": {
               "status": "passed",
-              "duration": 1882700
+              "duration": 2872199
             }
           },
           {
@@ -41,11 +41,11 @@
             "line": 7,
             "name": "I send a GET request to the \"books\" endpoint",
             "match": {
-              "location": "src\\tests\\steps\\getBooks.steps.ts:43"
+              "location": "src\\tests\\steps\\getBooks.steps.ts:40"
             },
             "result": {
               "status": "passed",
-              "duration": 74043099
+              "duration": 135500699
             }
           },
           {
@@ -54,11 +54,11 @@
             "line": 8,
             "name": "the response status should be 200",
             "match": {
-              "location": "src\\tests\\steps\\getBooks.steps.ts:52"
+              "location": "src\\tests\\steps\\getBooks.steps.ts:49"
             },
             "result": {
               "status": "passed",
-              "duration": 331699
+              "duration": 683600
             }
           },
           {
@@ -67,11 +67,11 @@
             "line": 9,
             "name": "the response should contain a list of books",
             "match": {
-              "location": "src\\tests\\steps\\getBooks.steps.ts:57"
+              "location": "src\\tests\\steps\\getBooks.steps.ts:54"
             },
             "result": {
               "status": "passed",
-              "duration": 3262900
+              "duration": 4796900
             }
           }
         ],
@@ -91,11 +91,11 @@
             "line": 14,
             "name": "there is a book entry in the system",
             "match": {
-              "location": "src\\tests\\steps\\getBooks.steps.ts:15"
+              "location": "src\\tests\\steps\\getBooks.steps.ts:12"
             },
             "result": {
               "status": "passed",
-              "duration": 78039899
+              "duration": 131295099
             }
           },
           {
@@ -104,11 +104,11 @@
             "line": 15,
             "name": "I am an authenticated user API client",
             "match": {
-              "location": "src\\tests\\steps\\getBooks.steps.ts:37"
+              "location": "src\\tests\\steps\\getBooks.steps.ts:34"
             },
             "result": {
               "status": "passed",
-              "duration": 1195900
+              "duration": 2199400
             }
           },
           {
@@ -117,11 +117,11 @@
             "line": 16,
             "name": "I send a GET request to the \"books\" endpoint",
             "match": {
-              "location": "src\\tests\\steps\\getBooks.steps.ts:43"
+              "location": "src\\tests\\steps\\getBooks.steps.ts:40"
             },
             "result": {
               "status": "passed",
-              "duration": 78898499
+              "duration": 128151299
             }
           },
           {
@@ -130,11 +130,11 @@
             "line": 17,
             "name": "the response status should be 200",
             "match": {
-              "location": "src\\tests\\steps\\getBooks.steps.ts:52"
+              "location": "src\\tests\\steps\\getBooks.steps.ts:49"
             },
             "result": {
               "status": "passed",
-              "duration": 355699
+              "duration": 859800
             }
           },
           {
@@ -143,11 +143,11 @@
             "line": 18,
             "name": "the response should contain a list of books",
             "match": {
-              "location": "src\\tests\\steps\\getBooks.steps.ts:57"
+              "location": "src\\tests\\steps\\getBooks.steps.ts:54"
             },
             "result": {
               "status": "passed",
-              "duration": 1693600
+              "duration": 3861699
             }
           }
         ],
@@ -161,5 +161,142 @@
     "name": "Get all books",
     "tags": [],
     "uri": "src\\tests\\features\\getBooks.feature"
+  },
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "create-a-new-book;verify-the-response-of-the-post-/api/books-api-as-admin-with-valid-data",
+        "keyword": "Scenario",
+        "line": 3,
+        "name": "Verify the response of the POST /api/books API as admin with valid data",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "I am an authenticated POST admin API client",
+            "match": {
+              "location": "src\\tests\\steps\\postBook.steps.ts:11"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2232500
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 5,
+            "name": "I send a POST request to the \"books\" endpoint with valid book details",
+            "match": {
+              "location": "src\\tests\\steps\\postBook.steps.ts:21"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 125297199
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 6,
+            "name": "the response status of POST should be either 201 or 208",
+            "match": {
+              "location": "src\\tests\\steps\\postBook.steps.ts:33"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1536100
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 7,
+            "name": "the response should contain the created book details",
+            "match": {
+              "location": "src\\tests\\steps\\postBook.steps.ts:37"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5616799
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "create-a-new-book;verify-the-response-of-the-post-/api/books-api-as-user-with-valid-data",
+        "keyword": "Scenario",
+        "line": 9,
+        "name": "Verify the response of the POST /api/books API as user with valid data",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 10,
+            "name": "I am an authenticated POST user API client",
+            "match": {
+              "location": "src\\tests\\steps\\postBook.steps.ts:16"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2834899
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 11,
+            "name": "I send a POST request to the \"books\" endpoint with valid book details",
+            "match": {
+              "location": "src\\tests\\steps\\postBook.steps.ts:21"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 131734499
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 12,
+            "name": "the response status of POST should be either 201 or 208",
+            "match": {
+              "location": "src\\tests\\steps\\postBook.steps.ts:33"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 709800
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 13,
+            "name": "the response should contain the created book details",
+            "match": {
+              "location": "src\\tests\\steps\\postBook.steps.ts:37"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4447900
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "create-a-new-book",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Create a new book",
+    "tags": [],
+    "uri": "src\\tests\\features\\postBook.feature"
   }
 ]
