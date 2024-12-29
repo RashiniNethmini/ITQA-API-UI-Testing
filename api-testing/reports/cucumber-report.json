@@ -19,7 +19,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 329640399
+              "duration": 154208900
             }
           },
           {
@@ -32,7 +32,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 8030000
+              "duration": 3308900
             }
           },
           {
@@ -45,7 +45,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 168134900
+              "duration": 87040500
             }
           },
           {
@@ -54,11 +54,11 @@
             "line": 8,
             "name": "the response status should be 200",
             "match": {
-              "location": "src\\tests\\steps\\getBooks.steps.ts:49"
+              "location": "src\\tests\\steps\\getBooks.steps.ts:57"
             },
             "result": {
               "status": "passed",
-              "duration": 678899
+              "duration": 824900
             }
           },
           {
@@ -67,11 +67,11 @@
             "line": 9,
             "name": "the response should contain a list of books",
             "match": {
-              "location": "src\\tests\\steps\\getBooks.steps.ts:54"
+              "location": "src\\tests\\steps\\getBooks.steps.ts:62"
             },
             "result": {
               "status": "passed",
-              "duration": 2729900
+              "duration": 3740800
             }
           }
         ],
@@ -95,7 +95,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 145747100
+              "duration": 75671799
             }
           },
           {
@@ -108,7 +108,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 3277699
+              "duration": 2607200
             }
           },
           {
@@ -121,7 +121,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 150116599
+              "duration": 77763599
             }
           },
           {
@@ -130,11 +130,11 @@
             "line": 17,
             "name": "the response status should be 200",
             "match": {
-              "location": "src\\tests\\steps\\getBooks.steps.ts:49"
+              "location": "src\\tests\\steps\\getBooks.steps.ts:57"
             },
             "result": {
               "status": "passed",
-              "duration": 811400
+              "duration": 566200
             }
           },
           {
@@ -143,11 +143,138 @@
             "line": 18,
             "name": "the response should contain a list of books",
             "match": {
-              "location": "src\\tests\\steps\\getBooks.steps.ts:54"
+              "location": "src\\tests\\steps\\getBooks.steps.ts:62"
             },
             "result": {
               "status": "passed",
-              "duration": 3560100
+              "duration": 3604100
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "get-all-books;verify-the-response-of-the-get-/api/books/{bookid}-api-as-admin-with-non-existing-id",
+        "keyword": "Scenario",
+        "line": 20,
+        "name": "Verify the response of the Get /api/books/{bookId} API as admin with non-existing ID",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 21,
+            "name": "there is a book entry in the system",
+            "match": {
+              "location": "src\\tests\\steps\\getBooks.steps.ts:12"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 88160000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 22,
+            "name": "I am an authenticated admin API client",
+            "match": {
+              "location": "src\\tests\\steps\\getBooks.steps.ts:28"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 6654699
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 23,
+            "name": "I send a GET request to the \"books/100000\" endpoint with a non-existing ID",
+            "match": {
+              "location": "src\\tests\\steps\\getBooks.steps.ts:48"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 82670900
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 24,
+            "name": "the response status should be 404",
+            "match": {
+              "location": "src\\tests\\steps\\getBooks.steps.ts:57"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 717999
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "get-all-books;verify-the-response-of-the-get-/api/books/{bookid}-api-as-user-with-non-existing-id",
+        "keyword": "Scenario",
+        "line": 26,
+        "name": "Verify the response of the Get /api/books/{bookId} API as user with non-existing ID",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 27,
+            "name": "there is a book entry in the system",
+            "match": {
+              "location": "src\\tests\\steps\\getBooks.steps.ts:12"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 84091400
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 28,
+            "name": "I am an authenticated user API client",
+            "match": {
+              "location": "src\\tests\\steps\\getBooks.steps.ts:34"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2451999
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 29,
+            "name": "I send a GET request to the \"books/100000\" endpoint with a non-existing ID",
+            "match": {
+              "location": "src\\tests\\steps\\getBooks.steps.ts:48"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 82100899
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 30,
+            "name": "the response status should be 404",
+            "match": {
+              "location": "src\\tests\\steps\\getBooks.steps.ts:57"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 4039000,
+              "error_message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m404\u001b[39m\nReceived: \u001b[31m403\u001b[39m\n    at Proxy.<anonymous> (C:\\Users\\Naduni\\Documents\\GitHub\\ITQA-API-UI-Testing\\api-testing\\node_modules\\playwright\\lib\\matchers\\expect.js:227:37)\n    at World.<anonymous> (C:\\Users\\Naduni\\Documents\\GitHub\\ITQA-API-UI-Testing\\api-testing\\src\\tests\\steps\\getBooks.steps.ts:58:31)"
             }
           }
         ],
@@ -182,7 +309,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 3658600
+              "duration": 5376699
             }
           },
           {
@@ -195,7 +322,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 140283900
+              "duration": 77039400
             }
           },
           {
@@ -208,7 +335,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 893200
+              "duration": 881999
             }
           },
           {
@@ -221,7 +348,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 4482599
+              "duration": 15570699
             }
           }
         ],
@@ -245,7 +372,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 2762199
+              "duration": 1875900
             }
           },
           {
@@ -258,7 +385,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 150653299
+              "duration": 75476500
             }
           },
           {
@@ -271,7 +398,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 637600
+              "duration": 1712600
             }
           },
           {
@@ -284,7 +411,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 4563200
+              "duration": 8367399
             }
           }
         ],
@@ -308,7 +435,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1071100
+              "duration": 3539499
             }
           },
           {
@@ -321,7 +448,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 156336600
+              "duration": 78231699
             }
           },
           {
@@ -334,7 +461,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 492099
+              "duration": 1015499
             }
           },
           {
@@ -347,7 +474,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 2405899
+              "duration": 9690699
             }
           }
         ],
@@ -371,7 +498,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 881999
+              "duration": 2044900
             }
           },
           {
@@ -384,7 +511,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 146003700
+              "duration": 84713300
             }
           },
           {
@@ -397,7 +524,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 552100
+              "duration": 721799
             }
           },
           {
@@ -410,7 +537,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 5533400
+              "duration": 4071899
             }
           }
         ],

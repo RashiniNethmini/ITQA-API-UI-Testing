@@ -45,6 +45,14 @@ When('I send a GET request to the {string} endpoint', async (endpoint: string) =
     }
 });
 
+When('I send a GET request to the {string} endpoint with a non-existing ID', async (endpoint: string) => {
+    if (endpoint === 'books/100000') {
+        response = await booksPage.getBookById(100000); // Using the fixed non-existing ID
+    } else {
+        throw new Error(`Unknown endpoint: ${endpoint}`);
+    }
+});
+
 
 Then('the response status should be {int}', (status: number) => {
     expect(response.status()).toBe(status);
