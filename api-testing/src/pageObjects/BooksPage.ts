@@ -15,6 +15,12 @@ export class BooksPage {
         const response = await this.request.get(`${this.baseURL}/books`);
         return response;
     }
+
+    async getBookById(bookId: number) {
+        const response = await this.request.get(`${this.baseURL}/books/${bookId}`);
+        return response;
+    }
+
     async createBook(bookDetails: { title: string, author: string }) {
         const response = await this.request.post(`${this.baseURL}/books`, {
             data: bookDetails
