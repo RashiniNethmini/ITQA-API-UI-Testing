@@ -31,6 +31,7 @@ When('I send a DELETE request with an existing book ID', async () => {
     response = await booksPage.deleteBook(bookId);
 });
 
+//To delete a non-existing book
 When('I send a DELETE request with a non-existing book ID', async () => {
     const nonExistingBookId = 999999; // Use a number that is unlikely to exist
     response = await booksPage.deleteBook(nonExistingBookId);
@@ -42,6 +43,5 @@ Then('the response status of DELETE should be {int}', async (status: number) => 
 
 Then('the response should contain an error message {string}', async (expectedErrorMessage: string) => {
     const responseBody = await response.json();
-    // Check if the error message exists and matches the expected message
     expect(responseBody.error).toBe(expectedErrorMessage);
 });
