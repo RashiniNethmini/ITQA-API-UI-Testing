@@ -86,6 +86,18 @@ When('I send 2 POST requests to the {string} endpoint with the same title but di
     }
 });
 
+When('I send a POST request to the {string} endpoint without title', async function (endpoint: string) {
+    if (endpoint === 'books') {
+        const bookDetails = {
+            title: null,
+            author: 'Some Author'
+        };
+        response = await booksPage.createBook(bookDetails);
+    } else {
+        throw new Error(`Unknown endpoint: ${endpoint}`);
+    }
+});
+
 
 Then('the response status of POST should be either {int} or {int}', (status1: number, status2: number) => {
     validateResponseTwoStatus(response, status1, status2);
