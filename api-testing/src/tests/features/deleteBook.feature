@@ -14,3 +14,18 @@ Feature: Delete a book
     When I send a DELETE request with an existing book ID
     Then the response status of DELETE should be 403
     Then the response should contain an error message "User is not permitted."
+
+
+
+# Delete a book with a non-existing ID
+
+  Scenario: Verify the response of the DELETE API as admin with a non-existing ID
+    Given I am an authenticated DELETE admin API client
+    When I send a DELETE request with a non-existing book ID
+    Then the response status of DELETE should be 404
+
+  Scenario: Verify the response of the DELETE API as user with a non-existing ID
+    Given I am an authenticated DELETE user API client
+    When I send a DELETE request with a non-existing book ID
+    Then the response status of DELETE should be 403
+    Then the response should contain an error message "User is not permitted."
