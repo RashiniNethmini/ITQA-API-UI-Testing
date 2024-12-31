@@ -1,4 +1,4 @@
-Feature: Update an existing book by changing the author
+Feature: Update a book
 
   Scenario: Verify the response of the PUT /api/books/{id} API as admin
     
