@@ -2,8 +2,8 @@ import { Given, When, Then } from '@cucumber/cucumber';
 import { RequestFactory } from '../../requests/requestFactory';
 import { BooksPage } from '../../pageObjects/BooksPage';
 import { credentials } from '../../config';
-import {  validateBookCreationResponse,validateBookCreationResponseDifferentTiltle,validateBookCreationResponseEmpty } from '../../requests/BookCreation';
-import {  validateResponseTwoStatus } from '../../requests/ValidateResponseStatus'; 
+import {  validateBookCreationResponse,validateBookCreationResponseDifferentTiltle,validateBookCreationResponseEmpty, validateBookCreationResponseDifferentAuthors } from '../../requests/BookCreation';
+import {  validateResponseTwoStatus, validateResponseStatus } from '../../requests/ValidateResponseStatus'; 
 import { expect } from 'playwright/test';
 
 let booksPage: BooksPage;
@@ -68,6 +68,23 @@ When('I send a POST request to the {string} endpoint with empty title', async fu
     }
 });
 
+When('I send 2 POST requests to the {string} endpoint with the same title but different authors', async function (endpoint: string) {
+    if (endpoint === 'books') {
+        const bookDetails1 = {
+            title: 'Common Book Title',
+            author: 'Author One'
+        };
+        const randomAuthor = `Author-${Math.floor(Math.random() * 100000)}`; // Randomly generated author
+        const bookDetails2 = {
+            title: 'Common Book Title',
+            author: randomAuthor
+        };
+    await booksPage.createBookWithoutResponse(bookDetails1);
+    await booksPage.createBook(bookDetails2);
+    } else {
+        throw new Error(`Unknown endpoint: ${endpoint}`);
+    }
+});
 
 
 Then('the response status of POST should be either {int} or {int}', (status1: number, status2: number) => {
@@ -86,7 +103,12 @@ Then('the response should contain the details of both books', async () => {
     await validateBookCreationResponseDifferentTiltle(response);
 });
 
-Then('the response status of POST should be {int}', (status: number) => {
-    expect(response.status()).toBe(status);
+Then('the response should contain the details of both books with the same title but different authors', async () => {
+    await validateBookCreationResponseDifferentAuthors(response);
+});
+
+
+Then('the response status of POST should be {int}', async (status: number) => {
+    await validateResponseStatus(response, status);
 });
 

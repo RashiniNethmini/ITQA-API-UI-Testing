@@ -21,6 +21,12 @@ export class BooksPage {
         return response;
     }
 
+    async createBookWithoutResponse(bookDetails: { title: string, author: string }) {
+        const response = await this.request.post(`${this.baseURL}/books`, {
+            data: bookDetails
+        });
+    }
+
     async createBook(bookDetails: { title: string, author: string }) {
         const response = await this.request.post(`${this.baseURL}/books`, {
             data: bookDetails
@@ -28,4 +34,12 @@ export class BooksPage {
         });
         return response;
     }
+
+    async updateBook(id: string, updatedBookData: {id: string, title:string, author: string}) {
+        const response = await this.request.put(`${this.baseURL}/books/${id}`, {
+            data: updatedBookData
+        });
+        return response;
+    }
+
 }
