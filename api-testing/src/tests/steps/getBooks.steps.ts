@@ -6,12 +6,14 @@ import { expect } from 'playwright/test';
 import { BooksPage } from '../../pageObjects/BooksPage';
 import { validateResponseStatus } from '../../requests/ValidateResponseStatus';
 import { validateBookByIdDetails } from '../../requests/BookAquisition'; 
+import { createRandomTitleBook } from '../../requests/Randomizer';
 
 
 let booksPage: BooksPage;
 let response: any;
-let bookId: number;
 let randomTitle: string;
+let bookId: number;  
+
 
 
 Given('there is a book entry in the system', async () => {
@@ -38,23 +40,10 @@ Given('I am an authenticated user API client', async () => {
 });
 
 Given('I create a new book with a random title', async () => {
-    randomTitle = `Book-${Math.floor(Math.random() * 100000)}`; // Randomly generated title
-        const bookData = {
-            title: randomTitle,
-            author: 'Random Author',
-        };
-        const request = await RequestFactory.createRequest('Basic', credentials.admin, credentials.password);
-        const booksPage = new BooksPage(request);
-   
-        const addResponse = await booksPage.createBook(bookData);
-        expect([201, 208].includes(addResponse.status())).toBe(true);
-   
-        const createdBook = await addResponse.json();
-        bookId = createdBook.id;
-        expect(bookId).toBeTruthy();
-        // console.log(`Created bookId: ${bookId}`);
-    });
-
+    const result = await createRandomTitleBook();
+    randomTitle = result.randomTitle; 
+    bookId = result.bookId; 
+});
 
 
 When('I send a GET request to the {string} endpoint', async (endpoint: string) => {

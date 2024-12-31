@@ -3,6 +3,7 @@ import { RequestFactory } from '../../requests/requestFactory';
 import { credentials } from '../../config';
 import { expect } from 'playwright/test';
 import { BooksPage } from '../../pageObjects/BooksPage';
+import { createRandomTitleBook } from '../../requests/Randomizer';
 
 let booksPage: BooksPage;
 let response: any;
@@ -11,21 +12,9 @@ let randomTitle: string;
 
 
 Given('I create a new book entry with a random title', async () => {
-    randomTitle = `Book-${Math.floor(Math.random() * 100000)}`; // Randomly generated title
-    const bookData = {
-        title: randomTitle,
-        author: 'Random Author',
-    };
-    const request = await RequestFactory.createRequest('Basic', credentials.admin, credentials.password);
-    const booksPage = new BooksPage(request);
-
-    const addResponse = await booksPage.createBook(bookData);
-    expect([201, 208].includes(addResponse.status())).toBe(true);
-
-    const createdBook = await addResponse.json();
-    bookId = createdBook.id;
-    expect(bookId).toBeTruthy();
-    // console.log(`Created bookId: ${bookId}`); 
+    const result = await createRandomTitleBook();
+        randomTitle = result.randomTitle; 
+        bookId = result.bookId; 
 });
 
 Given('I am an authenticated PUT admin API client', async () => {
