@@ -4,24 +4,24 @@ import { RequestFactory } from '../../requests/requestFactory';
 import { credentials } from '../../config';
 import { expect } from 'playwright/test';
 import { BooksPage } from '../../pageObjects/BooksPage';
+import { validateResponseStatus } from '../../requests/ValidateResponseStatus'; 
+
 
 let booksPage: BooksPage;
 let response: any;
+let bookId: number;
+let randomTitle: string;
 
 
 Given('there is a book entry in the system', async () => {
     const request = await RequestFactory.createRequest('Basic', credentials.admin, credentials.password);
     booksPage = new BooksPage(request);
-
-
     const bookData = {
         title: 'Sample Book',
         author: 'Sample Author',
     };
     const addResponse = await booksPage.createBook(bookData);
     expect([201, 208].includes(addResponse.status())).toBe(true);
-
-
 });
 
 
@@ -54,9 +54,9 @@ When('I send a GET request to the {string} endpoint with a non-existing ID', asy
 });
 
 
-Then('the response status should be {int}', (status: number) => {
-    expect(response.status()).toBe(status);
-});
+Then('the response status should be {int}', async (status: number) => {
+    await validateResponseStatus(response, status);
+    });
 
 
 Then('the response should contain a list of books', async () => {

@@ -64,3 +64,21 @@ export async function validateBookCreationResponseDifferentTiltle(response: any)
         expect(responseBody).toBe('Book Already Exists');
     }
 }
+
+export async function validateBookCreationResponseDifferentAuthors(responses: any[]) {
+    const responseBodies = await Promise.all(
+        responses.map(async (response) => {
+            let responseBody;
+            try {
+                responseBody = await response.json();
+            } catch (error) {
+                responseBody = await response.text();
+            }
+            return responseBody;
+        })
+    );
+    expect(responseBodies.length).toBe(2);
+    const [book1, book2] = responseBodies;
+    expect(book1.title).toBe(book2.title);
+    expect(book1.author).not.toBe(book2.author);
+}

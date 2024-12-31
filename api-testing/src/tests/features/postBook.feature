@@ -12,6 +12,7 @@ Scenario: Verify the response of the POST /api/books API as user with valid data
     Then the response status of POST should be either 201 or 208
     And the response should contain the created book details
 
+# Create book with empty title and author
 
 Scenario: Verify the response of the POST /api/books API as admin with empty title and author
   Given I am an authenticated POST admin API client
@@ -25,17 +26,21 @@ Scenario: Verify the response of the POST /api/books API as user with empty titl
   Then the response status of POST should be either 201 or 208
   And the response should contain the created book details with empty title and author
 
+# Create 2 different books with same with author but different titles
+
 Scenario: Attempt to create two different books with the same author but different titles as admin
     Given I am an authenticated POST admin API client
     When I send a POST request to the "books" endpoint with two different titles and the same author
     Then the response status of POST should be either 201 or 208
     And the response should contain the details of both books
 
-  Scenario: Attempt to create two different books with the same author but different titles as user
+Scenario: Attempt to create two different books with the same author but different titles as user
     Given I am an authenticated POST user API client
     When I send a POST request to the "books" endpoint with two different titles and the same author
     Then the response status of POST should be either 201 or 208
     And the response should contain the details of both books
+
+#Create book with empty title
 
 Scenario: Verify the response of the POST /api/books API as admin with empty title 
   Given I am an authenticated POST admin API client
@@ -46,3 +51,18 @@ Scenario: Verify the response of the POST /api/books API as user with empty titl
   Given I am an authenticated POST user API client
   When I send a POST request to the "books" endpoint with empty title
   Then the response status of POST should be 400
+
+#Add a new book with an already existing title but different author
+
+  Scenario: Verify the response of the POST /api/books API as admin with an existing title but a different author
+    Given I am an authenticated POST admin API client
+    When I send 2 POST requests to the "books" endpoint with the same title but different authors
+    Then the response status of POST should be 201
+    And the response should contain the details of both books with the same title but different authors
+
+  Scenario: Verify the response of the POST /api/books API as user with an existing title but a different author
+    Given I am an authenticated POST user API client
+    When I send 2 POST requests to the "books" endpoint with the same title but different authors
+    Then the response status of POST should be 201
+    And the response should contain the details of both books with the same title but different authors
+
