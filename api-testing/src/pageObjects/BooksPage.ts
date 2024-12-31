@@ -27,7 +27,7 @@ export class BooksPage {
         });
     }
 
-    async createBook(bookDetails: { title: string, author: string }) {
+    async createBook(bookDetails: { title: any, author: string }) {
         const response = await this.request.post(`${this.baseURL}/books`, {
             data: bookDetails
             

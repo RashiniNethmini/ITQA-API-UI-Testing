@@ -66,3 +66,15 @@ Scenario: Verify the response of the POST /api/books API as user with empty titl
     Then the response status of POST should be 201
     And the response should contain the details of both books with the same title but different authors
 
+#Create book without title (null)
+
+Scenario: Verify the response of the POST /api/books API as admin without title 
+  Given I am an authenticated POST admin API client
+  When I send a POST request to the "books" endpoint without title
+  Then the response status of POST should be 400
+
+Scenario: Verify the response of the POST /api/books API as user without title 
+  Given I am an authenticated POST user API client
+  When I send a POST request to the "books" endpoint without title
+  Then the response status of POST should be 400
+
