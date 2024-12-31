@@ -4,10 +4,10 @@
     "elements": [
       {
         "description": "",
-        "id": "delete-a-book;verify-the-response-of-the-delete-api-as-admin-with-non-existing-id",
+        "id": "delete-a-book;verify-the-response-of-the-delete-api-as-admin-with-an-existing-id",
         "keyword": "Scenario",
         "line": 5,
-        "name": "Verify the response of the DELETE API as admin with non-existing ID",
+        "name": "Verify the response of the DELETE API as admin with an existing ID",
         "steps": [
           {
             "arguments": [],
@@ -15,11 +15,11 @@
             "line": 6,
             "name": "a random book is created",
             "match": {
-              "location": "src\\tests\\steps\\deleteBook.steps.ts:15"
+              "location": "src\\tests\\steps\\deleteBook.steps.ts:16"
             },
             "result": {
               "status": "passed",
-              "duration": 160725400
+              "duration": 1120602699
             }
           },
           {
@@ -28,11 +28,11 @@
             "line": 7,
             "name": "I am an authenticated DELETE admin API client",
             "match": {
-              "location": "src\\tests\\steps\\deleteBook.steps.ts:30"
+              "location": "src\\tests\\steps\\deleteBook.steps.ts:23"
             },
             "result": {
               "status": "passed",
-              "duration": 5737299
+              "duration": 2351900
             }
           },
           {
@@ -41,11 +41,11 @@
             "line": 8,
             "name": "I send a DELETE request with an existing book ID",
             "match": {
-              "location": "src\\tests\\steps\\deleteBook.steps.ts:42"
+              "location": "src\\tests\\steps\\deleteBook.steps.ts:35"
             },
             "result": {
               "status": "passed",
-              "duration": 129006400
+              "duration": 132693299
             }
           },
           {
@@ -54,12 +54,12 @@
             "line": 9,
             "name": "the response status of DELETE should be 200",
             "match": {
-              "location": "src\\tests\\steps\\deleteBook.steps.ts:47"
+              "location": "src\\tests\\steps\\deleteBook.steps.ts:40"
             },
             "result": {
               "status": "failed",
-              "duration": 3326900,
-              "error_message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m200\u001b[39m\nReceived: \u001b[31m403\u001b[39m\n    at Proxy.<anonymous> (D:\\ITQA-API-UI-Testing\\api-testing\\node_modules\\playwright\\lib\\matchers\\expect.js:227:37)\n    at validateResponseStatus (D:\\ITQA-API-UI-Testing\\api-testing\\src\\requests\\ValidateResponseStatus.ts:10:28)\n    at World.<anonymous> (D:\\ITQA-API-UI-Testing\\api-testing\\src\\tests\\steps\\deleteBook.steps.ts:48:33)"
+              "duration": 4956899,
+              "error_message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m200\u001b[39m\nReceived: \u001b[31m403\u001b[39m\n    at Proxy.<anonymous> (C:\\ITQA-API-UI-Testing\\api-testing\\node_modules\\playwright\\lib\\matchers\\expect.js:227:37)\n    at validateResponseStatus (C:\\ITQA-API-UI-Testing\\api-testing\\src\\requests\\ValidateResponseStatus.ts:10:28)\n    at World.<anonymous> (C:\\ITQA-API-UI-Testing\\api-testing\\src\\tests\\steps\\deleteBook.steps.ts:41:33)"
             }
           }
         ],
@@ -68,10 +68,10 @@
       },
       {
         "description": "",
-        "id": "delete-a-book;verify-the-response-of-the-delete-api-as-user-with-non-existing-id",
+        "id": "delete-a-book;verify-the-response-of-the-delete-api-as-user-with-an-existing-id",
         "keyword": "Scenario",
         "line": 11,
-        "name": "Verify the response of the DELETE API as user with non-existing ID",
+        "name": "Verify the response of the DELETE API as user with an existing ID",
         "steps": [
           {
             "arguments": [],
@@ -79,11 +79,11 @@
             "line": 12,
             "name": "a random book is created",
             "match": {
-              "location": "src\\tests\\steps\\deleteBook.steps.ts:15"
+              "location": "src\\tests\\steps\\deleteBook.steps.ts:16"
             },
             "result": {
               "status": "passed",
-              "duration": 127896800
+              "duration": 98447799
             }
           },
           {
@@ -92,11 +92,11 @@
             "line": 13,
             "name": "I am an authenticated DELETE user API client",
             "match": {
-              "location": "src\\tests\\steps\\deleteBook.steps.ts:36"
+              "location": "src\\tests\\steps\\deleteBook.steps.ts:29"
             },
             "result": {
               "status": "passed",
-              "duration": 2571299
+              "duration": 2526299
             }
           },
           {
@@ -105,11 +105,11 @@
             "line": 14,
             "name": "I send a DELETE request with an existing book ID",
             "match": {
-              "location": "src\\tests\\steps\\deleteBook.steps.ts:42"
+              "location": "src\\tests\\steps\\deleteBook.steps.ts:35"
             },
             "result": {
               "status": "passed",
-              "duration": 122420199
+              "duration": 155335199
             }
           },
           {
@@ -118,12 +118,12 @@
             "line": 15,
             "name": "the response status of DELETE should be 403",
             "match": {
-              "location": "src\\tests\\steps\\deleteBook.steps.ts:47"
+              "location": "src\\tests\\steps\\deleteBook.steps.ts:40"
             },
             "result": {
               "status": "failed",
-              "duration": 927599,
-              "error_message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m403\u001b[39m\nReceived: \u001b[31m200\u001b[39m\n    at Proxy.<anonymous> (D:\\ITQA-API-UI-Testing\\api-testing\\node_modules\\playwright\\lib\\matchers\\expect.js:227:37)\n    at validateResponseStatus (D:\\ITQA-API-UI-Testing\\api-testing\\src\\requests\\ValidateResponseStatus.ts:10:28)\n    at World.<anonymous> (D:\\ITQA-API-UI-Testing\\api-testing\\src\\tests\\steps\\deleteBook.steps.ts:48:33)"
+              "duration": 1014699,
+              "error_message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m403\u001b[39m\nReceived: \u001b[31m200\u001b[39m\n    at Proxy.<anonymous> (C:\\ITQA-API-UI-Testing\\api-testing\\node_modules\\playwright\\lib\\matchers\\expect.js:227:37)\n    at validateResponseStatus (C:\\ITQA-API-UI-Testing\\api-testing\\src\\requests\\ValidateResponseStatus.ts:10:28)\n    at World.<anonymous> (C:\\ITQA-API-UI-Testing\\api-testing\\src\\tests\\steps\\deleteBook.steps.ts:41:33)"
             }
           },
           {
@@ -132,7 +132,7 @@
             "line": 16,
             "name": "the response should contain an error message \"User is not permitted.\"",
             "match": {
-              "location": "src\\tests\\steps\\deleteBook.steps.ts:52"
+              "location": "src\\tests\\steps\\deleteBook.steps.ts:45"
             },
             "result": {
               "status": "skipped",
@@ -167,11 +167,11 @@
             "line": 6,
             "name": "there is a book entry in the system",
             "match": {
-              "location": "src\\tests\\steps\\getBooks.steps.ts:17"
+              "location": "src\\tests\\steps\\getBooks.steps.ts:19"
             },
             "result": {
               "status": "passed",
-              "duration": 114450999
+              "duration": 223849400
             }
           },
           {
@@ -180,11 +180,11 @@
             "line": 7,
             "name": "I am an authenticated admin API client",
             "match": {
-              "location": "src\\tests\\steps\\getBooks.steps.ts:29"
+              "location": "src\\tests\\steps\\getBooks.steps.ts:31"
             },
             "result": {
               "status": "passed",
-              "duration": 2333899
+              "duration": 3943800
             }
           },
           {
@@ -193,11 +193,11 @@
             "line": 8,
             "name": "I send a GET request to the \"books\" endpoint",
             "match": {
-              "location": "src\\tests\\steps\\getBooks.steps.ts:60"
+              "location": "src\\tests\\steps\\getBooks.steps.ts:49"
             },
             "result": {
               "status": "passed",
-              "duration": 114564699
+              "duration": 137528699
             }
           },
           {
@@ -206,11 +206,11 @@
             "line": 9,
             "name": "the response status should be 200",
             "match": {
-              "location": "src\\tests\\steps\\getBooks.steps.ts:82"
+              "location": "src\\tests\\steps\\getBooks.steps.ts:71"
             },
             "result": {
               "status": "passed",
-              "duration": 755699
+              "duration": 609300
             }
           },
           {
@@ -219,11 +219,11 @@
             "line": 10,
             "name": "the response should contain a list of books",
             "match": {
-              "location": "src\\tests\\steps\\getBooks.steps.ts:87"
+              "location": "src\\tests\\steps\\getBooks.steps.ts:76"
             },
             "result": {
               "status": "passed",
-              "duration": 3914499
+              "duration": 2403299
             }
           }
         ],
@@ -243,11 +243,11 @@
             "line": 14,
             "name": "there is a book entry in the system",
             "match": {
-              "location": "src\\tests\\steps\\getBooks.steps.ts:17"
+              "location": "src\\tests\\steps\\getBooks.steps.ts:19"
             },
             "result": {
               "status": "passed",
-              "duration": 118638500
+              "duration": 106747800
             }
           },
           {
@@ -256,11 +256,11 @@
             "line": 15,
             "name": "I am an authenticated user API client",
             "match": {
-              "location": "src\\tests\\steps\\getBooks.steps.ts:35"
+              "location": "src\\tests\\steps\\getBooks.steps.ts:37"
             },
             "result": {
               "status": "passed",
-              "duration": 2196899
+              "duration": 4980700
             }
           },
           {
@@ -269,11 +269,11 @@
             "line": 16,
             "name": "I send a GET request to the \"books\" endpoint",
             "match": {
-              "location": "src\\tests\\steps\\getBooks.steps.ts:60"
+              "location": "src\\tests\\steps\\getBooks.steps.ts:49"
             },
             "result": {
               "status": "passed",
-              "duration": 113332300
+              "duration": 98141100
             }
           },
           {
@@ -282,11 +282,11 @@
             "line": 17,
             "name": "the response status should be 200",
             "match": {
-              "location": "src\\tests\\steps\\getBooks.steps.ts:82"
+              "location": "src\\tests\\steps\\getBooks.steps.ts:71"
             },
             "result": {
               "status": "passed",
-              "duration": 845299
+              "duration": 578899
             }
           },
           {
@@ -295,11 +295,11 @@
             "line": 18,
             "name": "the response should contain a list of books",
             "match": {
-              "location": "src\\tests\\steps\\getBooks.steps.ts:87"
+              "location": "src\\tests\\steps\\getBooks.steps.ts:76"
             },
             "result": {
               "status": "passed",
-              "duration": 2770200
+              "duration": 2175699
             }
           }
         ],
@@ -319,11 +319,11 @@
             "line": 23,
             "name": "there is a book entry in the system",
             "match": {
-              "location": "src\\tests\\steps\\getBooks.steps.ts:17"
+              "location": "src\\tests\\steps\\getBooks.steps.ts:19"
             },
             "result": {
               "status": "passed",
-              "duration": 123737200
+              "duration": 90150200
             }
           },
           {
@@ -332,11 +332,11 @@
             "line": 24,
             "name": "I am an authenticated admin API client",
             "match": {
-              "location": "src\\tests\\steps\\getBooks.steps.ts:29"
+              "location": "src\\tests\\steps\\getBooks.steps.ts:31"
             },
             "result": {
               "status": "passed",
-              "duration": 2329099
+              "duration": 2092699
             }
           },
           {
@@ -345,11 +345,11 @@
             "line": 25,
             "name": "I send a GET request to the \"books/100000\" endpoint with a non-existing ID",
             "match": {
-              "location": "src\\tests\\steps\\getBooks.steps.ts:68"
+              "location": "src\\tests\\steps\\getBooks.steps.ts:57"
             },
             "result": {
               "status": "passed",
-              "duration": 122118800
+              "duration": 91238900
             }
           },
           {
@@ -358,11 +358,11 @@
             "line": 26,
             "name": "the response status should be 404",
             "match": {
-              "location": "src\\tests\\steps\\getBooks.steps.ts:82"
+              "location": "src\\tests\\steps\\getBooks.steps.ts:71"
             },
             "result": {
               "status": "passed",
-              "duration": 702699
+              "duration": 615300
             }
           }
         ],
@@ -382,11 +382,11 @@
             "line": 29,
             "name": "there is a book entry in the system",
             "match": {
-              "location": "src\\tests\\steps\\getBooks.steps.ts:17"
+              "location": "src\\tests\\steps\\getBooks.steps.ts:19"
             },
             "result": {
               "status": "passed",
-              "duration": 130475399
+              "duration": 88630000
             }
           },
           {
@@ -395,11 +395,11 @@
             "line": 30,
             "name": "I am an authenticated user API client",
             "match": {
-              "location": "src\\tests\\steps\\getBooks.steps.ts:35"
+              "location": "src\\tests\\steps\\getBooks.steps.ts:37"
             },
             "result": {
               "status": "passed",
-              "duration": 1976500
+              "duration": 1474000
             }
           },
           {
@@ -408,11 +408,11 @@
             "line": 31,
             "name": "I send a GET request to the \"books/100000\" endpoint with a non-existing ID",
             "match": {
-              "location": "src\\tests\\steps\\getBooks.steps.ts:68"
+              "location": "src\\tests\\steps\\getBooks.steps.ts:57"
             },
             "result": {
               "status": "passed",
-              "duration": 115290799
+              "duration": 93039700
             }
           },
           {
@@ -421,12 +421,12 @@
             "line": 32,
             "name": "the response status should be 404",
             "match": {
-              "location": "src\\tests\\steps\\getBooks.steps.ts:82"
+              "location": "src\\tests\\steps\\getBooks.steps.ts:71"
             },
             "result": {
               "status": "failed",
-              "duration": 984200,
-              "error_message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m404\u001b[39m\nReceived: \u001b[31m403\u001b[39m\n    at Proxy.<anonymous> (D:\\ITQA-API-UI-Testing\\api-testing\\node_modules\\playwright\\lib\\matchers\\expect.js:227:37)\n    at validateResponseStatus (D:\\ITQA-API-UI-Testing\\api-testing\\src\\requests\\ValidateResponseStatus.ts:10:28)\n    at World.<anonymous> (D:\\ITQA-API-UI-Testing\\api-testing\\src\\tests\\steps\\getBooks.steps.ts:83:33)"
+              "duration": 787900,
+              "error_message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m404\u001b[39m\nReceived: \u001b[31m403\u001b[39m\n    at Proxy.<anonymous> (C:\\ITQA-API-UI-Testing\\api-testing\\node_modules\\playwright\\lib\\matchers\\expect.js:227:37)\n    at validateResponseStatus (C:\\ITQA-API-UI-Testing\\api-testing\\src\\requests\\ValidateResponseStatus.ts:10:28)\n    at World.<anonymous> (C:\\ITQA-API-UI-Testing\\api-testing\\src\\tests\\steps\\getBooks.steps.ts:72:33)"
             }
           }
         ],
@@ -446,11 +446,11 @@
             "line": 38,
             "name": "I create a new book with a random title",
             "match": {
-              "location": "src\\tests\\steps\\getBooks.steps.ts:40"
+              "location": "src\\tests\\steps\\getBooks.steps.ts:42"
             },
             "result": {
               "status": "passed",
-              "duration": 118567299
+              "duration": 124992099
             }
           },
           {
@@ -459,11 +459,11 @@
             "line": 39,
             "name": "I am an authenticated admin API client",
             "match": {
-              "location": "src\\tests\\steps\\getBooks.steps.ts:29"
+              "location": "src\\tests\\steps\\getBooks.steps.ts:31"
             },
             "result": {
               "status": "passed",
-              "duration": 1339600
+              "duration": 1831599
             }
           },
           {
@@ -472,11 +472,11 @@
             "line": 40,
             "name": "I send a GET request with an existing book ID",
             "match": {
-              "location": "src\\tests\\steps\\getBooks.steps.ts:76"
+              "location": "src\\tests\\steps\\getBooks.steps.ts:65"
             },
             "result": {
               "status": "passed",
-              "duration": 112264199
+              "duration": 88632099
             }
           },
           {
@@ -485,11 +485,11 @@
             "line": 41,
             "name": "the response status should be 200",
             "match": {
-              "location": "src\\tests\\steps\\getBooks.steps.ts:82"
+              "location": "src\\tests\\steps\\getBooks.steps.ts:71"
             },
             "result": {
               "status": "passed",
-              "duration": 671599
+              "duration": 506100
             }
           },
           {
@@ -498,11 +498,11 @@
             "line": 42,
             "name": "the response should contain the details of the book",
             "match": {
-              "location": "src\\tests\\steps\\getBooks.steps.ts:93"
+              "location": "src\\tests\\steps\\getBooks.steps.ts:82"
             },
             "result": {
               "status": "passed",
-              "duration": 3794899
+              "duration": 2026899
             }
           }
         ],
@@ -522,11 +522,11 @@
             "line": 45,
             "name": "I create a new book with a random title",
             "match": {
-              "location": "src\\tests\\steps\\getBooks.steps.ts:40"
+              "location": "src\\tests\\steps\\getBooks.steps.ts:42"
             },
             "result": {
               "status": "passed",
-              "duration": 122439099
+              "duration": 96524699
             }
           },
           {
@@ -535,11 +535,11 @@
             "line": 46,
             "name": "I am an authenticated user API client",
             "match": {
-              "location": "src\\tests\\steps\\getBooks.steps.ts:35"
+              "location": "src\\tests\\steps\\getBooks.steps.ts:37"
             },
             "result": {
               "status": "passed",
-              "duration": 2218200
+              "duration": 1210900
             }
           },
           {
@@ -548,11 +548,11 @@
             "line": 47,
             "name": "I send a GET request with an existing book ID",
             "match": {
-              "location": "src\\tests\\steps\\getBooks.steps.ts:76"
+              "location": "src\\tests\\steps\\getBooks.steps.ts:65"
             },
             "result": {
               "status": "passed",
-              "duration": 114732299
+              "duration": 95634599
             }
           },
           {
@@ -561,12 +561,12 @@
             "line": 48,
             "name": "the response status should be 200",
             "match": {
-              "location": "src\\tests\\steps\\getBooks.steps.ts:82"
+              "location": "src\\tests\\steps\\getBooks.steps.ts:71"
             },
             "result": {
               "status": "failed",
-              "duration": 778999,
-              "error_message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m200\u001b[39m\nReceived: \u001b[31m403\u001b[39m\n    at Proxy.<anonymous> (D:\\ITQA-API-UI-Testing\\api-testing\\node_modules\\playwright\\lib\\matchers\\expect.js:227:37)\n    at validateResponseStatus (D:\\ITQA-API-UI-Testing\\api-testing\\src\\requests\\ValidateResponseStatus.ts:10:28)\n    at World.<anonymous> (D:\\ITQA-API-UI-Testing\\api-testing\\src\\tests\\steps\\getBooks.steps.ts:83:33)"
+              "duration": 713200,
+              "error_message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m200\u001b[39m\nReceived: \u001b[31m403\u001b[39m\n    at Proxy.<anonymous> (C:\\ITQA-API-UI-Testing\\api-testing\\node_modules\\playwright\\lib\\matchers\\expect.js:227:37)\n    at validateResponseStatus (C:\\ITQA-API-UI-Testing\\api-testing\\src\\requests\\ValidateResponseStatus.ts:10:28)\n    at World.<anonymous> (C:\\ITQA-API-UI-Testing\\api-testing\\src\\tests\\steps\\getBooks.steps.ts:72:33)"
             }
           },
           {
@@ -575,7 +575,7 @@
             "line": 49,
             "name": "the response should contain the details of the book",
             "match": {
-              "location": "src\\tests\\steps\\getBooks.steps.ts:93"
+              "location": "src\\tests\\steps\\getBooks.steps.ts:82"
             },
             "result": {
               "status": "skipped",
@@ -614,7 +614,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1298200
+              "duration": 2154700
             }
           },
           {
@@ -627,7 +627,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 115542199
+              "duration": 88780199
             }
           },
           {
@@ -636,11 +636,11 @@
             "line": 6,
             "name": "the response status of POST should be either 201 or 208",
             "match": {
-              "location": "src\\tests\\steps\\postBook.steps.ts:90"
+              "location": "src\\tests\\steps\\postBook.steps.ts:102"
             },
             "result": {
               "status": "passed",
-              "duration": 1065399
+              "duration": 467899
             }
           },
           {
@@ -649,11 +649,11 @@
             "line": 7,
             "name": "the response should contain the created book details",
             "match": {
-              "location": "src\\tests\\steps\\postBook.steps.ts:94"
+              "location": "src\\tests\\steps\\postBook.steps.ts:106"
             },
             "result": {
               "status": "passed",
-              "duration": 3853600
+              "duration": 3278999
             }
           }
         ],
@@ -677,7 +677,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1359099
+              "duration": 1253300
             }
           },
           {
@@ -690,7 +690,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 112583899
+              "duration": 83961900
             }
           },
           {
@@ -699,11 +699,11 @@
             "line": 12,
             "name": "the response status of POST should be either 201 or 208",
             "match": {
-              "location": "src\\tests\\steps\\postBook.steps.ts:90"
+              "location": "src\\tests\\steps\\postBook.steps.ts:102"
             },
             "result": {
               "status": "passed",
-              "duration": 899100
+              "duration": 364000
             }
           },
           {
@@ -712,11 +712,11 @@
             "line": 13,
             "name": "the response should contain the created book details",
             "match": {
-              "location": "src\\tests\\steps\\postBook.steps.ts:94"
+              "location": "src\\tests\\steps\\postBook.steps.ts:106"
             },
             "result": {
               "status": "passed",
-              "duration": 9042900
+              "duration": 3295299
             }
           }
         ],
@@ -740,7 +740,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1419400
+              "duration": 1066700
             }
           },
           {
@@ -753,7 +753,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 125621199
+              "duration": 90648999
             }
           },
           {
@@ -762,11 +762,11 @@
             "line": 20,
             "name": "the response status of POST should be either 201 or 208",
             "match": {
-              "location": "src\\tests\\steps\\postBook.steps.ts:90"
+              "location": "src\\tests\\steps\\postBook.steps.ts:102"
             },
             "result": {
               "status": "passed",
-              "duration": 709800
+              "duration": 221500
             }
           },
           {
@@ -775,11 +775,11 @@
             "line": 21,
             "name": "the response should contain the created book details with empty title and author",
             "match": {
-              "location": "src\\tests\\steps\\postBook.steps.ts:98"
+              "location": "src\\tests\\steps\\postBook.steps.ts:110"
             },
             "result": {
               "status": "passed",
-              "duration": 4969800
+              "duration": 2114299
             }
           }
         ],
@@ -803,7 +803,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1948100
+              "duration": 6749100
             }
           },
           {
@@ -816,7 +816,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 119931800
+              "duration": 84767799
             }
           },
           {
@@ -825,11 +825,11 @@
             "line": 26,
             "name": "the response status of POST should be either 201 or 208",
             "match": {
-              "location": "src\\tests\\steps\\postBook.steps.ts:90"
+              "location": "src\\tests\\steps\\postBook.steps.ts:102"
             },
             "result": {
               "status": "passed",
-              "duration": 495700
+              "duration": 303899
             }
           },
           {
@@ -838,11 +838,11 @@
             "line": 27,
             "name": "the response should contain the created book details with empty title and author",
             "match": {
-              "location": "src\\tests\\steps\\postBook.steps.ts:98"
+              "location": "src\\tests\\steps\\postBook.steps.ts:110"
             },
             "result": {
               "status": "passed",
-              "duration": 3523599
+              "duration": 2808800
             }
           }
         ],
@@ -866,7 +866,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1366599
+              "duration": 1117399
             }
           },
           {
@@ -879,7 +879,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 124710000
+              "duration": 90090899
             }
           },
           {
@@ -888,11 +888,11 @@
             "line": 34,
             "name": "the response status of POST should be either 201 or 208",
             "match": {
-              "location": "src\\tests\\steps\\postBook.steps.ts:90"
+              "location": "src\\tests\\steps\\postBook.steps.ts:102"
             },
             "result": {
               "status": "passed",
-              "duration": 673600
+              "duration": 317600
             }
           },
           {
@@ -901,11 +901,11 @@
             "line": 35,
             "name": "the response should contain the details of both books",
             "match": {
-              "location": "src\\tests\\steps\\postBook.steps.ts:102"
+              "location": "src\\tests\\steps\\postBook.steps.ts:114"
             },
             "result": {
               "status": "passed",
-              "duration": 4339299
+              "duration": 4704099
             }
           }
         ],
@@ -929,7 +929,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1947299
+              "duration": 1366899
             }
           },
           {
@@ -942,7 +942,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 121337399
+              "duration": 95009400
             }
           },
           {
@@ -951,11 +951,11 @@
             "line": 40,
             "name": "the response status of POST should be either 201 or 208",
             "match": {
-              "location": "src\\tests\\steps\\postBook.steps.ts:90"
+              "location": "src\\tests\\steps\\postBook.steps.ts:102"
             },
             "result": {
               "status": "passed",
-              "duration": 487699
+              "duration": 244399
             }
           },
           {
@@ -964,11 +964,11 @@
             "line": 41,
             "name": "the response should contain the details of both books",
             "match": {
-              "location": "src\\tests\\steps\\postBook.steps.ts:102"
+              "location": "src\\tests\\steps\\postBook.steps.ts:114"
             },
             "result": {
               "status": "passed",
-              "duration": 5232299
+              "duration": 3544099
             }
           }
         ],
@@ -992,7 +992,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1398799
+              "duration": 927200
             }
           },
           {
@@ -1005,7 +1005,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 120970199
+              "duration": 83309099
             }
           },
           {
@@ -1014,12 +1014,12 @@
             "line": 48,
             "name": "the response status of POST should be 400",
             "match": {
-              "location": "src\\tests\\steps\\postBook.steps.ts:111"
+              "location": "src\\tests\\steps\\postBook.steps.ts:123"
             },
             "result": {
               "status": "failed",
-              "duration": 967099,
-              "error_message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m400\u001b[39m\nReceived: \u001b[31m208\u001b[39m\n    at Proxy.<anonymous> (D:\\ITQA-API-UI-Testing\\api-testing\\node_modules\\playwright\\lib\\matchers\\expect.js:227:37)\n    at validateResponseStatus (D:\\ITQA-API-UI-Testing\\api-testing\\src\\requests\\ValidateResponseStatus.ts:10:28)\n    at World.<anonymous> (D:\\ITQA-API-UI-Testing\\api-testing\\src\\tests\\steps\\postBook.steps.ts:112:33)"
+              "duration": 1142200,
+              "error_message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m400\u001b[39m\nReceived: \u001b[31m208\u001b[39m\n    at Proxy.<anonymous> (C:\\ITQA-API-UI-Testing\\api-testing\\node_modules\\playwright\\lib\\matchers\\expect.js:227:37)\n    at validateResponseStatus (C:\\ITQA-API-UI-Testing\\api-testing\\src\\requests\\ValidateResponseStatus.ts:10:28)\n    at World.<anonymous> (C:\\ITQA-API-UI-Testing\\api-testing\\src\\tests\\steps\\postBook.steps.ts:124:33)"
             }
           }
         ],
@@ -1043,7 +1043,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 10864999
+              "duration": 1302799
             }
           },
           {
@@ -1056,7 +1056,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 119430500
+              "duration": 91108799
             }
           },
           {
@@ -1065,12 +1065,12 @@
             "line": 53,
             "name": "the response status of POST should be 400",
             "match": {
-              "location": "src\\tests\\steps\\postBook.steps.ts:111"
+              "location": "src\\tests\\steps\\postBook.steps.ts:123"
             },
             "result": {
               "status": "failed",
-              "duration": 1108299,
-              "error_message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m400\u001b[39m\nReceived: \u001b[31m208\u001b[39m\n    at Proxy.<anonymous> (D:\\ITQA-API-UI-Testing\\api-testing\\node_modules\\playwright\\lib\\matchers\\expect.js:227:37)\n    at validateResponseStatus (D:\\ITQA-API-UI-Testing\\api-testing\\src\\requests\\ValidateResponseStatus.ts:10:28)\n    at World.<anonymous> (D:\\ITQA-API-UI-Testing\\api-testing\\src\\tests\\steps\\postBook.steps.ts:112:33)"
+              "duration": 502399,
+              "error_message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m400\u001b[39m\nReceived: \u001b[31m208\u001b[39m\n    at Proxy.<anonymous> (C:\\ITQA-API-UI-Testing\\api-testing\\node_modules\\playwright\\lib\\matchers\\expect.js:227:37)\n    at validateResponseStatus (C:\\ITQA-API-UI-Testing\\api-testing\\src\\requests\\ValidateResponseStatus.ts:10:28)\n    at World.<anonymous> (C:\\ITQA-API-UI-Testing\\api-testing\\src\\tests\\steps\\postBook.steps.ts:124:33)"
             }
           }
         ],
@@ -1094,7 +1094,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1581500
+              "duration": 1370300
             }
           },
           {
@@ -1107,7 +1107,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 122825999
+              "duration": 94811000
             }
           },
           {
@@ -1116,12 +1116,12 @@
             "line": 60,
             "name": "the response status of POST should be 201",
             "match": {
-              "location": "src\\tests\\steps\\postBook.steps.ts:111"
+              "location": "src\\tests\\steps\\postBook.steps.ts:123"
             },
             "result": {
               "status": "failed",
-              "duration": 1302100,
-              "error_message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m201\u001b[39m\nReceived: \u001b[31m208\u001b[39m\n    at Proxy.<anonymous> (D:\\ITQA-API-UI-Testing\\api-testing\\node_modules\\playwright\\lib\\matchers\\expect.js:227:37)\n    at validateResponseStatus (D:\\ITQA-API-UI-Testing\\api-testing\\src\\requests\\ValidateResponseStatus.ts:10:28)\n    at World.<anonymous> (D:\\ITQA-API-UI-Testing\\api-testing\\src\\tests\\steps\\postBook.steps.ts:112:33)"
+              "duration": 1066100,
+              "error_message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m201\u001b[39m\nReceived: \u001b[31m208\u001b[39m\n    at Proxy.<anonymous> (C:\\ITQA-API-UI-Testing\\api-testing\\node_modules\\playwright\\lib\\matchers\\expect.js:227:37)\n    at validateResponseStatus (C:\\ITQA-API-UI-Testing\\api-testing\\src\\requests\\ValidateResponseStatus.ts:10:28)\n    at World.<anonymous> (C:\\ITQA-API-UI-Testing\\api-testing\\src\\tests\\steps\\postBook.steps.ts:124:33)"
             }
           },
           {
@@ -1130,7 +1130,7 @@
             "line": 61,
             "name": "the response should contain the details of both books with the same title but different authors",
             "match": {
-              "location": "src\\tests\\steps\\postBook.steps.ts:106"
+              "location": "src\\tests\\steps\\postBook.steps.ts:118"
             },
             "result": {
               "status": "skipped",
@@ -1158,7 +1158,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 2140600
+              "duration": 2254999
             }
           },
           {
@@ -1171,7 +1171,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 129180400
+              "duration": 92646000
             }
           },
           {
@@ -1180,12 +1180,12 @@
             "line": 66,
             "name": "the response status of POST should be 201",
             "match": {
-              "location": "src\\tests\\steps\\postBook.steps.ts:111"
+              "location": "src\\tests\\steps\\postBook.steps.ts:123"
             },
             "result": {
               "status": "failed",
-              "duration": 804599,
-              "error_message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m201\u001b[39m\nReceived: \u001b[31m208\u001b[39m\n    at Proxy.<anonymous> (D:\\ITQA-API-UI-Testing\\api-testing\\node_modules\\playwright\\lib\\matchers\\expect.js:227:37)\n    at validateResponseStatus (D:\\ITQA-API-UI-Testing\\api-testing\\src\\requests\\ValidateResponseStatus.ts:10:28)\n    at World.<anonymous> (D:\\ITQA-API-UI-Testing\\api-testing\\src\\tests\\steps\\postBook.steps.ts:112:33)"
+              "duration": 1024799,
+              "error_message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m201\u001b[39m\nReceived: \u001b[31m208\u001b[39m\n    at Proxy.<anonymous> (C:\\ITQA-API-UI-Testing\\api-testing\\node_modules\\playwright\\lib\\matchers\\expect.js:227:37)\n    at validateResponseStatus (C:\\ITQA-API-UI-Testing\\api-testing\\src\\requests\\ValidateResponseStatus.ts:10:28)\n    at World.<anonymous> (C:\\ITQA-API-UI-Testing\\api-testing\\src\\tests\\steps\\postBook.steps.ts:124:33)"
             }
           },
           {
@@ -1194,11 +1194,113 @@
             "line": 67,
             "name": "the response should contain the details of both books with the same title but different authors",
             "match": {
-              "location": "src\\tests\\steps\\postBook.steps.ts:106"
+              "location": "src\\tests\\steps\\postBook.steps.ts:118"
             },
             "result": {
               "status": "skipped",
               "duration": 0
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "create-a-new-book;verify-the-response-of-the-post-/api/books-api-as-admin-without-title",
+        "keyword": "Scenario",
+        "line": 71,
+        "name": "Verify the response of the POST /api/books API as admin without title",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 72,
+            "name": "I am an authenticated POST admin API client",
+            "match": {
+              "location": "src\\tests\\steps\\postBook.steps.ts:12"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1488999
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 73,
+            "name": "I send a POST request to the \"books\" endpoint without title",
+            "match": {
+              "location": "src\\tests\\steps\\postBook.steps.ts:89"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 92514400
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 74,
+            "name": "the response status of POST should be 400",
+            "match": {
+              "location": "src\\tests\\steps\\postBook.steps.ts:123"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 940599,
+              "error_message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m400\u001b[39m\nReceived: \u001b[31m208\u001b[39m\n    at Proxy.<anonymous> (C:\\ITQA-API-UI-Testing\\api-testing\\node_modules\\playwright\\lib\\matchers\\expect.js:227:37)\n    at validateResponseStatus (C:\\ITQA-API-UI-Testing\\api-testing\\src\\requests\\ValidateResponseStatus.ts:10:28)\n    at World.<anonymous> (C:\\ITQA-API-UI-Testing\\api-testing\\src\\tests\\steps\\postBook.steps.ts:124:33)"
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "create-a-new-book;verify-the-response-of-the-post-/api/books-api-as-user-without-title",
+        "keyword": "Scenario",
+        "line": 76,
+        "name": "Verify the response of the POST /api/books API as user without title",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 77,
+            "name": "I am an authenticated POST user API client",
+            "match": {
+              "location": "src\\tests\\steps\\postBook.steps.ts:17"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2156299
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 78,
+            "name": "I send a POST request to the \"books\" endpoint without title",
+            "match": {
+              "location": "src\\tests\\steps\\postBook.steps.ts:89"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 78338900
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 79,
+            "name": "the response status of POST should be 400",
+            "match": {
+              "location": "src\\tests\\steps\\postBook.steps.ts:123"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 583000,
+              "error_message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m400\u001b[39m\nReceived: \u001b[31m208\u001b[39m\n    at Proxy.<anonymous> (C:\\ITQA-API-UI-Testing\\api-testing\\node_modules\\playwright\\lib\\matchers\\expect.js:227:37)\n    at validateResponseStatus (C:\\ITQA-API-UI-Testing\\api-testing\\src\\requests\\ValidateResponseStatus.ts:10:28)\n    at World.<anonymous> (C:\\ITQA-API-UI-Testing\\api-testing\\src\\tests\\steps\\postBook.steps.ts:124:33)"
             }
           }
         ],
@@ -1229,11 +1331,11 @@
             "line": 5,
             "name": "I create a new book entry with a random title",
             "match": {
-              "location": "src\\tests\\steps\\updateBooks.steps.ts:13"
+              "location": "src\\tests\\steps\\updateBooks.steps.ts:15"
             },
             "result": {
               "status": "passed",
-              "duration": 120241699
+              "duration": 86730900
             }
           },
           {
@@ -1242,11 +1344,11 @@
             "line": 6,
             "name": "I am an authenticated PUT admin API client",
             "match": {
-              "location": "src\\tests\\steps\\updateBooks.steps.ts:31"
+              "location": "src\\tests\\steps\\updateBooks.steps.ts:21"
             },
             "result": {
               "status": "passed",
-              "duration": 2119499
+              "duration": 1425100
             }
           },
           {
@@ -1255,11 +1357,11 @@
             "line": 7,
             "name": "I send a PUT request to the endpoint with the new author \"John Doe\"",
             "match": {
-              "location": "src\\tests\\steps\\updateBooks.steps.ts:41"
+              "location": "src\\tests\\steps\\updateBooks.steps.ts:31"
             },
             "result": {
               "status": "passed",
-              "duration": 120309499
+              "duration": 161769500
             }
           },
           {
@@ -1268,12 +1370,12 @@
             "line": 8,
             "name": "the response status of PUT should be 200",
             "match": {
-              "location": "src\\tests\\steps\\updateBooks.steps.ts:50"
+              "location": "src\\tests\\steps\\updateBooks.steps.ts:60"
             },
             "result": {
               "status": "failed",
-              "duration": 849799,
-              "error_message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m200\u001b[39m\nReceived: \u001b[31m208\u001b[39m\n    at Proxy.<anonymous> (D:\\ITQA-API-UI-Testing\\api-testing\\node_modules\\playwright\\lib\\matchers\\expect.js:227:37)\n    at World.<anonymous> (D:\\ITQA-API-UI-Testing\\api-testing\\src\\tests\\steps\\updateBooks.steps.ts:51:31)"
+              "duration": 622099,
+              "error_message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m200\u001b[39m\nReceived: \u001b[31m208\u001b[39m\n    at Proxy.<anonymous> (C:\\ITQA-API-UI-Testing\\api-testing\\node_modules\\playwright\\lib\\matchers\\expect.js:227:37)\n    at validateResponseStatus (C:\\ITQA-API-UI-Testing\\api-testing\\src\\requests\\ValidateResponseStatus.ts:10:28)\n    at World.<anonymous> (C:\\ITQA-API-UI-Testing\\api-testing\\src\\tests\\steps\\updateBooks.steps.ts:61:33)"
             }
           },
           {
@@ -1282,7 +1384,7 @@
             "line": 9,
             "name": "the response should contain the updated book details with author \"John Doe\"",
             "match": {
-              "location": "src\\tests\\steps\\updateBooks.steps.ts:54"
+              "location": "src\\tests\\steps\\updateBooks.steps.ts:52"
             },
             "result": {
               "status": "skipped",
@@ -1306,11 +1408,11 @@
             "line": 14,
             "name": "I create a new book entry with a random title",
             "match": {
-              "location": "src\\tests\\steps\\updateBooks.steps.ts:13"
+              "location": "src\\tests\\steps\\updateBooks.steps.ts:15"
             },
             "result": {
               "status": "passed",
-              "duration": 117583300
+              "duration": 89115300
             }
           },
           {
@@ -1319,11 +1421,11 @@
             "line": 15,
             "name": "I am an authenticated PUT user API client",
             "match": {
-              "location": "src\\tests\\steps\\updateBooks.steps.ts:36"
+              "location": "src\\tests\\steps\\updateBooks.steps.ts:26"
             },
             "result": {
               "status": "passed",
-              "duration": 2080600
+              "duration": 1260500
             }
           },
           {
@@ -1332,11 +1434,11 @@
             "line": 16,
             "name": "I send a PUT request to the endpoint with the new author \"Jane Smith\"",
             "match": {
-              "location": "src\\tests\\steps\\updateBooks.steps.ts:41"
+              "location": "src\\tests\\steps\\updateBooks.steps.ts:31"
             },
             "result": {
               "status": "passed",
-              "duration": 114573200
+              "duration": 80979500
             }
           },
           {
@@ -1345,11 +1447,151 @@
             "line": 17,
             "name": "the response status of PUT should be 403",
             "match": {
-              "location": "src\\tests\\steps\\updateBooks.steps.ts:50"
+              "location": "src\\tests\\steps\\updateBooks.steps.ts:60"
             },
             "result": {
               "status": "passed",
-              "duration": 515999
+              "duration": 1216400
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "update-a-book;update-existing-book-without-author-(different-title)-as-admin",
+        "keyword": "Scenario",
+        "line": 21,
+        "name": "Update existing book without author (different title) as admin",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 22,
+            "name": "I create a new book entry with a random title",
+            "match": {
+              "location": "src\\tests\\steps\\updateBooks.steps.ts:15"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 85962399
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 23,
+            "name": "I am an authenticated PUT admin API client",
+            "match": {
+              "location": "src\\tests\\steps\\updateBooks.steps.ts:21"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1124700
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 24,
+            "name": "I send a PUT request with different title and without author field",
+            "match": {
+              "location": "src\\tests\\steps\\updateBooks.steps.ts:40"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 87593000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 25,
+            "name": "the response status of PUT should be 200",
+            "match": {
+              "location": "src\\tests\\steps\\updateBooks.steps.ts:60"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 501100,
+              "error_message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m200\u001b[39m\nReceived: \u001b[31m400\u001b[39m\n    at Proxy.<anonymous> (C:\\ITQA-API-UI-Testing\\api-testing\\node_modules\\playwright\\lib\\matchers\\expect.js:227:37)\n    at validateResponseStatus (C:\\ITQA-API-UI-Testing\\api-testing\\src\\requests\\ValidateResponseStatus.ts:10:28)\n    at World.<anonymous> (C:\\ITQA-API-UI-Testing\\api-testing\\src\\tests\\steps\\updateBooks.steps.ts:61:33)"
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "update-a-book;update-existing-book-without-author-(different-title)-as-user",
+        "keyword": "Scenario",
+        "line": 28,
+        "name": "Update existing book without author (different title) as user",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 29,
+            "name": "I create a new book entry with a random title",
+            "match": {
+              "location": "src\\tests\\steps\\updateBooks.steps.ts:15"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 106490399
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 30,
+            "name": "I am an authenticated PUT user API client",
+            "match": {
+              "location": "src\\tests\\steps\\updateBooks.steps.ts:26"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2189999
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 31,
+            "name": "I send a PUT request with different title and without author field",
+            "match": {
+              "location": "src\\tests\\steps\\updateBooks.steps.ts:40"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 85226399
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 32,
+            "name": "the response status of PUT should be 403",
+            "match": {
+              "location": "src\\tests\\steps\\updateBooks.steps.ts:60"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 345399
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 33,
+            "name": "the response should be \"User is not permitted.\"",
+            "match": {
+              "location": "src\\tests\\steps\\updateBooks.steps.ts:65"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2527900
             }
           }
         ],

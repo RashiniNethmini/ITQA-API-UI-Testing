@@ -35,7 +35,7 @@ export class BooksPage {
         return response;
     }
 
-    async updateBook(id: string, updatedBookData: {id: string, title:string, author: string}) {
+    async updateBook(id: string, updatedBookData: {id: string, title:any, author: any}) {
         const response = await this.request.put(`${this.baseURL}/books/${id}`, {
             data: updatedBookData
         });
