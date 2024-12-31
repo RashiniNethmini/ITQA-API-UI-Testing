@@ -10,7 +10,7 @@ let booksPage: BooksPage;
 let response: any;
 let bookId: number;
 let randomTitle: string;
-
+let updatedTitle: any;
 
 Given('I create a new book entry with a random title', async () => {
     const result = await createRandomTitleBook();
@@ -56,12 +56,27 @@ When('I send a PUT request to the endpoint with the non-existing book id', async
     response = await booksPage.updateBook(updatedBookData.id, updatedBookData);
 });
 
+When('I send a PUT request to the endpoint with a new title', async () => {
+    updatedTitle = `Book-${Math.floor(Math.random() * 100000)}`;
+    const updatedBookData = {
+        id: bookId,
+        title: updatedTitle,
+        author: 'Random Author', 
+    };
+    response = await booksPage.updateBook(bookId, updatedBookData);
+});
+
 Then('the response should contain the updated book details with author {string}', async (author: string) => {
     const responseBody = await response.json();
     console.log('Response Body:', responseBody);
     expect(responseBody.author).toBe(author);
 });
 
+Then('the response should contain the updated book details with a new title and the same author', async () => {
+    const responseBody = await response.json();
+    expect(responseBody.title).toBe(updatedTitle);
+    expect(responseBody.author).toBe('Random Author');
+});
 
 Then('the response status of PUT should be {int}', async (status: number) => {
     await validateResponseStatus(response, status);
