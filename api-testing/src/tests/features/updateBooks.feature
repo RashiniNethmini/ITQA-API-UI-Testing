@@ -31,3 +31,16 @@ Feature: Update a book
     When I send a PUT request with different title and without author field
     Then the response status of PUT should be 403
     And the response should be "User is not permitted."
+
+
+  Scenario: Admin tries to update a non-existing book id
+    Given I am an authenticated PUT admin API client
+    When I send a PUT request to the endpoint with the non-existing book id
+    Then the response status of PUT should be 404
+    And the response should display an error message "Book not found"
+
+  Scenario: User tries to update a non-existing book id
+    Given I am an authenticated PUT user API client
+    When I send a PUT request to the endpoint with the non-existing book id
+    Then the response status of PUT should be 403
+    And the response should display an error message "User is not permitted."

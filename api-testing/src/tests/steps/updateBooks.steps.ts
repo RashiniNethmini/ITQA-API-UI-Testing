@@ -8,7 +8,7 @@ import { validateResponseStatus } from '../../requests/ValidateResponseStatus';
 
 let booksPage: BooksPage;
 let response: any;
-let bookId: string;
+let bookId: number;
 let randomTitle: string;
 
 
@@ -46,15 +46,21 @@ When('I send a PUT request with different title and without author field', async
     response = await booksPage.updateBook(bookId, updatedBookData);
 });
 
-
-
+//non-existing book id
+When('I send a PUT request to the endpoint with the non-existing book id', async () => {
+    const updatedBookData = {
+        id: 1000000,
+        title: "non-existing book",
+        author: 'non-existing author',
+    };
+    response = await booksPage.updateBook(updatedBookData.id, updatedBookData);
+});
 
 Then('the response should contain the updated book details with author {string}', async (author: string) => {
     const responseBody = await response.json();
     console.log('Response Body:', responseBody);
     expect(responseBody.author).toBe(author);
 });
-
 
 
 Then('the response status of PUT should be {int}', async (status: number) => {
@@ -79,6 +85,18 @@ Then('the response should be {string}', async (expectedMessage: string) => {
         expect(actualMessage).toBe(expectedMessage);
     }
 });
+
+
+Then('the response should display an error message {string}', async (message: string) => {
+    const responseBody = await response.text(); 
+    try {
+        const parsedBody = JSON.parse(responseBody); 
+        expect(parsedBody.message).toBe(message);
+    } catch (e) {
+        expect(responseBody).toBe(message);
+    }
+});
+
 
 
 
