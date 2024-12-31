@@ -19,7 +19,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 138606099
+              "duration": 131257400
             }
           },
           {
@@ -32,7 +32,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1253899
+              "duration": 3282799
             }
           },
           {
@@ -45,7 +45,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 81490900
+              "duration": 67758799
             }
           },
           {
@@ -54,12 +54,12 @@
             "line": 9,
             "name": "the response status of DELETE should be 200",
             "match": {
-              "location": "src\\tests\\steps\\deleteBook.steps.ts:39"
+              "location": "src\\tests\\steps\\deleteBook.steps.ts:40"
             },
             "result": {
               "status": "failed",
-              "duration": 1630700,
-              "error_message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m200\u001b[39m\nReceived: \u001b[31m403\u001b[39m\n    at Proxy.<anonymous> (C:\\ITQA-API-UI-Testing\\api-testing\\node_modules\\playwright\\lib\\matchers\\expect.js:227:37)\n    at validateResponseStatus (C:\\ITQA-API-UI-Testing\\api-testing\\src\\requests\\ValidateResponseStatus.ts:10:28)\n    at World.<anonymous> (C:\\ITQA-API-UI-Testing\\api-testing\\src\\tests\\steps\\deleteBook.steps.ts:40:33)"
+              "duration": 3902799,
+              "error_message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m200\u001b[39m\nReceived: \u001b[31m403\u001b[39m\n    at Proxy.<anonymous> (C:\\Users\\Naduni\\Documents\\GitHub\\ITQA-API-UI-Testing\\api-testing\\node_modules\\playwright\\lib\\matchers\\expect.js:227:37)\n    at validateResponseStatus (C:\\Users\\Naduni\\Documents\\GitHub\\ITQA-API-UI-Testing\\api-testing\\src\\requests\\ValidateResponseStatus.ts:10:28)\n    at World.<anonymous> (C:\\Users\\Naduni\\Documents\\GitHub\\ITQA-API-UI-Testing\\api-testing\\src\\tests\\steps\\deleteBook.steps.ts:41:33)"
             }
           }
         ],
@@ -83,7 +83,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 80123300
+              "duration": 78313400
             }
           },
           {
@@ -96,7 +96,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1466699
+              "duration": 2363399
             }
           },
           {
@@ -109,7 +109,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 85490099
+              "duration": 69871600
             }
           },
           {
@@ -118,12 +118,12 @@
             "line": 15,
             "name": "the response status of DELETE should be 403",
             "match": {
-              "location": "src\\tests\\steps\\deleteBook.steps.ts:39"
+              "location": "src\\tests\\steps\\deleteBook.steps.ts:40"
             },
             "result": {
               "status": "failed",
-              "duration": 717999,
-              "error_message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m403\u001b[39m\nReceived: \u001b[31m200\u001b[39m\n    at Proxy.<anonymous> (C:\\ITQA-API-UI-Testing\\api-testing\\node_modules\\playwright\\lib\\matchers\\expect.js:227:37)\n    at validateResponseStatus (C:\\ITQA-API-UI-Testing\\api-testing\\src\\requests\\ValidateResponseStatus.ts:10:28)\n    at World.<anonymous> (C:\\ITQA-API-UI-Testing\\api-testing\\src\\tests\\steps\\deleteBook.steps.ts:40:33)"
+              "duration": 918100,
+              "error_message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m403\u001b[39m\nReceived: \u001b[31m200\u001b[39m\n    at Proxy.<anonymous> (C:\\Users\\Naduni\\Documents\\GitHub\\ITQA-API-UI-Testing\\api-testing\\node_modules\\playwright\\lib\\matchers\\expect.js:227:37)\n    at validateResponseStatus (C:\\Users\\Naduni\\Documents\\GitHub\\ITQA-API-UI-Testing\\api-testing\\src\\requests\\ValidateResponseStatus.ts:10:28)\n    at World.<anonymous> (C:\\Users\\Naduni\\Documents\\GitHub\\ITQA-API-UI-Testing\\api-testing\\src\\tests\\steps\\deleteBook.steps.ts:41:33)"
             }
           },
           {
@@ -132,7 +132,7 @@
             "line": 16,
             "name": "the response should contain an error message \"User is not permitted.\"",
             "match": {
-              "location": "src\\tests\\steps\\deleteBook.steps.ts:43"
+              "location": "src\\tests\\steps\\deleteBook.steps.ts:44"
             },
             "result": {
               "status": "skipped",
@@ -160,7 +160,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1061499
+              "duration": 1978399
             }
           },
           {
@@ -169,11 +169,11 @@
             "line": 24,
             "name": "I send a DELETE request with a non-existing book ID",
             "match": {
-              "location": "src\\tests\\steps\\deleteBook.steps.ts:34"
+              "location": "src\\tests\\steps\\deleteBook.steps.ts:35"
             },
             "result": {
               "status": "passed",
-              "duration": 76001299
+              "duration": 67353399
             }
           },
           {
@@ -182,12 +182,12 @@
             "line": 25,
             "name": "the response status of DELETE should be 404",
             "match": {
-              "location": "src\\tests\\steps\\deleteBook.steps.ts:39"
+              "location": "src\\tests\\steps\\deleteBook.steps.ts:40"
             },
             "result": {
               "status": "failed",
-              "duration": 1194700,
-              "error_message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m404\u001b[39m\nReceived: \u001b[31m403\u001b[39m\n    at Proxy.<anonymous> (C:\\ITQA-API-UI-Testing\\api-testing\\node_modules\\playwright\\lib\\matchers\\expect.js:227:37)\n    at validateResponseStatus (C:\\ITQA-API-UI-Testing\\api-testing\\src\\requests\\ValidateResponseStatus.ts:10:28)\n    at World.<anonymous> (C:\\ITQA-API-UI-Testing\\api-testing\\src\\tests\\steps\\deleteBook.steps.ts:40:33)"
+              "duration": 1376400,
+              "error_message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m404\u001b[39m\nReceived: \u001b[31m403\u001b[39m\n    at Proxy.<anonymous> (C:\\Users\\Naduni\\Documents\\GitHub\\ITQA-API-UI-Testing\\api-testing\\node_modules\\playwright\\lib\\matchers\\expect.js:227:37)\n    at validateResponseStatus (C:\\Users\\Naduni\\Documents\\GitHub\\ITQA-API-UI-Testing\\api-testing\\src\\requests\\ValidateResponseStatus.ts:10:28)\n    at World.<anonymous> (C:\\Users\\Naduni\\Documents\\GitHub\\ITQA-API-UI-Testing\\api-testing\\src\\tests\\steps\\deleteBook.steps.ts:41:33)"
             }
           }
         ],
@@ -211,7 +211,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1341199
+              "duration": 9162299
             }
           },
           {
@@ -220,11 +220,11 @@
             "line": 29,
             "name": "I send a DELETE request with a non-existing book ID",
             "match": {
-              "location": "src\\tests\\steps\\deleteBook.steps.ts:34"
+              "location": "src\\tests\\steps\\deleteBook.steps.ts:35"
             },
             "result": {
               "status": "passed",
-              "duration": 73011800
+              "duration": 75296799
             }
           },
           {
@@ -233,12 +233,12 @@
             "line": 30,
             "name": "the response status of DELETE should be 403",
             "match": {
-              "location": "src\\tests\\steps\\deleteBook.steps.ts:39"
+              "location": "src\\tests\\steps\\deleteBook.steps.ts:40"
             },
             "result": {
               "status": "failed",
-              "duration": 598500,
-              "error_message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m403\u001b[39m\nReceived: \u001b[31m404\u001b[39m\n    at Proxy.<anonymous> (C:\\ITQA-API-UI-Testing\\api-testing\\node_modules\\playwright\\lib\\matchers\\expect.js:227:37)\n    at validateResponseStatus (C:\\ITQA-API-UI-Testing\\api-testing\\src\\requests\\ValidateResponseStatus.ts:10:28)\n    at World.<anonymous> (C:\\ITQA-API-UI-Testing\\api-testing\\src\\tests\\steps\\deleteBook.steps.ts:40:33)"
+              "duration": 1640299,
+              "error_message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m403\u001b[39m\nReceived: \u001b[31m404\u001b[39m\n    at Proxy.<anonymous> (C:\\Users\\Naduni\\Documents\\GitHub\\ITQA-API-UI-Testing\\api-testing\\node_modules\\playwright\\lib\\matchers\\expect.js:227:37)\n    at validateResponseStatus (C:\\Users\\Naduni\\Documents\\GitHub\\ITQA-API-UI-Testing\\api-testing\\src\\requests\\ValidateResponseStatus.ts:10:28)\n    at World.<anonymous> (C:\\Users\\Naduni\\Documents\\GitHub\\ITQA-API-UI-Testing\\api-testing\\src\\tests\\steps\\deleteBook.steps.ts:41:33)"
             }
           },
           {
@@ -247,7 +247,7 @@
             "line": 31,
             "name": "the response should contain an error message \"User is not permitted.\"",
             "match": {
-              "location": "src\\tests\\steps\\deleteBook.steps.ts:43"
+              "location": "src\\tests\\steps\\deleteBook.steps.ts:44"
             },
             "result": {
               "status": "skipped",
@@ -286,7 +286,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 79749300
+              "duration": 78236600
             }
           },
           {
@@ -299,7 +299,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1404300
+              "duration": 1915800
             }
           },
           {
@@ -312,7 +312,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 86334399
+              "duration": 73783699
             }
           },
           {
@@ -325,7 +325,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 335799
+              "duration": 828999
             }
           },
           {
@@ -338,7 +338,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1373299
+              "duration": 2805099
             }
           }
         ],
@@ -362,7 +362,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 81428799
+              "duration": 77716499
             }
           },
           {
@@ -375,7 +375,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1589100
+              "duration": 4166299
             }
           },
           {
@@ -388,7 +388,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 77326100
+              "duration": 69979699
             }
           },
           {
@@ -401,7 +401,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 277099
+              "duration": 604499
             }
           },
           {
@@ -414,7 +414,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1049799
+              "duration": 3268099
             }
           }
         ],
@@ -438,7 +438,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 97042699
+              "duration": 73192999
             }
           },
           {
@@ -451,7 +451,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1277599
+              "duration": 1538000
             }
           },
           {
@@ -464,7 +464,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 85794499
+              "duration": 66327800
             }
           },
           {
@@ -477,7 +477,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 343100
+              "duration": 813400
             }
           }
         ],
@@ -501,7 +501,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 81375200
+              "duration": 68976099
             }
           },
           {
@@ -514,7 +514,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1369300
+              "duration": 1275099
             }
           },
           {
@@ -527,7 +527,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 82995600
+              "duration": 72104299
             }
           },
           {
@@ -540,8 +540,8 @@
             },
             "result": {
               "status": "failed",
-              "duration": 487799,
-              "error_message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m404\u001b[39m\nReceived: \u001b[31m403\u001b[39m\n    at Proxy.<anonymous> (C:\\ITQA-API-UI-Testing\\api-testing\\node_modules\\playwright\\lib\\matchers\\expect.js:227:37)\n    at validateResponseStatus (C:\\ITQA-API-UI-Testing\\api-testing\\src\\requests\\ValidateResponseStatus.ts:10:28)\n    at World.<anonymous> (C:\\ITQA-API-UI-Testing\\api-testing\\src\\tests\\steps\\getBooks.steps.ts:72:33)"
+              "duration": 2485200,
+              "error_message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m404\u001b[39m\nReceived: \u001b[31m403\u001b[39m\n    at Proxy.<anonymous> (C:\\Users\\Naduni\\Documents\\GitHub\\ITQA-API-UI-Testing\\api-testing\\node_modules\\playwright\\lib\\matchers\\expect.js:227:37)\n    at validateResponseStatus (C:\\Users\\Naduni\\Documents\\GitHub\\ITQA-API-UI-Testing\\api-testing\\src\\requests\\ValidateResponseStatus.ts:10:28)\n    at World.<anonymous> (C:\\Users\\Naduni\\Documents\\GitHub\\ITQA-API-UI-Testing\\api-testing\\src\\tests\\steps\\getBooks.steps.ts:72:33)"
             }
           }
         ],
@@ -565,7 +565,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 79039400
+              "duration": 73549899
             }
           },
           {
@@ -578,7 +578,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 741099
+              "duration": 4580099
             }
           },
           {
@@ -591,7 +591,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 74453300
+              "duration": 76126000
             }
           },
           {
@@ -604,7 +604,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 391200
+              "duration": 2751699
             }
           },
           {
@@ -617,7 +617,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1552400
+              "duration": 11140399
             }
           }
         ],
@@ -641,7 +641,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 107336299
+              "duration": 85832900
             }
           },
           {
@@ -654,7 +654,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1276100
+              "duration": 2212999
             }
           },
           {
@@ -667,7 +667,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 80138599
+              "duration": 67856400
             }
           },
           {
@@ -680,8 +680,8 @@
             },
             "result": {
               "status": "failed",
-              "duration": 458499,
-              "error_message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m200\u001b[39m\nReceived: \u001b[31m403\u001b[39m\n    at Proxy.<anonymous> (C:\\ITQA-API-UI-Testing\\api-testing\\node_modules\\playwright\\lib\\matchers\\expect.js:227:37)\n    at validateResponseStatus (C:\\ITQA-API-UI-Testing\\api-testing\\src\\requests\\ValidateResponseStatus.ts:10:28)\n    at World.<anonymous> (C:\\ITQA-API-UI-Testing\\api-testing\\src\\tests\\steps\\getBooks.steps.ts:72:33)"
+              "duration": 1013800,
+              "error_message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m200\u001b[39m\nReceived: \u001b[31m403\u001b[39m\n    at Proxy.<anonymous> (C:\\Users\\Naduni\\Documents\\GitHub\\ITQA-API-UI-Testing\\api-testing\\node_modules\\playwright\\lib\\matchers\\expect.js:227:37)\n    at validateResponseStatus (C:\\Users\\Naduni\\Documents\\GitHub\\ITQA-API-UI-Testing\\api-testing\\src\\requests\\ValidateResponseStatus.ts:10:28)\n    at World.<anonymous> (C:\\Users\\Naduni\\Documents\\GitHub\\ITQA-API-UI-Testing\\api-testing\\src\\tests\\steps\\getBooks.steps.ts:72:33)"
             }
           },
           {
@@ -729,7 +729,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1065700
+              "duration": 1959899
             }
           },
           {
@@ -742,7 +742,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 76754699
+              "duration": 73869500
             }
           },
           {
@@ -755,7 +755,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 538399
+              "duration": 1194200
             }
           },
           {
@@ -768,7 +768,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 3689199
+              "duration": 9212700
             }
           }
         ],
@@ -792,7 +792,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1088099
+              "duration": 3113700
             }
           },
           {
@@ -805,7 +805,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 87891500
+              "duration": 70097799
             }
           },
           {
@@ -818,7 +818,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 303600
+              "duration": 367500
             }
           },
           {
@@ -831,7 +831,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1530899
+              "duration": 3616600
             }
           }
         ],
@@ -840,10 +840,10 @@
       },
       {
         "description": "",
-        "id": "create-a-new-book;verify-the-response-of-the-post-/api/books-api-as-admin-without-title-and-author",
+        "id": "create-a-new-book;verify-the-response-of-the-post-/api/books-api-as-admin-with-empty-title-and-author",
         "keyword": "Scenario",
         "line": 17,
-        "name": "Verify the response of the POST /api/books API as admin without title and author",
+        "name": "Verify the response of the POST /api/books API as admin with empty title and author",
         "steps": [
           {
             "arguments": [],
@@ -855,47 +855,46 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1135400
+              "duration": 1584100
             }
           },
           {
             "arguments": [],
             "keyword": "When ",
             "line": 19,
-            "name": "I send a POST request to the \"books\" endpoint without title and author",
+            "name": "I send a POST request to the \"books\" endpoint with empty title and author",
             "match": {
               "location": "src\\tests\\steps\\postBook.steps.ts:34"
             },
             "result": {
               "status": "passed",
-              "duration": 80075399
+              "duration": 68558100
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
             "line": 20,
-            "name": "the response status of POST should be 400",
+            "name": "the response status of POST should be either 201 or 208",
             "match": {
-              "location": "src\\tests\\steps\\postBook.steps.ts:123"
+              "location": "src\\tests\\steps\\postBook.steps.ts:102"
             },
             "result": {
-              "status": "failed",
-              "duration": 597200,
-              "error_message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m400\u001b[39m\nReceived: \u001b[31m208\u001b[39m\n    at Proxy.<anonymous> (C:\\ITQA-API-UI-Testing\\api-testing\\node_modules\\playwright\\lib\\matchers\\expect.js:227:37)\n    at validateResponseStatus (C:\\ITQA-API-UI-Testing\\api-testing\\src\\requests\\ValidateResponseStatus.ts:10:28)\n    at World.<anonymous> (C:\\ITQA-API-UI-Testing\\api-testing\\src\\tests\\steps\\postBook.steps.ts:124:33)"
+              "status": "passed",
+              "duration": 569700
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
             "line": 21,
-            "name": "the response should contain the created book details without title and author",
+            "name": "the response should contain the created book details with empty title and author",
             "match": {
               "location": "src\\tests\\steps\\postBook.steps.ts:110"
             },
             "result": {
-              "status": "skipped",
-              "duration": 0
+              "status": "passed",
+              "duration": 9624900
             }
           }
         ],
@@ -904,10 +903,10 @@
       },
       {
         "description": "",
-        "id": "create-a-new-book;verify-the-response-of-the-post-/api/books-api-as-user-without-title-and-author",
+        "id": "create-a-new-book;verify-the-response-of-the-post-/api/books-api-as-user-with-empty-title-and-author",
         "keyword": "Scenario",
         "line": 23,
-        "name": "Verify the response of the POST /api/books API as user without title and author",
+        "name": "Verify the response of the POST /api/books API as user with empty title and author",
         "steps": [
           {
             "arguments": [],
@@ -919,47 +918,46 @@
             },
             "result": {
               "status": "passed",
-              "duration": 661700
+              "duration": 2228900
             }
           },
           {
             "arguments": [],
             "keyword": "When ",
             "line": 25,
-            "name": "I send a POST request to the \"books\" endpoint without title and author",
+            "name": "I send a POST request to the \"books\" endpoint with empty title and author",
             "match": {
               "location": "src\\tests\\steps\\postBook.steps.ts:34"
             },
             "result": {
               "status": "passed",
-              "duration": 75703100
+              "duration": 65710799
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
             "line": 26,
-            "name": "the response status of POST should be 400",
+            "name": "the response status of POST should be either 201 or 208",
             "match": {
-              "location": "src\\tests\\steps\\postBook.steps.ts:123"
+              "location": "src\\tests\\steps\\postBook.steps.ts:102"
             },
             "result": {
-              "status": "failed",
-              "duration": 666899,
-              "error_message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m400\u001b[39m\nReceived: \u001b[31m208\u001b[39m\n    at Proxy.<anonymous> (C:\\ITQA-API-UI-Testing\\api-testing\\node_modules\\playwright\\lib\\matchers\\expect.js:227:37)\n    at validateResponseStatus (C:\\ITQA-API-UI-Testing\\api-testing\\src\\requests\\ValidateResponseStatus.ts:10:28)\n    at World.<anonymous> (C:\\ITQA-API-UI-Testing\\api-testing\\src\\tests\\steps\\postBook.steps.ts:124:33)"
+              "status": "passed",
+              "duration": 580099
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
             "line": 27,
-            "name": "the response should contain the created book details without title and author",
+            "name": "the response should contain the created book details with empty title and author",
             "match": {
               "location": "src\\tests\\steps\\postBook.steps.ts:110"
             },
             "result": {
-              "status": "skipped",
-              "duration": 0
+              "status": "passed",
+              "duration": 3237599
             }
           }
         ],
@@ -983,7 +981,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 741600
+              "duration": 1218999
             }
           },
           {
@@ -996,7 +994,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 95304900
+              "duration": 74204199
             }
           },
           {
@@ -1009,7 +1007,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 407599
+              "duration": 295100
             }
           },
           {
@@ -1022,7 +1020,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 3705200
+              "duration": 4637899
             }
           }
         ],
@@ -1046,7 +1044,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 4094399
+              "duration": 1757600
             }
           },
           {
@@ -1059,7 +1057,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 88856999
+              "duration": 75844499
             }
           },
           {
@@ -1072,7 +1070,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 231999
+              "duration": 574200
             }
           },
           {
@@ -1085,7 +1083,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 2633700
+              "duration": 3766799
             }
           }
         ],
@@ -1109,7 +1107,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 854000
+              "duration": 1501400
             }
           },
           {
@@ -1122,7 +1120,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 79132699
+              "duration": 68985899
             }
           },
           {
@@ -1135,8 +1133,8 @@
             },
             "result": {
               "status": "failed",
-              "duration": 509199,
-              "error_message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m400\u001b[39m\nReceived: \u001b[31m208\u001b[39m\n    at Proxy.<anonymous> (C:\\ITQA-API-UI-Testing\\api-testing\\node_modules\\playwright\\lib\\matchers\\expect.js:227:37)\n    at validateResponseStatus (C:\\ITQA-API-UI-Testing\\api-testing\\src\\requests\\ValidateResponseStatus.ts:10:28)\n    at World.<anonymous> (C:\\ITQA-API-UI-Testing\\api-testing\\src\\tests\\steps\\postBook.steps.ts:124:33)"
+              "duration": 1120999,
+              "error_message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m400\u001b[39m\nReceived: \u001b[31m208\u001b[39m\n    at Proxy.<anonymous> (C:\\Users\\Naduni\\Documents\\GitHub\\ITQA-API-UI-Testing\\api-testing\\node_modules\\playwright\\lib\\matchers\\expect.js:227:37)\n    at validateResponseStatus (C:\\Users\\Naduni\\Documents\\GitHub\\ITQA-API-UI-Testing\\api-testing\\src\\requests\\ValidateResponseStatus.ts:10:28)\n    at World.<anonymous> (C:\\Users\\Naduni\\Documents\\GitHub\\ITQA-API-UI-Testing\\api-testing\\src\\tests\\steps\\postBook.steps.ts:124:33)"
             }
           }
         ],
@@ -1160,7 +1158,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 944300
+              "duration": 2716800
             }
           },
           {
@@ -1173,7 +1171,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 83827300
+              "duration": 74774200
             }
           },
           {
@@ -1186,8 +1184,8 @@
             },
             "result": {
               "status": "failed",
-              "duration": 299799,
-              "error_message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m400\u001b[39m\nReceived: \u001b[31m208\u001b[39m\n    at Proxy.<anonymous> (C:\\ITQA-API-UI-Testing\\api-testing\\node_modules\\playwright\\lib\\matchers\\expect.js:227:37)\n    at validateResponseStatus (C:\\ITQA-API-UI-Testing\\api-testing\\src\\requests\\ValidateResponseStatus.ts:10:28)\n    at World.<anonymous> (C:\\ITQA-API-UI-Testing\\api-testing\\src\\tests\\steps\\postBook.steps.ts:124:33)"
+              "duration": 1754099,
+              "error_message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m400\u001b[39m\nReceived: \u001b[31m208\u001b[39m\n    at Proxy.<anonymous> (C:\\Users\\Naduni\\Documents\\GitHub\\ITQA-API-UI-Testing\\api-testing\\node_modules\\playwright\\lib\\matchers\\expect.js:227:37)\n    at validateResponseStatus (C:\\Users\\Naduni\\Documents\\GitHub\\ITQA-API-UI-Testing\\api-testing\\src\\requests\\ValidateResponseStatus.ts:10:28)\n    at World.<anonymous> (C:\\Users\\Naduni\\Documents\\GitHub\\ITQA-API-UI-Testing\\api-testing\\src\\tests\\steps\\postBook.steps.ts:124:33)"
             }
           }
         ],
@@ -1211,7 +1209,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 606299
+              "duration": 1354100
             }
           },
           {
@@ -1224,7 +1222,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 78700799
+              "duration": 74695899
             }
           },
           {
@@ -1237,8 +1235,8 @@
             },
             "result": {
               "status": "failed",
-              "duration": 456799,
-              "error_message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m201\u001b[39m\nReceived: \u001b[31m208\u001b[39m\n    at Proxy.<anonymous> (C:\\ITQA-API-UI-Testing\\api-testing\\node_modules\\playwright\\lib\\matchers\\expect.js:227:37)\n    at validateResponseStatus (C:\\ITQA-API-UI-Testing\\api-testing\\src\\requests\\ValidateResponseStatus.ts:10:28)\n    at World.<anonymous> (C:\\ITQA-API-UI-Testing\\api-testing\\src\\tests\\steps\\postBook.steps.ts:124:33)"
+              "duration": 1474199,
+              "error_message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m201\u001b[39m\nReceived: \u001b[31m208\u001b[39m\n    at Proxy.<anonymous> (C:\\Users\\Naduni\\Documents\\GitHub\\ITQA-API-UI-Testing\\api-testing\\node_modules\\playwright\\lib\\matchers\\expect.js:227:37)\n    at validateResponseStatus (C:\\Users\\Naduni\\Documents\\GitHub\\ITQA-API-UI-Testing\\api-testing\\src\\requests\\ValidateResponseStatus.ts:10:28)\n    at World.<anonymous> (C:\\Users\\Naduni\\Documents\\GitHub\\ITQA-API-UI-Testing\\api-testing\\src\\tests\\steps\\postBook.steps.ts:124:33)"
             }
           },
           {
@@ -1275,7 +1273,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1101700
+              "duration": 2021200
             }
           },
           {
@@ -1288,7 +1286,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 92096599
+              "duration": 71588600
             }
           },
           {
@@ -1301,8 +1299,8 @@
             },
             "result": {
               "status": "failed",
-              "duration": 644600,
-              "error_message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m201\u001b[39m\nReceived: \u001b[31m208\u001b[39m\n    at Proxy.<anonymous> (C:\\ITQA-API-UI-Testing\\api-testing\\node_modules\\playwright\\lib\\matchers\\expect.js:227:37)\n    at validateResponseStatus (C:\\ITQA-API-UI-Testing\\api-testing\\src\\requests\\ValidateResponseStatus.ts:10:28)\n    at World.<anonymous> (C:\\ITQA-API-UI-Testing\\api-testing\\src\\tests\\steps\\postBook.steps.ts:124:33)"
+              "duration": 552399,
+              "error_message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m201\u001b[39m\nReceived: \u001b[31m208\u001b[39m\n    at Proxy.<anonymous> (C:\\Users\\Naduni\\Documents\\GitHub\\ITQA-API-UI-Testing\\api-testing\\node_modules\\playwright\\lib\\matchers\\expect.js:227:37)\n    at validateResponseStatus (C:\\Users\\Naduni\\Documents\\GitHub\\ITQA-API-UI-Testing\\api-testing\\src\\requests\\ValidateResponseStatus.ts:10:28)\n    at World.<anonymous> (C:\\Users\\Naduni\\Documents\\GitHub\\ITQA-API-UI-Testing\\api-testing\\src\\tests\\steps\\postBook.steps.ts:124:33)"
             }
           },
           {
@@ -1339,7 +1337,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1105999
+              "duration": 1857999
             }
           },
           {
@@ -1352,7 +1350,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 80104000
+              "duration": 71607600
             }
           },
           {
@@ -1365,8 +1363,8 @@
             },
             "result": {
               "status": "failed",
-              "duration": 579799,
-              "error_message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m400\u001b[39m\nReceived: \u001b[31m208\u001b[39m\n    at Proxy.<anonymous> (C:\\ITQA-API-UI-Testing\\api-testing\\node_modules\\playwright\\lib\\matchers\\expect.js:227:37)\n    at validateResponseStatus (C:\\ITQA-API-UI-Testing\\api-testing\\src\\requests\\ValidateResponseStatus.ts:10:28)\n    at World.<anonymous> (C:\\ITQA-API-UI-Testing\\api-testing\\src\\tests\\steps\\postBook.steps.ts:124:33)"
+              "duration": 964599,
+              "error_message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m400\u001b[39m\nReceived: \u001b[31m208\u001b[39m\n    at Proxy.<anonymous> (C:\\Users\\Naduni\\Documents\\GitHub\\ITQA-API-UI-Testing\\api-testing\\node_modules\\playwright\\lib\\matchers\\expect.js:227:37)\n    at validateResponseStatus (C:\\Users\\Naduni\\Documents\\GitHub\\ITQA-API-UI-Testing\\api-testing\\src\\requests\\ValidateResponseStatus.ts:10:28)\n    at World.<anonymous> (C:\\Users\\Naduni\\Documents\\GitHub\\ITQA-API-UI-Testing\\api-testing\\src\\tests\\steps\\postBook.steps.ts:124:33)"
             }
           }
         ],
@@ -1390,7 +1388,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1411699
+              "duration": 4199900
             }
           },
           {
@@ -1403,7 +1401,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 81550400
+              "duration": 72287900
             }
           },
           {
@@ -1416,8 +1414,8 @@
             },
             "result": {
               "status": "failed",
-              "duration": 532500,
-              "error_message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m400\u001b[39m\nReceived: \u001b[31m208\u001b[39m\n    at Proxy.<anonymous> (C:\\ITQA-API-UI-Testing\\api-testing\\node_modules\\playwright\\lib\\matchers\\expect.js:227:37)\n    at validateResponseStatus (C:\\ITQA-API-UI-Testing\\api-testing\\src\\requests\\ValidateResponseStatus.ts:10:28)\n    at World.<anonymous> (C:\\ITQA-API-UI-Testing\\api-testing\\src\\tests\\steps\\postBook.steps.ts:124:33)"
+              "duration": 831699,
+              "error_message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m400\u001b[39m\nReceived: \u001b[31m208\u001b[39m\n    at Proxy.<anonymous> (C:\\Users\\Naduni\\Documents\\GitHub\\ITQA-API-UI-Testing\\api-testing\\node_modules\\playwright\\lib\\matchers\\expect.js:227:37)\n    at validateResponseStatus (C:\\Users\\Naduni\\Documents\\GitHub\\ITQA-API-UI-Testing\\api-testing\\src\\requests\\ValidateResponseStatus.ts:10:28)\n    at World.<anonymous> (C:\\Users\\Naduni\\Documents\\GitHub\\ITQA-API-UI-Testing\\api-testing\\src\\tests\\steps\\postBook.steps.ts:124:33)"
             }
           }
         ],
@@ -1452,7 +1450,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 86951799
+              "duration": 70937699
             }
           },
           {
@@ -1465,7 +1463,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1376299
+              "duration": 1758399
             }
           },
           {
@@ -1478,7 +1476,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 83705500
+              "duration": 65662000
             }
           },
           {
@@ -1487,12 +1485,12 @@
             "line": 8,
             "name": "the response status of PUT should be 200",
             "match": {
-              "location": "src\\tests\\steps\\updateBooks.steps.ts:66"
+              "location": "src\\tests\\steps\\updateBooks.steps.ts:81"
             },
             "result": {
               "status": "failed",
-              "duration": 592599,
-              "error_message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m200\u001b[39m\nReceived: \u001b[31m208\u001b[39m\n    at Proxy.<anonymous> (C:\\ITQA-API-UI-Testing\\api-testing\\node_modules\\playwright\\lib\\matchers\\expect.js:227:37)\n    at validateResponseStatus (C:\\ITQA-API-UI-Testing\\api-testing\\src\\requests\\ValidateResponseStatus.ts:10:28)\n    at World.<anonymous> (C:\\ITQA-API-UI-Testing\\api-testing\\src\\tests\\steps\\updateBooks.steps.ts:67:33)"
+              "duration": 972900,
+              "error_message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m200\u001b[39m\nReceived: \u001b[31m208\u001b[39m\n    at Proxy.<anonymous> (C:\\Users\\Naduni\\Documents\\GitHub\\ITQA-API-UI-Testing\\api-testing\\node_modules\\playwright\\lib\\matchers\\expect.js:227:37)\n    at validateResponseStatus (C:\\Users\\Naduni\\Documents\\GitHub\\ITQA-API-UI-Testing\\api-testing\\src\\requests\\ValidateResponseStatus.ts:10:28)\n    at World.<anonymous> (C:\\Users\\Naduni\\Documents\\GitHub\\ITQA-API-UI-Testing\\api-testing\\src\\tests\\steps\\updateBooks.steps.ts:82:33)"
             }
           },
           {
@@ -1501,7 +1499,7 @@
             "line": 9,
             "name": "the response should contain the updated book details with author \"John Doe\"",
             "match": {
-              "location": "src\\tests\\steps\\updateBooks.steps.ts:59"
+              "location": "src\\tests\\steps\\updateBooks.steps.ts:69"
             },
             "result": {
               "status": "skipped",
@@ -1529,7 +1527,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 76868499
+              "duration": 74142100
             }
           },
           {
@@ -1542,7 +1540,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1243800
+              "duration": 1890999
             }
           },
           {
@@ -1555,7 +1553,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 74646800
+              "duration": 66035600
             }
           },
           {
@@ -1564,11 +1562,11 @@
             "line": 17,
             "name": "the response status of PUT should be 403",
             "match": {
-              "location": "src\\tests\\steps\\updateBooks.steps.ts:66"
+              "location": "src\\tests\\steps\\updateBooks.steps.ts:81"
             },
             "result": {
               "status": "passed",
-              "duration": 322000
+              "duration": 471900
             }
           }
         ],
@@ -1592,7 +1590,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 90798799
+              "duration": 70864800
             }
           },
           {
@@ -1605,7 +1603,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 825499
+              "duration": 1942800
             }
           },
           {
@@ -1618,7 +1616,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 81387499
+              "duration": 67243200
             }
           },
           {
@@ -1627,12 +1625,12 @@
             "line": 25,
             "name": "the response status of PUT should be 200",
             "match": {
-              "location": "src\\tests\\steps\\updateBooks.steps.ts:66"
+              "location": "src\\tests\\steps\\updateBooks.steps.ts:81"
             },
             "result": {
               "status": "failed",
-              "duration": 523699,
-              "error_message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m200\u001b[39m\nReceived: \u001b[31m400\u001b[39m\n    at Proxy.<anonymous> (C:\\ITQA-API-UI-Testing\\api-testing\\node_modules\\playwright\\lib\\matchers\\expect.js:227:37)\n    at validateResponseStatus (C:\\ITQA-API-UI-Testing\\api-testing\\src\\requests\\ValidateResponseStatus.ts:10:28)\n    at World.<anonymous> (C:\\ITQA-API-UI-Testing\\api-testing\\src\\tests\\steps\\updateBooks.steps.ts:67:33)"
+              "duration": 907900,
+              "error_message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m200\u001b[39m\nReceived: \u001b[31m400\u001b[39m\n    at Proxy.<anonymous> (C:\\Users\\Naduni\\Documents\\GitHub\\ITQA-API-UI-Testing\\api-testing\\node_modules\\playwright\\lib\\matchers\\expect.js:227:37)\n    at validateResponseStatus (C:\\Users\\Naduni\\Documents\\GitHub\\ITQA-API-UI-Testing\\api-testing\\src\\requests\\ValidateResponseStatus.ts:10:28)\n    at World.<anonymous> (C:\\Users\\Naduni\\Documents\\GitHub\\ITQA-API-UI-Testing\\api-testing\\src\\tests\\steps\\updateBooks.steps.ts:82:33)"
             }
           }
         ],
@@ -1656,7 +1654,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 82215700
+              "duration": 69754500
             }
           },
           {
@@ -1669,7 +1667,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 570399
+              "duration": 2109400
             }
           },
           {
@@ -1682,7 +1680,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 76941800
+              "duration": 65487199
             }
           },
           {
@@ -1691,11 +1689,11 @@
             "line": 32,
             "name": "the response status of PUT should be 403",
             "match": {
-              "location": "src\\tests\\steps\\updateBooks.steps.ts:66"
+              "location": "src\\tests\\steps\\updateBooks.steps.ts:81"
             },
             "result": {
               "status": "passed",
-              "duration": 774199
+              "duration": 585200
             }
           },
           {
@@ -1704,11 +1702,11 @@
             "line": 33,
             "name": "the response should be \"User is not permitted.\"",
             "match": {
-              "location": "src\\tests\\steps\\updateBooks.steps.ts:71"
+              "location": "src\\tests\\steps\\updateBooks.steps.ts:86"
             },
             "result": {
               "status": "passed",
-              "duration": 9457400
+              "duration": 3088800
             }
           }
         ],
@@ -1732,7 +1730,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 2165700
+              "duration": 1139700
             }
           },
           {
@@ -1745,7 +1743,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 93522500
+              "duration": 65824200
             }
           },
           {
@@ -1754,11 +1752,11 @@
             "line": 39,
             "name": "the response status of PUT should be 404",
             "match": {
-              "location": "src\\tests\\steps\\updateBooks.steps.ts:66"
+              "location": "src\\tests\\steps\\updateBooks.steps.ts:81"
             },
             "result": {
               "status": "passed",
-              "duration": 345599
+              "duration": 682500
             }
           },
           {
@@ -1767,11 +1765,11 @@
             "line": 40,
             "name": "the response should display an error message \"Book not found\"",
             "match": {
-              "location": "src\\tests\\steps\\updateBooks.steps.ts:90"
+              "location": "src\\tests\\steps\\updateBooks.steps.ts:105"
             },
             "result": {
               "status": "passed",
-              "duration": 1125800
+              "duration": 2959600
             }
           }
         ],
@@ -1795,7 +1793,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1068600
+              "duration": 1503899
             }
           },
           {
@@ -1808,7 +1806,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 78212700
+              "duration": 68133799
             }
           },
           {
@@ -1817,11 +1815,11 @@
             "line": 45,
             "name": "the response status of PUT should be 403",
             "match": {
-              "location": "src\\tests\\steps\\updateBooks.steps.ts:66"
+              "location": "src\\tests\\steps\\updateBooks.steps.ts:81"
             },
             "result": {
               "status": "passed",
-              "duration": 416900
+              "duration": 984999
             }
           },
           {
@@ -1830,11 +1828,163 @@
             "line": 46,
             "name": "the response should display an error message \"User is not permitted.\"",
             "match": {
-              "location": "src\\tests\\steps\\updateBooks.steps.ts:90"
+              "location": "src\\tests\\steps\\updateBooks.steps.ts:105"
             },
             "result": {
               "status": "passed",
-              "duration": 924200
+              "duration": 6744199
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "update-a-book;verify-the-response-of-the-put-/api/books/{id}-api-as-admin",
+        "keyword": "Scenario",
+        "line": 48,
+        "name": "Verify the response of the PUT /api/books/{id} API as admin",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 49,
+            "name": "I create a new book entry with a random title",
+            "match": {
+              "location": "src\\tests\\steps\\updateBooks.steps.ts:15"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 78685000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 50,
+            "name": "I am an authenticated PUT admin API client",
+            "match": {
+              "location": "src\\tests\\steps\\updateBooks.steps.ts:21"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1813000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 51,
+            "name": "I send a PUT request to the endpoint with a new title",
+            "match": {
+              "location": "src\\tests\\steps\\updateBooks.steps.ts:59"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 72982899
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 52,
+            "name": "the response status of PUT should be 200",
+            "match": {
+              "location": "src\\tests\\steps\\updateBooks.steps.ts:81"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 390199
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 53,
+            "name": "the response should contain the updated book details with a new title and the same author",
+            "match": {
+              "location": "src\\tests\\steps\\updateBooks.steps.ts:75"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1726700
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "update-a-book;verify-the-response-of-the-put-/api/books/{id}-api-as-user",
+        "keyword": "Scenario",
+        "line": 55,
+        "name": "Verify the response of the PUT /api/books/{id} API as user",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 56,
+            "name": "I create a new book entry with a random title",
+            "match": {
+              "location": "src\\tests\\steps\\updateBooks.steps.ts:15"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 71994400
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 57,
+            "name": "I am an authenticated PUT user API client",
+            "match": {
+              "location": "src\\tests\\steps\\updateBooks.steps.ts:26"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1749599
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 58,
+            "name": "I send a PUT request to the endpoint with a new title",
+            "match": {
+              "location": "src\\tests\\steps\\updateBooks.steps.ts:59"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 65915800
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 59,
+            "name": "the response status of PUT should be 403",
+            "match": {
+              "location": "src\\tests\\steps\\updateBooks.steps.ts:81"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 422699
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 60,
+            "name": "the response should display an error message \"User is not permitted.\"",
+            "match": {
+              "location": "src\\tests\\steps\\updateBooks.steps.ts:105"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1803099
             }
           }
         ],
