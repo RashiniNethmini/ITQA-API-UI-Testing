@@ -4,74 +4,62 @@
     "elements": [
       {
         "description": "",
-        "id": "get-all-books;verify-the-response-of-the-get-/api/books-api-as-admin",
+        "id": "delete-a-book;verify-the-response-of-the-delete-api-as-admin-with-non-existing-id",
         "keyword": "Scenario",
-        "line": 3,
-        "name": "Verify the response of the GET /api/books API as admin",
+        "line": 5,
+        "name": "Verify the response of the DELETE API as admin with non-existing ID",
         "steps": [
           {
             "arguments": [],
             "keyword": "Given ",
-            "line": 5,
-            "name": "there is a book entry in the system",
-            "match": {
-              "location": "src\\tests\\steps\\getBooks.steps.ts:12"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 129027300
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Given ",
             "line": 6,
-            "name": "I am an authenticated admin API client",
+            "name": "a random book is created",
             "match": {
-              "location": "src\\tests\\steps\\getBooks.steps.ts:28"
+              "location": "src\\tests\\steps\\deleteBook.steps.ts:15"
             },
             "result": {
               "status": "passed",
-              "duration": 1341800
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "When ",
-            "line": 7,
-            "name": "I send a GET request to the \"books\" endpoint",
-            "match": {
-              "location": "src\\tests\\steps\\getBooks.steps.ts:40"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 98208799
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Then ",
-            "line": 8,
-            "name": "the response status should be 200",
-            "match": {
-              "location": "src\\tests\\steps\\getBooks.steps.ts:57"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 1376600
+              "duration": 160725400
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
-            "line": 9,
-            "name": "the response should contain a list of books",
+            "line": 7,
+            "name": "I am an authenticated DELETE admin API client",
             "match": {
-              "location": "src\\tests\\steps\\getBooks.steps.ts:62"
+              "location": "src\\tests\\steps\\deleteBook.steps.ts:30"
             },
             "result": {
               "status": "passed",
-              "duration": 2445299
+              "duration": 5737299
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 8,
+            "name": "I send a DELETE request with an existing book ID",
+            "match": {
+              "location": "src\\tests\\steps\\deleteBook.steps.ts:42"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 129006400
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 9,
+            "name": "the response status of DELETE should be 200",
+            "match": {
+              "location": "src\\tests\\steps\\deleteBook.steps.ts:47"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 3326900,
+              "error_message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m200\u001b[39m\nReceived: \u001b[31m403\u001b[39m\n    at Proxy.<anonymous> (D:\\ITQA-API-UI-Testing\\api-testing\\node_modules\\playwright\\lib\\matchers\\expect.js:227:37)\n    at validateResponseStatus (D:\\ITQA-API-UI-Testing\\api-testing\\src\\requests\\ValidateResponseStatus.ts:10:28)\n    at World.<anonymous> (D:\\ITQA-API-UI-Testing\\api-testing\\src\\tests\\steps\\deleteBook.steps.ts:48:33)"
             }
           }
         ],
@@ -80,9 +68,173 @@
       },
       {
         "description": "",
-        "id": "get-all-books;verify-the-response-of-the-get-/api/books-api-as-user",
+        "id": "delete-a-book;verify-the-response-of-the-delete-api-as-user-with-non-existing-id",
         "keyword": "Scenario",
-        "line": 12,
+        "line": 11,
+        "name": "Verify the response of the DELETE API as user with non-existing ID",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 12,
+            "name": "a random book is created",
+            "match": {
+              "location": "src\\tests\\steps\\deleteBook.steps.ts:15"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 127896800
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 13,
+            "name": "I am an authenticated DELETE user API client",
+            "match": {
+              "location": "src\\tests\\steps\\deleteBook.steps.ts:36"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2571299
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 14,
+            "name": "I send a DELETE request with an existing book ID",
+            "match": {
+              "location": "src\\tests\\steps\\deleteBook.steps.ts:42"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 122420199
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 15,
+            "name": "the response status of DELETE should be 403",
+            "match": {
+              "location": "src\\tests\\steps\\deleteBook.steps.ts:47"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 927599,
+              "error_message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m403\u001b[39m\nReceived: \u001b[31m200\u001b[39m\n    at Proxy.<anonymous> (D:\\ITQA-API-UI-Testing\\api-testing\\node_modules\\playwright\\lib\\matchers\\expect.js:227:37)\n    at validateResponseStatus (D:\\ITQA-API-UI-Testing\\api-testing\\src\\requests\\ValidateResponseStatus.ts:10:28)\n    at World.<anonymous> (D:\\ITQA-API-UI-Testing\\api-testing\\src\\tests\\steps\\deleteBook.steps.ts:48:33)"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 16,
+            "name": "the response should contain an error message \"User is not permitted.\"",
+            "match": {
+              "location": "src\\tests\\steps\\deleteBook.steps.ts:52"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "delete-a-book",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Delete a book",
+    "tags": [],
+    "uri": "src\\tests\\features\\deleteBook.feature"
+  },
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "get-books;verify-the-response-of-the-get-/api/books-api-as-admin",
+        "keyword": "Scenario",
+        "line": 5,
+        "name": "Verify the response of the GET /api/books API as admin",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 6,
+            "name": "there is a book entry in the system",
+            "match": {
+              "location": "src\\tests\\steps\\getBooks.steps.ts:17"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 114450999
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 7,
+            "name": "I am an authenticated admin API client",
+            "match": {
+              "location": "src\\tests\\steps\\getBooks.steps.ts:29"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2333899
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 8,
+            "name": "I send a GET request to the \"books\" endpoint",
+            "match": {
+              "location": "src\\tests\\steps\\getBooks.steps.ts:60"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 114564699
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 9,
+            "name": "the response status should be 200",
+            "match": {
+              "location": "src\\tests\\steps\\getBooks.steps.ts:82"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 755699
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 10,
+            "name": "the response should contain a list of books",
+            "match": {
+              "location": "src\\tests\\steps\\getBooks.steps.ts:87"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3914499
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "get-books;verify-the-response-of-the-get-/api/books-api-as-user",
+        "keyword": "Scenario",
+        "line": 13,
         "name": "Verify the response of the GET /api/books API as user",
         "steps": [
           {
@@ -91,24 +243,24 @@
             "line": 14,
             "name": "there is a book entry in the system",
             "match": {
-              "location": "src\\tests\\steps\\getBooks.steps.ts:12"
+              "location": "src\\tests\\steps\\getBooks.steps.ts:17"
             },
             "result": {
               "status": "passed",
-              "duration": 85160100
+              "duration": 118638500
             }
           },
           {
             "arguments": [],
-            "keyword": "Given ",
+            "keyword": "And ",
             "line": 15,
             "name": "I am an authenticated user API client",
             "match": {
-              "location": "src\\tests\\steps\\getBooks.steps.ts:34"
+              "location": "src\\tests\\steps\\getBooks.steps.ts:35"
             },
             "result": {
               "status": "passed",
-              "duration": 1537900
+              "duration": 2196899
             }
           },
           {
@@ -117,11 +269,11 @@
             "line": 16,
             "name": "I send a GET request to the \"books\" endpoint",
             "match": {
-              "location": "src\\tests\\steps\\getBooks.steps.ts:40"
+              "location": "src\\tests\\steps\\getBooks.steps.ts:60"
             },
             "result": {
               "status": "passed",
-              "duration": 89293500
+              "duration": 113332300
             }
           },
           {
@@ -130,11 +282,11 @@
             "line": 17,
             "name": "the response status should be 200",
             "match": {
-              "location": "src\\tests\\steps\\getBooks.steps.ts:57"
+              "location": "src\\tests\\steps\\getBooks.steps.ts:82"
             },
             "result": {
               "status": "passed",
-              "duration": 451500
+              "duration": 845299
             }
           },
           {
@@ -143,11 +295,11 @@
             "line": 18,
             "name": "the response should contain a list of books",
             "match": {
-              "location": "src\\tests\\steps\\getBooks.steps.ts:62"
+              "location": "src\\tests\\steps\\getBooks.steps.ts:87"
             },
             "result": {
               "status": "passed",
-              "duration": 2684000
+              "duration": 2770200
             }
           }
         ],
@@ -156,61 +308,61 @@
       },
       {
         "description": "",
-        "id": "get-all-books;verify-the-response-of-the-get-/api/books/{bookid}-api-as-admin-with-non-existing-id",
+        "id": "get-books;verify-the-response-of-the-get-/api/books/{bookid}-api-as-admin-with-non-existing-id",
         "keyword": "Scenario",
-        "line": 20,
+        "line": 22,
         "name": "Verify the response of the Get /api/books/{bookId} API as admin with non-existing ID",
         "steps": [
           {
             "arguments": [],
             "keyword": "Given ",
-            "line": 21,
+            "line": 23,
             "name": "there is a book entry in the system",
             "match": {
-              "location": "src\\tests\\steps\\getBooks.steps.ts:12"
+              "location": "src\\tests\\steps\\getBooks.steps.ts:17"
             },
             "result": {
               "status": "passed",
-              "duration": 97490499
+              "duration": 123737200
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
-            "line": 22,
+            "line": 24,
             "name": "I am an authenticated admin API client",
             "match": {
-              "location": "src\\tests\\steps\\getBooks.steps.ts:28"
+              "location": "src\\tests\\steps\\getBooks.steps.ts:29"
             },
             "result": {
               "status": "passed",
-              "duration": 1437699
+              "duration": 2329099
             }
           },
           {
             "arguments": [],
             "keyword": "When ",
-            "line": 23,
+            "line": 25,
             "name": "I send a GET request to the \"books/100000\" endpoint with a non-existing ID",
             "match": {
-              "location": "src\\tests\\steps\\getBooks.steps.ts:48"
+              "location": "src\\tests\\steps\\getBooks.steps.ts:68"
             },
             "result": {
               "status": "passed",
-              "duration": 84347699
+              "duration": 122118800
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
-            "line": 24,
+            "line": 26,
             "name": "the response status should be 404",
             "match": {
-              "location": "src\\tests\\steps\\getBooks.steps.ts:57"
+              "location": "src\\tests\\steps\\getBooks.steps.ts:82"
             },
             "result": {
               "status": "passed",
-              "duration": 2299799
+              "duration": 702699
             }
           }
         ],
@@ -219,62 +371,215 @@
       },
       {
         "description": "",
-        "id": "get-all-books;verify-the-response-of-the-get-/api/books/{bookid}-api-as-user-with-non-existing-id",
+        "id": "get-books;verify-the-response-of-the-get-/api/books/{bookid}-api-as-user-with-non-existing-id",
         "keyword": "Scenario",
-        "line": 26,
+        "line": 28,
         "name": "Verify the response of the Get /api/books/{bookId} API as user with non-existing ID",
         "steps": [
           {
             "arguments": [],
             "keyword": "Given ",
-            "line": 27,
+            "line": 29,
             "name": "there is a book entry in the system",
             "match": {
-              "location": "src\\tests\\steps\\getBooks.steps.ts:12"
+              "location": "src\\tests\\steps\\getBooks.steps.ts:17"
             },
             "result": {
               "status": "passed",
-              "duration": 103670600
+              "duration": 130475399
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
-            "line": 28,
+            "line": 30,
             "name": "I am an authenticated user API client",
             "match": {
-              "location": "src\\tests\\steps\\getBooks.steps.ts:34"
+              "location": "src\\tests\\steps\\getBooks.steps.ts:35"
             },
             "result": {
               "status": "passed",
-              "duration": 1315100
+              "duration": 1976500
             }
           },
           {
             "arguments": [],
             "keyword": "When ",
-            "line": 29,
+            "line": 31,
             "name": "I send a GET request to the \"books/100000\" endpoint with a non-existing ID",
             "match": {
-              "location": "src\\tests\\steps\\getBooks.steps.ts:48"
+              "location": "src\\tests\\steps\\getBooks.steps.ts:68"
             },
             "result": {
               "status": "passed",
-              "duration": 90243099
+              "duration": 115290799
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
-            "line": 30,
+            "line": 32,
             "name": "the response status should be 404",
             "match": {
-              "location": "src\\tests\\steps\\getBooks.steps.ts:57"
+              "location": "src\\tests\\steps\\getBooks.steps.ts:82"
             },
             "result": {
               "status": "failed",
-              "duration": 5350099,
-              "error_message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m404\u001b[39m\nReceived: \u001b[31m403\u001b[39m\n    at Proxy.<anonymous> (C:\\ITQA-API-UI-Testing\\api-testing\\node_modules\\playwright\\lib\\matchers\\expect.js:227:37)\n    at World.<anonymous> (C:\\ITQA-API-UI-Testing\\api-testing\\src\\tests\\steps\\getBooks.steps.ts:58:31)"
+              "duration": 984200,
+              "error_message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m404\u001b[39m\nReceived: \u001b[31m403\u001b[39m\n    at Proxy.<anonymous> (D:\\ITQA-API-UI-Testing\\api-testing\\node_modules\\playwright\\lib\\matchers\\expect.js:227:37)\n    at validateResponseStatus (D:\\ITQA-API-UI-Testing\\api-testing\\src\\requests\\ValidateResponseStatus.ts:10:28)\n    at World.<anonymous> (D:\\ITQA-API-UI-Testing\\api-testing\\src\\tests\\steps\\getBooks.steps.ts:83:33)"
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "get-books;verify-the-response-of-the-get-/api/books/{bookid}-api-as-admin-with-existing-id",
+        "keyword": "Scenario",
+        "line": 37,
+        "name": "Verify the response of the GET /api/books/{bookId} API as admin with existing ID",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 38,
+            "name": "I create a new book with a random title",
+            "match": {
+              "location": "src\\tests\\steps\\getBooks.steps.ts:40"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 118567299
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 39,
+            "name": "I am an authenticated admin API client",
+            "match": {
+              "location": "src\\tests\\steps\\getBooks.steps.ts:29"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1339600
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 40,
+            "name": "I send a GET request with an existing book ID",
+            "match": {
+              "location": "src\\tests\\steps\\getBooks.steps.ts:76"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 112264199
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 41,
+            "name": "the response status should be 200",
+            "match": {
+              "location": "src\\tests\\steps\\getBooks.steps.ts:82"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 671599
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 42,
+            "name": "the response should contain the details of the book",
+            "match": {
+              "location": "src\\tests\\steps\\getBooks.steps.ts:93"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3794899
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "get-books;verify-the-response-of-the-get-/api/books/{bookid}-api-as-user-with-existing-id",
+        "keyword": "Scenario",
+        "line": 44,
+        "name": "Verify the response of the GET /api/books/{bookId} API as user with existing ID",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 45,
+            "name": "I create a new book with a random title",
+            "match": {
+              "location": "src\\tests\\steps\\getBooks.steps.ts:40"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 122439099
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 46,
+            "name": "I am an authenticated user API client",
+            "match": {
+              "location": "src\\tests\\steps\\getBooks.steps.ts:35"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2218200
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 47,
+            "name": "I send a GET request with an existing book ID",
+            "match": {
+              "location": "src\\tests\\steps\\getBooks.steps.ts:76"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 114732299
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 48,
+            "name": "the response status should be 200",
+            "match": {
+              "location": "src\\tests\\steps\\getBooks.steps.ts:82"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 778999,
+              "error_message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m200\u001b[39m\nReceived: \u001b[31m403\u001b[39m\n    at Proxy.<anonymous> (D:\\ITQA-API-UI-Testing\\api-testing\\node_modules\\playwright\\lib\\matchers\\expect.js:227:37)\n    at validateResponseStatus (D:\\ITQA-API-UI-Testing\\api-testing\\src\\requests\\ValidateResponseStatus.ts:10:28)\n    at World.<anonymous> (D:\\ITQA-API-UI-Testing\\api-testing\\src\\tests\\steps\\getBooks.steps.ts:83:33)"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 49,
+            "name": "the response should contain the details of the book",
+            "match": {
+              "location": "src\\tests\\steps\\getBooks.steps.ts:93"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
             }
           }
         ],
@@ -282,10 +587,10 @@
         "type": "scenario"
       }
     ],
-    "id": "get-all-books",
+    "id": "get-books",
     "line": 1,
     "keyword": "Feature",
-    "name": "Get all books",
+    "name": "Get books",
     "tags": [],
     "uri": "src\\tests\\features\\getBooks.feature"
   },
@@ -309,7 +614,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1402099
+              "duration": 1298200
             }
           },
           {
@@ -322,7 +627,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 92889400
+              "duration": 115542199
             }
           },
           {
@@ -331,11 +636,11 @@
             "line": 6,
             "name": "the response status of POST should be either 201 or 208",
             "match": {
-              "location": "src\\tests\\steps\\postBook.steps.ts:73"
+              "location": "src\\tests\\steps\\postBook.steps.ts:90"
             },
             "result": {
               "status": "passed",
-              "duration": 954900
+              "duration": 1065399
             }
           },
           {
@@ -344,11 +649,11 @@
             "line": 7,
             "name": "the response should contain the created book details",
             "match": {
-              "location": "src\\tests\\steps\\postBook.steps.ts:77"
+              "location": "src\\tests\\steps\\postBook.steps.ts:94"
             },
             "result": {
               "status": "passed",
-              "duration": 3172700
+              "duration": 3853600
             }
           }
         ],
@@ -372,7 +677,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1200200
+              "duration": 1359099
             }
           },
           {
@@ -385,7 +690,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 95429300
+              "duration": 112583899
             }
           },
           {
@@ -394,11 +699,11 @@
             "line": 12,
             "name": "the response status of POST should be either 201 or 208",
             "match": {
-              "location": "src\\tests\\steps\\postBook.steps.ts:73"
+              "location": "src\\tests\\steps\\postBook.steps.ts:90"
             },
             "result": {
               "status": "passed",
-              "duration": 616399
+              "duration": 899100
             }
           },
           {
@@ -407,11 +712,11 @@
             "line": 13,
             "name": "the response should contain the created book details",
             "match": {
-              "location": "src\\tests\\steps\\postBook.steps.ts:77"
+              "location": "src\\tests\\steps\\postBook.steps.ts:94"
             },
             "result": {
               "status": "passed",
-              "duration": 2753600
+              "duration": 9042900
             }
           }
         ],
@@ -422,59 +727,59 @@
         "description": "",
         "id": "create-a-new-book;verify-the-response-of-the-post-/api/books-api-as-admin-with-empty-title-and-author",
         "keyword": "Scenario",
-        "line": 16,
+        "line": 17,
         "name": "Verify the response of the POST /api/books API as admin with empty title and author",
         "steps": [
           {
             "arguments": [],
             "keyword": "Given ",
-            "line": 17,
+            "line": 18,
             "name": "I am an authenticated POST admin API client",
             "match": {
               "location": "src\\tests\\steps\\postBook.steps.ts:12"
             },
             "result": {
               "status": "passed",
-              "duration": 846199
+              "duration": 1419400
             }
           },
           {
             "arguments": [],
             "keyword": "When ",
-            "line": 18,
+            "line": 19,
             "name": "I send a POST request to the \"books\" endpoint with empty title and author",
             "match": {
               "location": "src\\tests\\steps\\postBook.steps.ts:34"
             },
             "result": {
               "status": "passed",
-              "duration": 88486899
+              "duration": 125621199
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
-            "line": 19,
+            "line": 20,
             "name": "the response status of POST should be either 201 or 208",
             "match": {
-              "location": "src\\tests\\steps\\postBook.steps.ts:73"
+              "location": "src\\tests\\steps\\postBook.steps.ts:90"
             },
             "result": {
               "status": "passed",
-              "duration": 428300
+              "duration": 709800
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
-            "line": 20,
+            "line": 21,
             "name": "the response should contain the created book details with empty title and author",
             "match": {
-              "location": "src\\tests\\steps\\postBook.steps.ts:81"
+              "location": "src\\tests\\steps\\postBook.steps.ts:98"
             },
             "result": {
               "status": "passed",
-              "duration": 3600000
+              "duration": 4969800
             }
           }
         ],
@@ -485,59 +790,59 @@
         "description": "",
         "id": "create-a-new-book;verify-the-response-of-the-post-/api/books-api-as-user-with-empty-title-and-author",
         "keyword": "Scenario",
-        "line": 22,
+        "line": 23,
         "name": "Verify the response of the POST /api/books API as user with empty title and author",
         "steps": [
           {
             "arguments": [],
             "keyword": "Given ",
-            "line": 23,
+            "line": 24,
             "name": "I am an authenticated POST user API client",
             "match": {
               "location": "src\\tests\\steps\\postBook.steps.ts:17"
             },
             "result": {
               "status": "passed",
-              "duration": 982400
+              "duration": 1948100
             }
           },
           {
             "arguments": [],
             "keyword": "When ",
-            "line": 24,
+            "line": 25,
             "name": "I send a POST request to the \"books\" endpoint with empty title and author",
             "match": {
               "location": "src\\tests\\steps\\postBook.steps.ts:34"
             },
             "result": {
               "status": "passed",
-              "duration": 85576799
+              "duration": 119931800
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
-            "line": 25,
+            "line": 26,
             "name": "the response status of POST should be either 201 or 208",
             "match": {
-              "location": "src\\tests\\steps\\postBook.steps.ts:73"
+              "location": "src\\tests\\steps\\postBook.steps.ts:90"
             },
             "result": {
               "status": "passed",
-              "duration": 618599
+              "duration": 495700
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
-            "line": 26,
+            "line": 27,
             "name": "the response should contain the created book details with empty title and author",
             "match": {
-              "location": "src\\tests\\steps\\postBook.steps.ts:81"
+              "location": "src\\tests\\steps\\postBook.steps.ts:98"
             },
             "result": {
               "status": "passed",
-              "duration": 6617000
+              "duration": 3523599
             }
           }
         ],
@@ -548,59 +853,59 @@
         "description": "",
         "id": "create-a-new-book;attempt-to-create-two-different-books-with-the-same-author-but-different-titles-as-admin",
         "keyword": "Scenario",
-        "line": 28,
+        "line": 31,
         "name": "Attempt to create two different books with the same author but different titles as admin",
         "steps": [
           {
             "arguments": [],
             "keyword": "Given ",
-            "line": 29,
+            "line": 32,
             "name": "I am an authenticated POST admin API client",
             "match": {
               "location": "src\\tests\\steps\\postBook.steps.ts:12"
             },
             "result": {
               "status": "passed",
-              "duration": 758499
+              "duration": 1366599
             }
           },
           {
             "arguments": [],
             "keyword": "When ",
-            "line": 30,
+            "line": 33,
             "name": "I send a POST request to the \"books\" endpoint with two different titles and the same author",
             "match": {
               "location": "src\\tests\\steps\\postBook.steps.ts:46"
             },
             "result": {
               "status": "passed",
-              "duration": 93218499
+              "duration": 124710000
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
-            "line": 31,
+            "line": 34,
             "name": "the response status of POST should be either 201 or 208",
             "match": {
-              "location": "src\\tests\\steps\\postBook.steps.ts:73"
+              "location": "src\\tests\\steps\\postBook.steps.ts:90"
             },
             "result": {
               "status": "passed",
-              "duration": 337899
+              "duration": 673600
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
-            "line": 32,
+            "line": 35,
             "name": "the response should contain the details of both books",
             "match": {
-              "location": "src\\tests\\steps\\postBook.steps.ts:85"
+              "location": "src\\tests\\steps\\postBook.steps.ts:102"
             },
             "result": {
               "status": "passed",
-              "duration": 2599699
+              "duration": 4339299
             }
           }
         ],
@@ -611,59 +916,59 @@
         "description": "",
         "id": "create-a-new-book;attempt-to-create-two-different-books-with-the-same-author-but-different-titles-as-user",
         "keyword": "Scenario",
-        "line": 34,
+        "line": 37,
         "name": "Attempt to create two different books with the same author but different titles as user",
         "steps": [
           {
             "arguments": [],
             "keyword": "Given ",
-            "line": 35,
+            "line": 38,
             "name": "I am an authenticated POST user API client",
             "match": {
               "location": "src\\tests\\steps\\postBook.steps.ts:17"
             },
             "result": {
               "status": "passed",
-              "duration": 979299
+              "duration": 1947299
             }
           },
           {
             "arguments": [],
             "keyword": "When ",
-            "line": 36,
+            "line": 39,
             "name": "I send a POST request to the \"books\" endpoint with two different titles and the same author",
             "match": {
               "location": "src\\tests\\steps\\postBook.steps.ts:46"
             },
             "result": {
               "status": "passed",
-              "duration": 102053700
+              "duration": 121337399
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
-            "line": 37,
+            "line": 40,
             "name": "the response status of POST should be either 201 or 208",
             "match": {
-              "location": "src\\tests\\steps\\postBook.steps.ts:73"
+              "location": "src\\tests\\steps\\postBook.steps.ts:90"
             },
             "result": {
               "status": "passed",
-              "duration": 410200
+              "duration": 487699
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
-            "line": 38,
+            "line": 41,
             "name": "the response should contain the details of both books",
             "match": {
-              "location": "src\\tests\\steps\\postBook.steps.ts:85"
+              "location": "src\\tests\\steps\\postBook.steps.ts:102"
             },
             "result": {
               "status": "passed",
-              "duration": 2037500
+              "duration": 5232299
             }
           }
         ],
@@ -674,71 +979,20 @@
         "description": "",
         "id": "create-a-new-book;verify-the-response-of-the-post-/api/books-api-as-admin-with-empty-title",
         "keyword": "Scenario",
-        "line": 40,
+        "line": 45,
         "name": "Verify the response of the POST /api/books API as admin with empty title",
         "steps": [
           {
             "arguments": [],
             "keyword": "Given ",
-            "line": 41,
+            "line": 46,
             "name": "I am an authenticated POST admin API client",
             "match": {
               "location": "src\\tests\\steps\\postBook.steps.ts:12"
             },
             "result": {
               "status": "passed",
-              "duration": 950199
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "When ",
-            "line": 42,
-            "name": "I send a POST request to the \"books\" endpoint with empty title",
-            "match": {
-              "location": "src\\tests\\steps\\postBook.steps.ts:59"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 96997399
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Then ",
-            "line": 43,
-            "name": "the response status of POST should be 400",
-            "match": {
-              "location": "src\\tests\\steps\\postBook.steps.ts:89"
-            },
-            "result": {
-              "status": "failed",
-              "duration": 649800,
-              "error_message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m400\u001b[39m\nReceived: \u001b[31m208\u001b[39m\n    at Proxy.<anonymous> (C:\\ITQA-API-UI-Testing\\api-testing\\node_modules\\playwright\\lib\\matchers\\expect.js:227:37)\n    at World.<anonymous> (C:\\ITQA-API-UI-Testing\\api-testing\\src\\tests\\steps\\postBook.steps.ts:90:31)"
-            }
-          }
-        ],
-        "tags": [],
-        "type": "scenario"
-      },
-      {
-        "description": "",
-        "id": "create-a-new-book;verify-the-response-of-the-post-/api/books-api-as-user-with-empty-title",
-        "keyword": "Scenario",
-        "line": 45,
-        "name": "Verify the response of the POST /api/books API as user with empty title",
-        "steps": [
-          {
-            "arguments": [],
-            "keyword": "Given ",
-            "line": 46,
-            "name": "I am an authenticated POST user API client",
-            "match": {
-              "location": "src\\tests\\steps\\postBook.steps.ts:17"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 1226099
+              "duration": 1398799
             }
           },
           {
@@ -751,7 +1005,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 84474199
+              "duration": 120970199
             }
           },
           {
@@ -760,12 +1014,191 @@
             "line": 48,
             "name": "the response status of POST should be 400",
             "match": {
-              "location": "src\\tests\\steps\\postBook.steps.ts:89"
+              "location": "src\\tests\\steps\\postBook.steps.ts:111"
             },
             "result": {
               "status": "failed",
-              "duration": 702400,
-              "error_message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m400\u001b[39m\nReceived: \u001b[31m208\u001b[39m\n    at Proxy.<anonymous> (C:\\ITQA-API-UI-Testing\\api-testing\\node_modules\\playwright\\lib\\matchers\\expect.js:227:37)\n    at World.<anonymous> (C:\\ITQA-API-UI-Testing\\api-testing\\src\\tests\\steps\\postBook.steps.ts:90:31)"
+              "duration": 967099,
+              "error_message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m400\u001b[39m\nReceived: \u001b[31m208\u001b[39m\n    at Proxy.<anonymous> (D:\\ITQA-API-UI-Testing\\api-testing\\node_modules\\playwright\\lib\\matchers\\expect.js:227:37)\n    at validateResponseStatus (D:\\ITQA-API-UI-Testing\\api-testing\\src\\requests\\ValidateResponseStatus.ts:10:28)\n    at World.<anonymous> (D:\\ITQA-API-UI-Testing\\api-testing\\src\\tests\\steps\\postBook.steps.ts:112:33)"
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "create-a-new-book;verify-the-response-of-the-post-/api/books-api-as-user-with-empty-title",
+        "keyword": "Scenario",
+        "line": 50,
+        "name": "Verify the response of the POST /api/books API as user with empty title",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 51,
+            "name": "I am an authenticated POST user API client",
+            "match": {
+              "location": "src\\tests\\steps\\postBook.steps.ts:17"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 10864999
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 52,
+            "name": "I send a POST request to the \"books\" endpoint with empty title",
+            "match": {
+              "location": "src\\tests\\steps\\postBook.steps.ts:59"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 119430500
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 53,
+            "name": "the response status of POST should be 400",
+            "match": {
+              "location": "src\\tests\\steps\\postBook.steps.ts:111"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 1108299,
+              "error_message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m400\u001b[39m\nReceived: \u001b[31m208\u001b[39m\n    at Proxy.<anonymous> (D:\\ITQA-API-UI-Testing\\api-testing\\node_modules\\playwright\\lib\\matchers\\expect.js:227:37)\n    at validateResponseStatus (D:\\ITQA-API-UI-Testing\\api-testing\\src\\requests\\ValidateResponseStatus.ts:10:28)\n    at World.<anonymous> (D:\\ITQA-API-UI-Testing\\api-testing\\src\\tests\\steps\\postBook.steps.ts:112:33)"
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "create-a-new-book;verify-the-response-of-the-post-/api/books-api-as-admin-with-an-existing-title-but-a-different-author",
+        "keyword": "Scenario",
+        "line": 57,
+        "name": "Verify the response of the POST /api/books API as admin with an existing title but a different author",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 58,
+            "name": "I am an authenticated POST admin API client",
+            "match": {
+              "location": "src\\tests\\steps\\postBook.steps.ts:12"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1581500
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 59,
+            "name": "I send 2 POST requests to the \"books\" endpoint with the same title but different authors",
+            "match": {
+              "location": "src\\tests\\steps\\postBook.steps.ts:71"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 122825999
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 60,
+            "name": "the response status of POST should be 201",
+            "match": {
+              "location": "src\\tests\\steps\\postBook.steps.ts:111"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 1302100,
+              "error_message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m201\u001b[39m\nReceived: \u001b[31m208\u001b[39m\n    at Proxy.<anonymous> (D:\\ITQA-API-UI-Testing\\api-testing\\node_modules\\playwright\\lib\\matchers\\expect.js:227:37)\n    at validateResponseStatus (D:\\ITQA-API-UI-Testing\\api-testing\\src\\requests\\ValidateResponseStatus.ts:10:28)\n    at World.<anonymous> (D:\\ITQA-API-UI-Testing\\api-testing\\src\\tests\\steps\\postBook.steps.ts:112:33)"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 61,
+            "name": "the response should contain the details of both books with the same title but different authors",
+            "match": {
+              "location": "src\\tests\\steps\\postBook.steps.ts:106"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "create-a-new-book;verify-the-response-of-the-post-/api/books-api-as-user-with-an-existing-title-but-a-different-author",
+        "keyword": "Scenario",
+        "line": 63,
+        "name": "Verify the response of the POST /api/books API as user with an existing title but a different author",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 64,
+            "name": "I am an authenticated POST user API client",
+            "match": {
+              "location": "src\\tests\\steps\\postBook.steps.ts:17"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2140600
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 65,
+            "name": "I send 2 POST requests to the \"books\" endpoint with the same title but different authors",
+            "match": {
+              "location": "src\\tests\\steps\\postBook.steps.ts:71"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 129180400
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 66,
+            "name": "the response status of POST should be 201",
+            "match": {
+              "location": "src\\tests\\steps\\postBook.steps.ts:111"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 804599,
+              "error_message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m201\u001b[39m\nReceived: \u001b[31m208\u001b[39m\n    at Proxy.<anonymous> (D:\\ITQA-API-UI-Testing\\api-testing\\node_modules\\playwright\\lib\\matchers\\expect.js:227:37)\n    at validateResponseStatus (D:\\ITQA-API-UI-Testing\\api-testing\\src\\requests\\ValidateResponseStatus.ts:10:28)\n    at World.<anonymous> (D:\\ITQA-API-UI-Testing\\api-testing\\src\\tests\\steps\\postBook.steps.ts:112:33)"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 67,
+            "name": "the response should contain the details of both books with the same title but different authors",
+            "match": {
+              "location": "src\\tests\\steps\\postBook.steps.ts:106"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
             }
           }
         ],
@@ -779,5 +1212,156 @@
     "name": "Create a new book",
     "tags": [],
     "uri": "src\\tests\\features\\postBook.feature"
+  },
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "update-a-book;verify-the-response-of-the-put-/api/books/{id}-api-as-admin",
+        "keyword": "Scenario",
+        "line": 3,
+        "name": "Verify the response of the PUT /api/books/{id} API as admin",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 5,
+            "name": "I create a new book entry with a random title",
+            "match": {
+              "location": "src\\tests\\steps\\updateBooks.steps.ts:13"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 120241699
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 6,
+            "name": "I am an authenticated PUT admin API client",
+            "match": {
+              "location": "src\\tests\\steps\\updateBooks.steps.ts:31"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2119499
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 7,
+            "name": "I send a PUT request to the endpoint with the new author \"John Doe\"",
+            "match": {
+              "location": "src\\tests\\steps\\updateBooks.steps.ts:41"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 120309499
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 8,
+            "name": "the response status of PUT should be 200",
+            "match": {
+              "location": "src\\tests\\steps\\updateBooks.steps.ts:50"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 849799,
+              "error_message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m200\u001b[39m\nReceived: \u001b[31m208\u001b[39m\n    at Proxy.<anonymous> (D:\\ITQA-API-UI-Testing\\api-testing\\node_modules\\playwright\\lib\\matchers\\expect.js:227:37)\n    at World.<anonymous> (D:\\ITQA-API-UI-Testing\\api-testing\\src\\tests\\steps\\updateBooks.steps.ts:51:31)"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 9,
+            "name": "the response should contain the updated book details with author \"John Doe\"",
+            "match": {
+              "location": "src\\tests\\steps\\updateBooks.steps.ts:54"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "update-a-book;verify-the-response-of-the-put-/api/books/{id}-api-as-user",
+        "keyword": "Scenario",
+        "line": 12,
+        "name": "Verify the response of the PUT /api/books/{id} API as user",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 14,
+            "name": "I create a new book entry with a random title",
+            "match": {
+              "location": "src\\tests\\steps\\updateBooks.steps.ts:13"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 117583300
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 15,
+            "name": "I am an authenticated PUT user API client",
+            "match": {
+              "location": "src\\tests\\steps\\updateBooks.steps.ts:36"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2080600
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 16,
+            "name": "I send a PUT request to the endpoint with the new author \"Jane Smith\"",
+            "match": {
+              "location": "src\\tests\\steps\\updateBooks.steps.ts:41"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 114573200
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 17,
+            "name": "the response status of PUT should be 403",
+            "match": {
+              "location": "src\\tests\\steps\\updateBooks.steps.ts:50"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 515999
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "update-a-book",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Update a book",
+    "tags": [],
+    "uri": "src\\tests\\features\\updateBooks.feature"
   }
 ]

@@ -42,4 +42,10 @@ export class BooksPage {
         return response;
     }
 
+    async deleteBook(bookId: number) {
+        const response = await this.request.delete(`${this.baseURL}/books/${bookId}`);
+        return response;
+    }
+
+
 }

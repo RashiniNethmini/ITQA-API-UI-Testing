@@ -16,3 +16,18 @@ import { expect } from 'playwright/test';
 //     return response;
 // }
 
+export async function validateBookByIdDetails(response: any, bookId: number, randomTitle: string) {
+    let responseBody;
+    try {
+        responseBody = await response.json();
+    } catch (error) {
+        responseBody = await response.text();
+    }
+    if (typeof responseBody === 'object') {
+        expect(responseBody.id).toBe(bookId);
+        expect(responseBody.title).toBe(randomTitle);
+        expect(responseBody.author).toBe('Random Author');
+    }
+}
+
+
