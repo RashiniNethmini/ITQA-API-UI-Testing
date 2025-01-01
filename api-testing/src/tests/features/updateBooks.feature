@@ -45,14 +45,14 @@ Feature: Update a book
     Then the response status of PUT should be 403
     And the response should display an error message "User is not permitted."
 
-Scenario: Verify the response of the PUT /api/books/{id} API as admin
+Scenario: Update existing book with a new title and the same author as admin
     Given I create a new book entry with a random title
     Given I am an authenticated PUT admin API client
     When I send a PUT request to the endpoint with a new title 
     Then the response status of PUT should be 200
     And the response should contain the updated book details with a new title and the same author
 
-  Scenario: Verify the response of the PUT /api/books/{id} API as user
+Scenario: Update existing book with a new title and the same author as user
     Given I create a new book entry with a random title
     Given I am an authenticated PUT user API client
     When I send a PUT request to the endpoint with a new title
