@@ -58,3 +58,18 @@ Scenario: Verify the response of the PUT /api/books/{id} API as admin
     When I send a PUT request to the endpoint with a new title
     Then the response status of PUT should be 403
     And the response should display an error message "User is not permitted."
+
+Scenario: Update existing book without both title and author as admin
+	Given I create a new book entry with a random title
+	Given I am an authenticated PUT admin API client
+	When I send a PUT request to the endpoint without title and author
+	Then the response status of PUT should be 400
+	And the response should display an error message "Mandatory parameters should not be null"
+
+  Scenario: Update existing book without both title and author as user
+	Given I create a new book entry with a random title
+	Given I am an authenticated PUT user API client
+	When I send a PUT request to the endpoint without title and author
+	Then the response status of PUT should be 403
+	And the response should display an error message "User is not permitted."
+
