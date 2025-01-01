@@ -82,3 +82,20 @@ export async function validateBookCreationResponseDifferentAuthors(responses: an
     expect(book1.title).toBe(book2.title);
     expect(book1.author).not.toBe(book2.author);
 }
+
+export async function validateBookCreationResponseNullAuthor(response: any, randomTitle: any) {
+    let responseBody;
+    try {
+        responseBody = await response.json();
+    } catch (error) {
+        responseBody = await response.text();
+    }
+
+    if (typeof responseBody === 'object') {
+        expect(responseBody).toHaveProperty('id');
+        expect(responseBody).toHaveProperty('title', randomTitle);
+        expect(responseBody).toHaveProperty('author', null);
+    } else {
+        throw new Error('Response body is not valid JSON');
+    }
+}

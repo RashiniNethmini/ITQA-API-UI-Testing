@@ -2,12 +2,13 @@ import { Given, When, Then } from '@cucumber/cucumber';
 import { RequestFactory } from '../../requests/requestFactory';
 import { BooksPage } from '../../pageObjects/BooksPage';
 import { credentials } from '../../config';
-import {  validateBookCreationResponse,validateBookCreationResponseDifferentTiltle,validateBookCreationResponseEmpty, validateBookCreationResponseDifferentAuthors } from '../../requests/BookCreation';
+import {  validateBookCreationResponse,validateBookCreationResponseDifferentTiltle,validateBookCreationResponseEmpty, validateBookCreationResponseDifferentAuthors, validateBookCreationResponseNullAuthor } from '../../requests/BookCreation';
 import {  validateResponseTwoStatus, validateResponseStatus } from '../../requests/ValidateResponseStatus'; 
 import { expect } from 'playwright/test';
 
 let booksPage: BooksPage;
 let response: any;
+let randomTitle: any;
 
 Given('I am an authenticated POST admin API client', async () => {
     const request = await RequestFactory.createRequest('Basic', credentials.admin, credentials.password);
@@ -98,6 +99,18 @@ When('I send a POST request to the {string} endpoint without title', async funct
     }
 });
 
+When('I send a POST request to the {string} endpoint with title and without author', async function (endpoint: string) {
+    if (endpoint === 'books') {
+        randomTitle = `Book-${Math.floor(Math.random() * 100000)}`;
+        const bookDetails = {
+            title: randomTitle,
+            author: null 
+        };
+        response = await booksPage.createBook(bookDetails);
+    } else {
+        throw new Error(`Unknown endpoint: ${endpoint}`);
+    }
+});
 
 Then('the response status of POST should be either {int} or {int}', (status1: number, status2: number) => {
     validateResponseTwoStatus(response, status1, status2);
@@ -124,3 +137,6 @@ Then('the response status of POST should be {int}', async (status: number) => {
     await validateResponseStatus(response, status);
 });
 
+Then('the response should contain the created book details with title and null author', async () => {
+    await validateBookCreationResponseNullAuthor(response, randomTitle);
+});
