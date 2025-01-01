@@ -32,11 +32,11 @@ When('I send a POST request to the {string} endpoint with valid book details', a
     }
 });
 
-When('I send a POST request to the {string} endpoint with empty title and author', async function (endpoint: string) {
+When('I send a POST request to the {string} endpoint without both title and author', async function (endpoint: string) {
     if (endpoint === 'books') {
         const bookDetails = {
-            title: '', // Empty title
-            author: '' // Empty author
+            title: null,
+            author: null 
         };
         response = await booksPage.createBook(bookDetails);
     } else {
@@ -120,10 +120,6 @@ Then('the response should contain the created book details', async () => {
     await validateBookCreationResponse(response);
 });
 
-Then('the response should contain the created book details with empty title and author', async () => {
-    await validateBookCreationResponseEmpty(response);
-});
-
 Then('the response should contain the details of both books', async () => {
     await validateBookCreationResponseDifferentTiltle(response);
 });
@@ -139,4 +135,14 @@ Then('the response status of POST should be {int}', async (status: number) => {
 
 Then('the response should contain the created book details with title and null author', async () => {
     await validateBookCreationResponseNullAuthor(response, randomTitle);
+});
+
+Then('the response should display the message {string}', async (message: string) => {
+    const responseBody = await response.text(); 
+    try {
+        const parsedBody = JSON.parse(responseBody); 
+        expect(parsedBody.message).toBe(message);
+    } catch (e) {
+        expect(responseBody).toBe(message);
+    }
 });

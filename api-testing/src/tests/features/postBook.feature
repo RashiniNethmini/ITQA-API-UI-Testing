@@ -12,19 +12,20 @@ Scenario: Verify the response of the POST /api/books API as user with valid data
     Then the response status of POST should be either 201 or 208
     And the response should contain the created book details
 
-# Create book with empty title and author
+# Create book without both title and author
 
-Scenario: Verify the response of the POST /api/books API as admin with empty title and author
+Scenario: Verify the response of the POST /api/books API as admin without both title and author
   Given I am an authenticated POST admin API client
-  When I send a POST request to the "books" endpoint with empty title and author
-  Then the response status of POST should be either 201 or 208
-  And the response should contain the created book details with empty title and author
+  When I send a POST request to the "books" endpoint without both title and author
+  Then the response status of POST should be 400
+  And the response should display the message "Mandatory parameters should not be null"
 
-Scenario: Verify the response of the POST /api/books API as user with empty title and author
+Scenario: Verify the response of the POST /api/books API as user without both title and author
   Given I am an authenticated POST user API client
-  When I send a POST request to the "books" endpoint with empty title and author
-  Then the response status of POST should be either 201 or 208
-  And the response should contain the created book details with empty title and author
+  When I send a POST request to the "books" endpoint without both title and author
+  Then the response status of POST should be 400
+  And the response should display the message "Mandatory parameters should not be null"
+
 
 # Create 2 different books with same with author but different titles
 
