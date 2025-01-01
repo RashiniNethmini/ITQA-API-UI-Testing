@@ -78,3 +78,16 @@ Scenario: Verify the response of the POST /api/books API as user without title
   When I send a POST request to the "books" endpoint without title
   Then the response status of POST should be 400
 
+# Create book with title and without author
+
+  Scenario: Verify the response of the POST /api/books API as admin with title and without author
+    Given I am an authenticated POST admin API client
+    When I send a POST request to the "books" endpoint with title and without author
+    Then the response status of POST should be 201
+    And the response should contain the created book details with title and null author
+
+  Scenario: Verify the response of the POST /api/books API as user with title and without author
+    Given I am an authenticated POST user API client
+    When I send a POST request to the "books" endpoint with title and without author
+    Then the response status of POST should be 201
+    And the response should contain the created book details with title and null author
