@@ -73,3 +73,14 @@ Scenario: Update existing book without both title and author as admin
 	Then the response status of PUT should be 403
 	And the response should display an error message "User is not permitted."
 
+  Scenario: Update an existing book without title as admin
+    Given I create a new book entry with a random title
+    Given I am an authenticated PUT admin API client
+    When I send a PUT request to the "books" endpoint to update an existing book without a title
+    Then the response status of PUT should be 400
+
+  Scenario: Update an existing book without title as user
+    Given I create a new book entry with a random title
+    Given I am an authenticated PUT user API client
+    When I send a PUT request to the "books" endpoint to update an existing book without a title
+    Then the response status of PUT should be 403

@@ -75,6 +75,15 @@ When('I send a PUT request to the endpoint without title and author', async () =
     response = await booksPage.updateBook(bookId, updatedBookData);
 });
 
+When('I send a PUT request to the {string} endpoint to update an existing book without a title', async (endpoint: string) => {
+    const updatedBookData = {
+        id: bookId,
+        title: null,
+        author: 'Updated Author'
+    };
+    response = await booksPage.updateBook(bookId, updatedBookData);
+});
+
 
 Then('the response should contain the updated book details with author {string}', async (author: string) => {
     const responseBody = await response.json();
