@@ -1,14 +1,41 @@
+
+//   {
+//   "compilerOptions": {
+//     "target": "ESNext",
+//     "module": "CommonJS",
+//     "strict": true,
+//     "esModuleInterop": true,
+//     "skipLibCheck": true,
+//     "outDir": "./dist",
+//     "rootDir": "."
+//   },
+//   "include": ["test/**/*.ts", "src/**/*.ts"]
+// }
+
+
+// {
+//   "compilerOptions": {
+//     "module": "ESNext", // Use ES Modules
+//     "moduleResolution": "node", // Ensure proper module resolution
+//     "target": "ESNext",
+//     "esModuleInterop": true, // Allow importing CommonJS modules
+//     "allowJs": true,
+//     "outDir": "./dist" // Where your compiled files should go
+//   }
+// }
+
 {
-    "compilerOptions": {
-      "target": "ESNext",
-      "module": "CommonJS",
-      "outDir": "dist",
-      "rootDir": "src",
-      "strict": true,
-      "esModuleInterop": true,
-      "resolveJsonModule": true
-    },
-    "include": ["src/**/*.ts"],
-    "exclude": ["node_modules"]
-  }
-  
+  "compilerOptions": {
+    "target": "ES2022", // Or a more recent version if needed
+    "module": "commonjs", 
+    "outDir": "dist",
+    "rootDir": "src",
+    "strict": true,
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "lib": ["ESNext"] // Explicitly include ESNext libraries
+  },
+  "include": ["src/**/*.ts"],
+  "exclude": ["node_modules"]
+}
+
