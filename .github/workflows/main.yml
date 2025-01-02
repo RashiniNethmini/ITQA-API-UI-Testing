@@ -50,10 +50,14 @@ jobs:
     - name: Verify API Health
       run: curl -v http://127.0.0.1:7081/api/health
 
-    - name: Run API Tests
+    - name: Run API Tests Progress
       working-directory: ./api-testing
       run: |
         npm run test:progress
+
+    - name: Run API Tests Allure
+      working-directory: ./api-testing
+      run: |
         npm run test:allure
 
     - name: Generate Allure Report
