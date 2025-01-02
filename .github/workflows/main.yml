@@ -53,7 +53,6 @@ jobs:
     - name: Run API Tests
       working-directory: ./api-testing
       run: |
-        npm run test
         npm run test:progress
         npm run test:allure
 
