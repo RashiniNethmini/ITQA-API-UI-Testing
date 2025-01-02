@@ -1,0 +1,156 @@
+name: CI Pipeline for API and UI Tests
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  test-apis:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '22'
+        cache: 'npm'
+        cache-dependency-path: ./api-testing/package-lock.json
+
+    - name: Cache Node.js modules
+      uses: actions/cache@v3
+      with:
+        path: ./api-testing/node_modules
+        key: ${{ runner.os }}-node-${{ hashFiles('api-testing/package-lock.json') }}
+        restore-keys: |
+          ${{ runner.os }}-node-
+
+    - name: Install Node.js dependencies
+      working-directory: ./api-testing
+      run: npm ci
+
+    - name: Set up Java
+      uses: actions/setup-java@v3
+      with:
+        distribution: 'temurin'
+        java-version: '18'
+
+    - name: Start API Server
+      working-directory: ./api-testing
+      run: |
+        java -jar demo-0.0.1-SNAPSHOT.jar >api.log 2>&1 &
+        sleep 10
+        cat api.log
+
+    - name: Verify API Health
+      run: curl -v http://127.0.0.1:7081/api/health
+
+    - name: Run API Tests
+      working-directory: ./api-testing
+      run: |
+        npm run test
+        npm run test:progress
+        npm run test:allure
+
+    - name: Generate Allure Report
+      working-directory: ./api-testing
+      run: npm run allure-report --clean
+
+    - name: Upload Allure Report as Artifact
+      uses: actions/upload-artifact@v3
+      with:
+        name: allure-report-api
+        path: ./api-testing/allure-report
+
+  # test-uis:
+  #   runs-on: ubuntu-latest
+
+  #   steps:
+  #   - name: Checkout code
+  #     uses: actions/checkout@v4
+
+  #   - name: Set up Node.js
+  #     uses: actions/setup-node@v4
+  #     with:
+  #       node-version: '20'
+  #       cache: 'npm'
+  #       cache-dependency-path: ./e2eui/package-lock.json
+
+  #   - name: Cache Node.js modules
+  #     uses: actions/cache@v3
+  #     with:
+  #       path: ./e2eui/node_modules
+  #       key: ${{ runner.os }}-node-${{ hashFiles('e2eui/package-lock.json') }}
+  #       restore-keys: |
+  #         ${{ runner.os }}-node-
+
+  #   - name: Install Node.js dependencies
+  #     working-directory: ./e2eui
+  #     run: npm ci
+
+  #   - name: Install Playwright Browsers
+  #     run: npx playwright install
+
+  #   - name: Install xvfb
+  #     run: sudo apt-get install -y xvfb
+
+  #   - name: Run Cucumber Tests & Generate Allure Results
+  #     working-directory: ./e2eui
+  #     run: xvfb-run npx cucumber-js npx cucumber-js
+  #     continue-on-error: true
+
+  #   - name: Generate Allure Report
+  #     working-directory: ./e2eui
+  #     run: npx allure generate allure-results --clean
+
+  #   - name: Upload Allure Results as Artifact
+  #     uses: actions/upload-artifact@v3
+  #     with:
+  #       name: allure-report-ui
+  #       path: ./e2eui/allure-report
+ 
+  deploy-allure:
+    runs-on: ubuntu-latest
+    # needs: [test-apis, test-uis]
+    needs: [test-apis]
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Download Allure API Results Artifact
+      uses: actions/download-artifact@v3
+      with:
+        name: allure-report-api
+        path: allure-report-api
+
+    # - name: Download Allure UI Results Artifact
+    #   uses: actions/download-artifact@v3
+    #   with:
+    #     name: allure-report-ui
+    #     path: allure-report-ui
+
+
+    # - name: Prepare Deployment Directories
+    #   run: |
+    #     mkdir -p deployment/api-report
+    #     mkdir -p deployment/ui-report
+    #     cp -r allure-report-api/* deployment/api-report/
+    #     cp -r allure-report-ui/* deployment/ui-report/
+
+    - name: Prepare Deployment Directories
+      run: |
+        mkdir -p deployment/api-report
+        cp -r allure-report-api/* deployment/api-report/
+
+    - name: Deploy Allure Reports to GitHub Pages
+      uses: peaceiris/actions-gh-pages@v4
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: deployment
+        keep_files: false
