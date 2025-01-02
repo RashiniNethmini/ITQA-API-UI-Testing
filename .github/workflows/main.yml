@@ -1,4 +1,4 @@
-name: CI Pipeline for API and UI Tests
+name: CI/CD Pipeline for API and UI Tests
 
 on:
   push:
@@ -60,7 +60,7 @@ jobs:
 
     - name: Generate Allure Report
       working-directory: ./api-testing
-      run: npm run allure-report --clean
+      run: allure generate allure-results --clean
 
     - name: Upload Allure Report as Artifact
       uses: actions/upload-artifact@v3
