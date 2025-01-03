@@ -5,7 +5,7 @@ import {
   searchForTool,
   clickSearchButton,
   verifySearchedProduct,
-} from '../../definitions/searchdef';
+} from '../../Definitions/searchdef';
 
 let browser: Browser;
 let page: Page;
