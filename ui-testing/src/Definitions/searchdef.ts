@@ -4,7 +4,7 @@ import { expect } from '@playwright/test';
 import { UI_BASE_URL } from '../config';
 
 export async function navigateToHomePage(page: Page) {
-  await page.goto(UI_BASE_URL,);
+  await page.goto(UI_BASE_URL);
   const title = await page.title();
   expect(title).toBe('Practice Software Testing - Toolshop - v5.0');
 }

@@ -14,7 +14,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 170945499
+              "duration": 26487239199
             }
           },
           {
@@ -27,7 +27,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 5916966099
+              "duration": 30908668200
             }
           },
           {
@@ -40,7 +40,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 2956531000
+              "duration": 3016256300
             }
           },
           {
@@ -53,7 +53,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 5445944199
+              "duration": 5700594099
             }
           },
           {
@@ -66,7 +66,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1895932499
+              "duration": 1915731999
             }
           },
           {
@@ -74,7 +74,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 60156999
+              "duration": 56079299
             }
           }
         ],
@@ -94,6 +94,109 @@
     "elements": [
       {
         "description": "",
+        "id": "change-language;change-language-to-dutch",
+        "keyword": "Scenario",
+        "line": 3,
+        "name": "Change Language to Dutch",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 25597371800
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "I am on the home page",
+            "match": {
+              "location": "src\\tests\\steps\\changeLanguage.steps.ts:15"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 28529722100
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 5,
+            "name": "I click on the language button",
+            "match": {
+              "location": "src\\tests\\steps\\changeLanguage.steps.ts:24"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 96686599
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 6,
+            "name": "I click on the Dutch option",
+            "match": {
+              "location": "src\\tests\\steps\\changeLanguage.steps.ts:28"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 72291099
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 7,
+            "name": "the option must turn to Dutch",
+            "match": {
+              "location": "src\\tests\\steps\\changeLanguage.steps.ts:32"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 37287400
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 8,
+            "name": "the language must turn to Dutch",
+            "match": {
+              "location": "src\\tests\\steps\\changeLanguage.steps.ts:36"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1024783999
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 64162699
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "change-language",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Change Language",
+    "tags": [],
+    "uri": "src\\tests\\features\\changeLanguage.feature"
+  },
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
         "id": "search-functionality;search-a-product-by-name",
         "keyword": "Scenario",
         "line": 3,
@@ -104,7 +207,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 154143199
+              "duration": 26179888800
             }
           },
           {
@@ -117,7 +220,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 2106422999
+              "duration": 29123304999
             }
           },
           {
@@ -130,7 +233,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 31711400
+              "duration": 44549700
             }
           },
           {
@@ -143,7 +246,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 52492999
+              "duration": 106784399
             }
           },
           {
@@ -156,7 +259,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 3035192799
+              "duration": 3018224699
             }
           },
           {
@@ -164,7 +267,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 63066199
+              "duration": 65383099
             }
           }
         ],
