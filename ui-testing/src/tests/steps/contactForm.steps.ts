@@ -5,6 +5,8 @@ import {
   fillContactFormValid,
   submitForm,
   verifySuccessMessage,
+  fillContactFormInvalid,
+  verifyErrorMessages,
 } from '../../Definitions/contactFormdef';
 
 let browser: Browser;
@@ -30,6 +32,16 @@ When('I add all valid details', async function () {
 When('I press submit', async function () {
   await submitForm(page);
 });
+
+When('I add invalid details', async function () {
+  await fillContactFormInvalid(page, 'morgan.freeman', 'Message with less than fifty characters.');
+});
+
+
+Then('there has to be error messages', async function () {
+  await verifyErrorMessages(page);
+});
+
 
 Then('the form must be submitted', async function () {
   await verifySuccessMessage(page);
