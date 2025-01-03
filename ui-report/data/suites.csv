@@ -1,0 +1,5 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Fri Jan 03 08:36:57 UTC 2025","Fri Jan 03 08:37:08 UTC 2025","11038","","","","","","Add product to cart",""
+"passed","Fri Jan 03 08:37:14 UTC 2025","Fri Jan 03 08:37:18 UTC 2025","3553","","","","","","Search a product by name",""
+"passed","Fri Jan 03 08:37:08 UTC 2025","Fri Jan 03 08:37:10 UTC 2025","1574","","","","","","Change Language to Dutch",""
+"passed","Fri Jan 03 08:37:10 UTC 2025","Fri Jan 03 08:37:14 UTC 2025","4327","","","","","","Navigate to the second page and display corresponding products",""
