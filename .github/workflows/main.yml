@@ -113,6 +113,13 @@ jobs:
       working-directory: ./ui-testing
       run: npm run test:allure || echo "Test failures ignored for pipeline continuation"
 
+    - name: Install Allure CLI
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y openjdk-11-jre-headless wget unzip
+        wget -qO- https://github.com/allure-framework/allure2/releases/download/2.21.0/allure-2.21.0.tgz | tar -xz -C /opt/
+        sudo ln -s /opt/allure-2.21.0/bin/allure /usr/local/bin/allure
+
     - name: Generate Allure Report
       working-directory: ./ui-testing
       run: allure generate allure-results --clean
