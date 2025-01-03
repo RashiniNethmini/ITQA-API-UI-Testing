@@ -1,5 +1,6 @@
 import { Page } from '@playwright/test';
 import { chromium, Browser, BrowserContext } from '@playwright/test';
+import { UI_BASE_URL } from '../config';
 
 let browser: Browser;
 let page: Page;
@@ -13,7 +14,7 @@ export async function register(page: Page): Promise<void> {
             page = await context.newPage();
         }
 
-    await page.goto('https://practicesoftwaretesting.com/auth/register', { waitUntil: 'networkidle' });
+    await page.goto(`${UI_BASE_URL}/auth/register`, { waitUntil: 'networkidle' });
     
     const firstNameInput = page.locator('[formcontrolname="first_name"]');
     await firstNameInput.fill('random');

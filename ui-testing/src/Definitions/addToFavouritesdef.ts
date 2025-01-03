@@ -12,7 +12,7 @@ export async function loginUser(page: Page, username: string, password: string) 
   const loginPage = new Login(page);
   await loginPage.login(username, password);
   const title = await page.title();
-  console.log('Page title:', title);
+  // console.log('Page title:', title);
 }
 
 export async function navigateToHomePage(page: Page) {
