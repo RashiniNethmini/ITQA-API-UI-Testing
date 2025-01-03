@@ -131,10 +131,3 @@ Then('the response should display an error message {string}', async (message: st
     }
 });
 
-
-
-
-// Then('the response should contain an error message {string}', async (message: string) => {
-//     const responseBody = await response.string();
-//     expect(responseBody.message).toBe(message);
-// });
