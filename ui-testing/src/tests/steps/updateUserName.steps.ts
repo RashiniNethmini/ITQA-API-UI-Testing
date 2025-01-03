@@ -19,7 +19,7 @@ Given("I'm a registered user", async function () {
 
 Given("I have logged in", async function () {
   if (!browser) {
-    browser = await chromium.launch({ headless: false });
+    browser = await chromium.launch({ headless: true });
     context = await browser.newContext();
     page = await context.newPage();
   }

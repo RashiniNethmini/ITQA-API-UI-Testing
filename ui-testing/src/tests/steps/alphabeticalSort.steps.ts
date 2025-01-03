@@ -20,7 +20,7 @@ Given('I navigate to the Home Page', async function () {
   await navigateToHomePage(page);
 });
 
-When('I select {string} from the sort dropdown', async function (option: string) {
+When('selected {string} from the sort dropdown', async function (option: string) {
   await selectSortOption(page, option);
 });
 

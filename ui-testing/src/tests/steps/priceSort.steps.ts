@@ -10,7 +10,7 @@ let browser: Browser;
 let page: Page;
 let context: BrowserContext;
 
-Given('I navigate to the Home Page', async function () {
+Given('I navigate to Home Page', async function () {
   if (!browser) {
     browser = await chromium.launch({ headless: true });
     context = await browser.newContext();

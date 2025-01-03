@@ -7,6 +7,8 @@ export const contactFormLocators = {
     messageTextarea: '[data-test="message"]',
     submitButton: '[data-test="contact-submit"]',
     successAlert: 'div.alert.alert-success',
+    contactButton: '[data-test="nav-contact"]',
+
 
       
   errorMessages: {
@@ -15,5 +17,7 @@ export const contactFormLocators = {
     subjectRequired: 'div:has-text("Subject is required")',
     messageTooShort: 'div:has-text("Message must be minimal 50 characters")',
   },
+  dropdownButton: '[data-test="nav-menu"]',
+  myMessagesLink: '[data-test="nav-my-messages"]',
 
   };
