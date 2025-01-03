@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test1": "cucumber-js --require-module ts-node/register ",
-    "test:allure": "cross-env CONFIG=allure cucumber-js --require-module ts-node/register",
-    "test:progress": "cross-env CONFIG=progress cucumber-js --require-module ts-node/register",
+    "test:allure": "cross-env CONFIG=allure cucumber-js --require-module ts-node/register --exit",
+    "test:progress": "cross-env CONFIG=progress cucumber-js --require-module ts-node/register --exit",
     "test": "npm-run-all --parallel test:allure test:progress",
     "allure-report": "allure generate allure-results --clean && allure open"
   },
