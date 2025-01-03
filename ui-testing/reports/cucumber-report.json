@@ -14,7 +14,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 26487239199
+              "duration": 270341000
             }
           },
           {
@@ -27,7 +27,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 30908668200
+              "duration": 4834050199
             }
           },
           {
@@ -40,7 +40,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 3016256300
+              "duration": 3007208399
             }
           },
           {
@@ -53,7 +53,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 5700594099
+              "duration": 4986791000
             }
           },
           {
@@ -66,7 +66,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1915731999
+              "duration": 1896922500
             }
           },
           {
@@ -74,7 +74,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 56079299
+              "duration": 71515400
             }
           }
         ],
@@ -104,7 +104,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 25597371800
+              "duration": 151798200
             }
           },
           {
@@ -117,7 +117,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 28529722100
+              "duration": 1182245799
             }
           },
           {
@@ -130,7 +130,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 96686599
+              "duration": 72687999
             }
           },
           {
@@ -143,7 +143,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 72291099
+              "duration": 69799399
             }
           },
           {
@@ -156,7 +156,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 37287400
+              "duration": 20669799
             }
           },
           {
@@ -169,7 +169,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1024783999
+              "duration": 1023671800
             }
           },
           {
@@ -177,7 +177,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 64162699
+              "duration": 73156200
             }
           }
         ],
@@ -197,6 +197,96 @@
     "elements": [
       {
         "description": "",
+        "id": "pagination;navigate-to-the-second-page-and-display-corresponding-products",
+        "keyword": "Scenario",
+        "line": 3,
+        "name": "Navigate to the second page and display corresponding products",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 157253300
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "I am on the home page now",
+            "match": {
+              "location": "src\\tests\\steps\\pagination.steps.ts:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1048803099
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 5,
+            "name": "I click on \"2\" in the pagination",
+            "match": {
+              "location": "src\\tests\\steps\\pagination.steps.ts:19"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 924911299
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 6,
+            "name": "I should be navigated to the second page",
+            "match": {
+              "location": "src\\tests\\steps\\pagination.steps.ts:23"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 9757799
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 7,
+            "name": "the products displayed should be updated for the second page",
+            "match": {
+              "location": "src\\tests\\steps\\pagination.steps.ts:28"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3055640600
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 106720300
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "pagination",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Pagination",
+    "tags": [],
+    "uri": "src\\tests\\features\\pagination.feature"
+  },
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
         "id": "search-functionality;search-a-product-by-name",
         "keyword": "Scenario",
         "line": 3,
@@ -207,7 +297,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 26179888800
+              "duration": 152117800
             }
           },
           {
@@ -220,7 +310,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 29123304999
+              "duration": 1245595900
             }
           },
           {
@@ -233,7 +323,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 44549700
+              "duration": 36716199
             }
           },
           {
@@ -246,7 +336,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 106784399
+              "duration": 126306500
             }
           },
           {
@@ -259,7 +349,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 3018224699
+              "duration": 3026847999
             }
           },
           {
@@ -267,7 +357,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 65383099
+              "duration": 67307899
             }
           }
         ],
