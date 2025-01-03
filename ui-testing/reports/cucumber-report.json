@@ -1,0 +1,92 @@
+[
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "adding-a-product-to-the-cart;add-product-to-cart",
+        "keyword": "Scenario",
+        "line": 3,
+        "name": "Add product to cart",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 333450800
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "I navigate to the Combination Plier product page",
+            "match": {
+              "location": "src\\tests\\steps\\addToCart.ts:14"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4845712899
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 5,
+            "name": "I click on the Add to Cart Button",
+            "match": {
+              "location": "src\\tests\\steps\\addToCart.ts:23"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2964644900
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 6,
+            "name": "I go to my Cart by pressing on cart button",
+            "match": {
+              "location": "src\\tests\\steps\\addToCart.ts:27"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4880881600
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 7,
+            "name": "the item must appear in the cart",
+            "match": {
+              "location": "src\\tests\\steps\\addToCart.ts:31"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1914127200
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 113480900
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "adding-a-product-to-the-cart",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Adding a product to the cart",
+    "tags": [],
+    "uri": "src\\tests\\features\\addtoCart.feature"
+  }
+]
