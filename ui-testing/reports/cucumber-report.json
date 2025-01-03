@@ -14,7 +14,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 333450800
+              "duration": 170945499
             }
           },
           {
@@ -27,7 +27,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 4845712899
+              "duration": 5916966099
             }
           },
           {
@@ -40,7 +40,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 2964644900
+              "duration": 2956531000
             }
           },
           {
@@ -53,7 +53,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 4880881600
+              "duration": 5445944199
             }
           },
           {
@@ -66,7 +66,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1914127200
+              "duration": 1895932499
             }
           },
           {
@@ -74,7 +74,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 113480900
+              "duration": 60156999
             }
           }
         ],
@@ -88,5 +88,95 @@
     "name": "Adding a product to the cart",
     "tags": [],
     "uri": "src\\tests\\features\\addtoCart.feature"
+  },
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "search-functionality;search-a-product-by-name",
+        "keyword": "Scenario",
+        "line": 3,
+        "name": "Search a product by name",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 154143199
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 5,
+            "name": "I am in the Home Page",
+            "match": {
+              "location": "src\\tests\\steps\\search.steps.ts:14"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2106422999
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 6,
+            "name": "I search for a specific tool",
+            "match": {
+              "location": "src\\tests\\steps\\search.steps.ts:23"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 31711400
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 7,
+            "name": "I click on the search button",
+            "match": {
+              "location": "src\\tests\\steps\\search.steps.ts:27"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 52492999
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 8,
+            "name": "I should see the product I searched",
+            "match": {
+              "location": "src\\tests\\steps\\search.steps.ts:31"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3035192799
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 63066199
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "search-functionality",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Search Functionality",
+    "tags": [],
+    "uri": "src\\tests\\features\\search.feature"
   }
 ]
