@@ -35,3 +35,18 @@ export async function verifyItemInCart(page: Page) {
   const productTitleElement = page.locator(cartLocators.productTitleElement);
   await expect(productTitleElement).toHaveText('Combination Pliers');
 }
+
+export async function changeProductQuantityInCart(page: Page, quantity: string) {
+  const inputField = await page.locator(cartLocators.productQuantityInput);
+  await inputField.fill(quantity);
+  const value = await inputField.inputValue();
+  expect(value).toBe(quantity);
+  await inputField.press('Enter');
+}
+
+export async function verifyPriceChange(page: Page, expectedPrice: string) {
+  await page.waitForTimeout(3000); // Wait for price update
+  const linePrice = await page.locator(cartLocators.linePrice);
+  const textContent = await linePrice.textContent();
+  expect(textContent).toBe(expectedPrice);
+}
