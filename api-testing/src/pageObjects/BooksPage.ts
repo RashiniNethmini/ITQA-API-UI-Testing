@@ -42,10 +42,8 @@ export class BooksPage {
             responseBody = await response.json();
         } else {
             responseBody = await response.text(); // Handle non-JSON responses
-            console.error('Non-JSON response:', responseBody);
         }
     } catch (error) {
-        console.error('Error parsing response:', error);
         throw new Error('Failed to parse response from the API.');
     }
 
