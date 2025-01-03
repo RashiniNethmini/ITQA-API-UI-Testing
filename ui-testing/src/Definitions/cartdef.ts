@@ -1,9 +1,10 @@
 import { Page } from 'playwright';
 import {cartLocators} from '../Locators/cartLocators';
 import { expect } from '@playwright/test';
+import { UI_BASE_URL } from '../config';
 
 export async function navigateToPlierProductPage(page: Page) {
-  await page.goto('https://practicesoftwaretesting.com/', { waitUntil: 'networkidle' });
+  await page.goto(UI_BASE_URL, { waitUntil: 'networkidle' });
   const plierImage = page.locator(cartLocators.plierImage);
   await plierImage.click();
   await page.waitForTimeout(2000);
