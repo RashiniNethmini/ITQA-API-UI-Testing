@@ -95,3 +95,11 @@ Scenario: Attempt to UPDATE existing book without both title and author as admin
     Given I am an authenticated PUT user API client
     When I send a PUT request to the "books" endpoint to update an existing book without a title
     Then the response status of PUT should be 403
+
+#Update an exisiting book as an unauthenticated person
+
+  Scenario: Attempt to UPDATE an exisiting book with both different title and author as an unauthenticated person
+    Given I create a new book entry with a random title
+    Given I am an unauthenticated person to update a book
+    When I send a PUT request to the endpoint with the new title and author
+    Then the response status of PUT should be 401   

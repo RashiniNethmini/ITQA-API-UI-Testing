@@ -2,7 +2,7 @@ import { Given, When, Then } from '@cucumber/cucumber';
 import { RequestFactory } from '../../requests/requestFactory';
 import { BooksPage } from '../../pageObjects/BooksPage';
 import { credentials } from '../../config';
-import {  validateBookCreationResponse,validateBookCreationResponseDifferentTiltle,validateBookCreationResponseEmpty, validateBookCreationResponseDifferentAuthors, validateBookCreationResponseNullAuthor } from '../../requests/BookCreation';
+import {  validateBookCreationResponseDifferentTiltle,validateBookCreationResponseEmpty, validateBookCreationResponseDifferentAuthors, validateBookCreationResponseNullAuthor } from '../../requests/BookCreation';
 import {  validateResponseTwoStatus, validateResponseStatus } from '../../requests/ValidateResponseStatus'; 
 import { expect } from 'playwright/test';
 
@@ -20,10 +20,16 @@ Given('I am an authenticated POST user API client', async () => {
     booksPage = new BooksPage(request);
 });
 
+Given('I am an unauthenticated person for create a book', async () => {
+    const request = await RequestFactory.createRequest('None'); // No authentication
+    booksPage = new BooksPage(request);
+});
+
 When('I send a POST request to the {string} endpoint with valid book details', async function (endpoint: string) {
     if (endpoint === 'books') {
+        randomTitle = `Book-${Math.floor(Math.random() * 100000)}`;
         const bookDetails = {
-            title: 'New Book Title4',
+            title: randomTitle,
             author: 'Author Name'
         };
         response = await booksPage.createBook(bookDetails);
@@ -117,7 +123,9 @@ Then('the response status of POST should be either {int} or {int}', (status1: nu
 });
 
 Then('the response should contain the created book details', async () => {
-    await validateBookCreationResponse(response);
+    const responseBody = await response.json();
+        expect(responseBody.title).toBe(`${randomTitle}`);
+        expect(responseBody.author).toBe('Author Name');
 });
 
 Then('the response should contain the details of both books', async () => {

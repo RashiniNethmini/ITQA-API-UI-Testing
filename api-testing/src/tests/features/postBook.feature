@@ -5,14 +5,19 @@ Feature: Create a book
 Scenario: Attempt to CREATE a book with valid data as admin
     Given I am an authenticated POST admin API client
     When I send a POST request to the "books" endpoint with valid book details
-    Then the response status of POST should be either 201 or 208
+    Then the response status of POST should be 201
     And the response should contain the created book details
 
 Scenario: Attempt to CREATE a book with valid data as user
     Given I am an authenticated POST user API client
     When I send a POST request to the "books" endpoint with valid book details
-    Then the response status of POST should be either 201 or 208
+    Then the response status of POST should be 201
     And the response should contain the created book details
+
+  Scenario: Attempt to CREATE a book with valid data as an unauthenticated person
+    Given I am an unauthenticated person for create a book
+    When I send a POST request to the "books" endpoint with valid book details
+    Then the response status of POST should be 401
 
 # Create a book without both title and author
 

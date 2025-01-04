@@ -11,22 +11,6 @@ export async function validateResponseStatus(response: any, status1: number, sta
     expect(responseStatus === status1 || responseStatus === status2).toBe(true);
 }
 
-export async function validateBookCreationResponse(response: any) {
-    let responseBody;
-    try {
-        responseBody = await response.json();
-    } catch (error) {
-        responseBody = await response.text();
-    }
-
-    if (typeof responseBody === 'object') {
-        expect(responseBody).toHaveProperty('id');
-        expect(responseBody.title).toBe('New Book Title4');
-        expect(responseBody.author).toBe('Author Name');
-    } else {
-        expect(responseBody).toBe('Book Already Exists');
-    }
-}
 
 export async function validateBookCreationResponseEmpty(response: any) {
     let responseBody;

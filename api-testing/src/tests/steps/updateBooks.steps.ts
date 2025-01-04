@@ -28,6 +28,20 @@ Given('I am an authenticated PUT user API client', async () => {
     booksPage = new BooksPage(request);
 });
 
+Given('I am an unauthenticated person to update a book', async () => {
+    const request = await RequestFactory.createRequest('None'); // No authentication
+    booksPage = new BooksPage(request);
+});
+
+When('I send a PUT request to the endpoint with the new title and author', async () => {
+    const updatedBookData = {
+        id: bookId,
+        title: `Updated-${randomTitle}`,
+        author: 'Updated Author',
+    };
+    response = await booksPage.updateBook(bookId, updatedBookData);
+});
+
 When('I send a PUT request to the endpoint with the new author {string}', async (author: string) => {
     const updatedBookData = {
         id: bookId,
@@ -84,6 +98,11 @@ When('I send a PUT request to the {string} endpoint to update an existing book w
     response = await booksPage.updateBook(bookId, updatedBookData);
 });
 
+Then('the response should contain the updated book details', async () => {
+    const responseBody = await response.json();
+    expect(responseBody.title).toBe(`Updated-${randomTitle}`);
+    expect(responseBody.author).toBe('Updated Author');
+});
 
 Then('the response should contain the updated book details with author {string}', async (author: string) => {
     const responseBody = await response.json();
