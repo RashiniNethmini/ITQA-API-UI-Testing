@@ -1,6 +1,6 @@
 Feature: Update a user's name
 
-  Scenario: Updating user's profile name
+  Scenario: UI/TC14 - Updating user's profile name
     Given I'm a registered user
     And I have logged in
     And I'm in my profile page

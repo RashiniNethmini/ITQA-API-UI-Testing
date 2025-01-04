@@ -55,12 +55,13 @@ When('I send a POST request to the "books" endpoint with two different titles an
         title: 'First Book Title',
         author: 'Author Name'
     };
+    randomTitle = `Book-${Math.floor(Math.random() * 100000)}`;
     const bookDetails2 = {
-        title: 'Second Book Title',
+        title: randomTitle,
         author: 'Author Name'
     };
-    response = await booksPage.createBook(bookDetails1);
-    await booksPage.createBook(bookDetails2);
+     await booksPage.createBookWithoutResponse(bookDetails1);
+     response = await booksPage.createBook(bookDetails2);
 });
 
 When('I send a POST request to the {string} endpoint with empty title', async function (endpoint: string) {
@@ -129,7 +130,7 @@ Then('the response should contain the created book details', async () => {
 });
 
 Then('the response should contain the details of both books', async () => {
-    await validateBookCreationResponseDifferentTiltle(response);
+    await validateBookCreationResponseDifferentTiltle(response , randomTitle);
 });
 
 Then('the response should contain the details of both books with the same title but different authors', async () => {

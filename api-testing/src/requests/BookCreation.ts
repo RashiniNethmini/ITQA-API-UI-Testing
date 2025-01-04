@@ -30,23 +30,15 @@ export async function validateBookCreationResponseEmpty(response: any) {
     }
 }
 
-export async function validateBookCreationResponseDifferentTiltle(response: any) {
+export async function validateBookCreationResponseDifferentTiltle(response: any, randomTitle:any) {
     let responseBody;
     try {
         responseBody = await response.json();
     } catch (error) {
         responseBody = await response.text();
     }
-
-    if (Array.isArray(responseBody)) {
-        expect(responseBody.length).toBe(2);
-        expect(responseBody[0].title).toBe('First Book Title');
-        expect(responseBody[0].author).toBe('Author Name');
-        expect(responseBody[1].title).toBe('Second Book Title');
-        expect(responseBody[1].author).toBe('Author Name');
-    } else {
-        expect(responseBody).toBe('Book Already Exists');
-    }
+    expect(responseBody.title).toBe(`${randomTitle}`);
+    expect(responseBody.author).toBe('Author Name');
 }
 
 
