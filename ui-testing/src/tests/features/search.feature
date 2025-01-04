@@ -1,6 +1,6 @@
 Feature: Search Functionality
 
-  Scenario: Search a product by name
+  Scenario: UI/TC13 - Search a product by name
   
     Given I am in the Home Page
     When I search for a specific tool
