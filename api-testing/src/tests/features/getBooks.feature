@@ -16,6 +16,12 @@ Feature: Get books
     When I send a GET request to the "books" endpoint
     Then the response status should be 200
     And the response should contain a list of books
+    
+  Scenario: Attempt to GET all books as an unauthenticated person
+    Given there is a book entry in the system
+    And I am an unauthenticated person for get books
+    When I send a GET request to the "books" endpoint
+    Then the response status should be 401
 
 # Get a book with non-existing ID
 
@@ -47,6 +53,12 @@ Feature: Get books
     When I send a GET request with an existing book ID
     Then the response status should be 200
     And the response should contain the details of the book
+
+  Scenario: Attempt to GET a book with existing ID as an unauthenticated person
+    Given I create a new book with a random title
+    And I am an unauthenticated person for get books
+    When I send a GET request with an existing book ID
+    Then the response status should be 401
 
 
 

@@ -15,6 +15,12 @@ Feature: Delete a book
     Then the response status of DELETE should be 403
     Then the response should contain an error message "User is not permitted."
 
+  Scenario: Attempt to DELETE a book with an existing ID as an unauthenticated person
+    Given a random book is created
+    And I am an unauthenticated person for deletion
+    When I send a DELETE request with an existing book ID
+    Then the response status of DELETE should be 401
+
 
 
 # Delete a book with a non-existing ID

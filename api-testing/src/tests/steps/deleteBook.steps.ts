@@ -27,6 +27,11 @@ Given('I am an authenticated DELETE user API client', async () => {
     booksPage = new BooksPage(request);
 });
 
+Given('I am an unauthenticated person for deletion', async () => {
+    const request = await RequestFactory.createRequest('None'); // No authentication
+    booksPage = new BooksPage(request);
+});
+
 When('I send a DELETE request with an existing book ID', async () => {
     response = await booksPage.deleteBook(bookId);
 });

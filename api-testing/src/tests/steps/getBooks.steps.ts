@@ -39,11 +39,17 @@ Given('I am an authenticated user API client', async () => {
     booksPage = new BooksPage(request);
 });
 
+Given('I am an unauthenticated person for get books', async () => {
+    const request = await RequestFactory.createRequest('None'); // No authentication
+    booksPage = new BooksPage(request);
+});
+
 Given('I create a new book with a random title', async () => {
     const result = await createRandomTitleBook();
     randomTitle = result.randomTitle; 
     bookId = result.bookId; 
 });
+
 
 
 When('I send a GET request to the {string} endpoint', async (endpoint: string) => {
