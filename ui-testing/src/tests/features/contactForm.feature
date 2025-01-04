@@ -17,7 +17,7 @@ Feature: Contact form function
   Scenario: UI/TC09 - Sending message while logged in
 
     Given Im a registered user
-    Given I have logged in to the site
+    And I have logged in to the site
     When I click on the contact button
     And I add required details
     Then the message must be shown in my messages
